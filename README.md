@@ -1,2 +1,1 @@
-# GurukulErpV1
-School ERP
+# GurukulV1
