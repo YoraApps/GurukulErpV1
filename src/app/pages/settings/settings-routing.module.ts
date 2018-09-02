@@ -12,7 +12,7 @@ import { PresetComponent } from './preset/preset.component';
 const routes: Routes = [{
   path: '',
   component: SettingsComponent,
-  children: [{
+  children:[{
     path: 'degree-category',
     component: DegreeCategoryComponent,
   }, {
@@ -30,7 +30,7 @@ const routes: Routes = [{
   }, {
     path: 'preset',
     component: PresetComponent,
-  },],
+  }],
 }];
 
 @NgModule({
@@ -52,5 +52,5 @@ export const routedComponents = [
   CourseComponent,
   BranchComponent,
   BatchComponent,
-  PresetComponent
+  PresetComponent,
 ];
