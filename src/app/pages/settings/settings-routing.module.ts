@@ -30,7 +30,7 @@ const routes: Routes = [{
   }, {
     path: 'preset',
     component: PresetComponent,
-  }],
+  },],
 }];
 
 @NgModule({
