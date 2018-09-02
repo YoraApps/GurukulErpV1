@@ -9,7 +9,12 @@ import { NotFoundComponent } from './miscellaneous/not-found/not-found.component
 const routes: Routes = [{
   path: '',
   component: PagesComponent,
-  children: [{
+  children: [
+    {
+      path: 'settings',
+      loadChildren: './settings/settings.module#SettingsModule',
+    },
+    {
     path: 'dashboard',
     component: ECommerceComponent,
   }, {
