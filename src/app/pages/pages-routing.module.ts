@@ -15,6 +15,10 @@ const routes: Routes = [{
       loadChildren: './settings/settings.module#SettingsModule',
     },
     {
+      path: 'admission',
+      loadChildren: './admission/admission.module#AdmissionModule',
+    },
+    {
     path: 'dashboard',
     component: ECommerceComponent,
   }, {

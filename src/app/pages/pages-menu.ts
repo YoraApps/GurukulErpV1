@@ -2,10 +2,48 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'Admission',
+    title: 'Dashboard',
     icon: 'nb-plus-circled',
-    link: '/pages/ui-features',
+    link: '/admission/admission-list',
     home: true,
+  },
+  {
+    title: 'Admission',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Admission Forms',
+        link: '/pages/admission/admission-list',
+      },
+      {
+        title: 'Counselling',
+        link: '/pages/settings/degree-type',
+      },
+      {
+        title: 'Schedule Examination',
+        link: '/pages/settings/course',
+      },
+      {
+        title: 'Admission Fee Status',
+        link: '/pages/settings/branch',
+      },
+      {
+        title: 'Exam Result Upload',
+        link: '/pages/settings/batch',
+      },
+      {
+        title: 'Applicant Course Fee',
+        link: '/pages/settings/batch',
+      },
+      {
+        title: 'Review And Approve',
+        link: '/pages/settings/batch',
+      },
+      {
+        title: 'Id Cards',
+        link: '/pages/settings/batch',
+      },
+    ],
   },
   {
     title: 'Academics',
