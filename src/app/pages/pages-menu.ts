@@ -2,26 +2,12 @@ import { NbMenuItem } from '@nebular/theme';
 
 export const MENU_ITEMS: NbMenuItem[] = [
   {
-    title: 'E-commerce',
-    icon: 'nb-e-commerce',
-    link: '/pages/dashboard',
-    home: true,
-  },
-  {
-    title: 'IoT Dashboard',
-    icon: 'nb-home',
-    link: '/pages/iot-dashboard',
-  },
-  {
-    title: 'FEATURES',
-    group: true,
-  },
-  {
     title: 'Admission',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
+    home: true,
   },
-    {
+  {
     title: 'Academics',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
@@ -31,20 +17,46 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
   },
-    {
+  {
     title: 'PayRoll',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
   },
-    {
+  {
     title: 'Accounting',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
   },
-   {
+  {
     title: 'Presets',
     icon: 'nb-plus-circled',
-    link: '/pages/ui-features',
+    link: '/pages/settings/preset',
+  },
+  {
+    title: 'Academic Settings',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Degree Category',
+        link: '/pages/settings/degree-category',
+      },
+      {
+        title: 'Degree Type',
+        link: '/pages/settings/degree-type',
+      },
+      {
+        title: 'Course ',
+        link: '/pages/settings/course',
+      },
+      {
+        title: 'Branch',
+        link: '/pages/settings/branch',
+      },
+      {
+        title: 'Batch',
+        link: '/pages/settings/batch',
+      },
+    ],
   },
   {
     title: 'UI Features',
