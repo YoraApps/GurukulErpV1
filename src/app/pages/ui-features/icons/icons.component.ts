@@ -42,8 +42,8 @@ export class IconsComponent {
       'ion-settings', 'ion-wrench', 'ion-hammer', 'ion-edit', 'ion-trash-a', 'ion-trash-b',
       'ion-document', 'ion-document-text', 'ion-clipboard', 'ion-scissors', 'ion-funnel',
       'ion-bookmark', 'ion-email', 'ion-email-unread', 'ion-folder', 'ion-filing', 'ion-archive',
-      'ion-reply', 'ion-reply-all', 'ion-forward',
-    ],
+      'ion-reply', 'ion-reply-all', 'ion-forward', 'ion-android-checkbox', 'ion-android-bus',
+      'ion-social-googleplus-outline', 'ion-social-pinterest-outline'],
 
     fontAwesome: [
       'fa fa-adjust', 'fa fa-anchor', 'fa fa-archive', 'fa fa-chart-area', 'fa fa-arrows-alt', 'fa fa-arrows-alt-h',
@@ -51,8 +51,8 @@ export class IconsComponent {
       'fa fa-chart-bar', 'far fa-chart-bar', 'fa fa-barcode', 'fa fa-bars', 'fa fa-bed', 'fa fa-beer',
       'fa fa-bell', 'far fa-bell', 'fa fa-bell-slash', 'far fa-bell-slash', 'fa fa-bicycle', 'fa fa-binoculars',
       'fa fa-birthday-cake', 'fa fa-bolt', 'fa fa-bomb', 'fa fa-book', 'fa fa-bookmark', 'far fa-bookmark',
-      'fa fa-briefcase', 'fa fa-bug', 'fa fa-building', 'far fa-building', 'fa fa-bullhorn',
-    ],
+      'fa fa-briefcase', 'fa fa-bug', 'fa fa-building', 'far fa-building', 'fa fa-bullhorn', 'fa fa-bus',
+      'fas fa-graduation-cap', 'fab fa-google-plus', 'fab fa-pinterest-p'],
   };
 
 }
