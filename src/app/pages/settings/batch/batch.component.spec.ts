@@ -8,7 +8,7 @@ describe('BatchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ BatchComponent ]
+      declarations: [ BatchComponent ],
     })
     .compileComponents();
   }));

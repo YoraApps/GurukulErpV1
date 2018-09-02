@@ -8,7 +8,7 @@ describe('DegreeTypeComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DegreeTypeComponent ]
+      declarations: [ DegreeTypeComponent ],
     })
     .compileComponents();
   }));

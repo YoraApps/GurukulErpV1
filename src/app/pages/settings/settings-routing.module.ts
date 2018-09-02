@@ -12,7 +12,7 @@ import { PresetComponent } from './preset/preset.component';
 const routes: Routes = [{
   path: '',
   component: SettingsComponent,
-  children:[{
+  children: [{
     path: 'degree-category',
     component: DegreeCategoryComponent,
   }, {
