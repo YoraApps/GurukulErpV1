@@ -7,7 +7,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     link: '/pages/ui-features',
     home: true,
   },
-    {
+  {
     title: 'Academics',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
@@ -17,17 +17,17 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
   },
-    {
+  {
     title: 'PayRoll',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
   },
-    {
+  {
     title: 'Accounting',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
   },
-   {
+  {
     title: 'Presets',
     icon: 'nb-plus-circled',
     link: '/pages/settings/preset',
