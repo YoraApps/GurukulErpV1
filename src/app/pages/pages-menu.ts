@@ -17,6 +17,36 @@ export const MENU_ITEMS: NbMenuItem[] = [
     group: true,
   },
   {
+    title: 'Admission',
+    icon: 'nb-plus-circled',
+    link: '/pages/ui-features',
+  },
+    {
+    title: 'Academics',
+    icon: 'nb-plus-circled',
+    link: '/pages/ui-features',
+  },
+    {
+    title: 'Transportation',
+    icon: 'nb-plus-circled',
+    link: '/pages/ui-features',
+  },
+    {
+    title: 'PayRoll',
+    icon: 'nb-plus-circled',
+    link: '/pages/ui-features',
+  },
+    {
+    title: 'Accounting',
+    icon: 'nb-plus-circled',
+    link: '/pages/ui-features',
+  },
+   {
+    title: 'Presets',
+    icon: 'nb-plus-circled',
+    link: '/pages/ui-features',
+  },
+  {
     title: 'UI Features',
     icon: 'nb-keypad',
     link: '/pages/ui-features',
