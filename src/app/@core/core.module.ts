@@ -8,6 +8,7 @@ import { throwIfAlreadyLoaded } from './module-import-guard';
 import { DataModule } from './data/data.module';
 import { AnalyticsService } from './utils/analytics.service';
 import { SettingDataModule } from '../pages/settings/data/setting-data.module';
+import { AdmissionDataModule } from '../pages/admission/data/admission-data.module';
 
 const socialLinks = [
   {
@@ -37,6 +38,7 @@ export class NbSimpleRoleProvider extends NbRoleProvider {
 export const NB_CORE_PROVIDERS = [
   ...DataModule.forRoot().providers,
   ...SettingDataModule.forRoot().providers,
+  ...AdmissionDataModule.forRoot().providers,
   ...NbAuthModule.forRoot({
 
     strategies: [
