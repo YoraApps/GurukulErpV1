@@ -21,7 +21,7 @@ export class CourseComponent implements OnInit {
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
-    },  
+    },
     columns: {
       id: {
         title: 'Id',
@@ -30,7 +30,7 @@ export class CourseComponent implements OnInit {
       DegreeTypeId: {
         title: 'DegreeTypeId',
         type: 'number',
-      },      
+      },
       CourseCode: {
         title: 'CourseCode',
         type: 'string',
@@ -38,11 +38,11 @@ export class CourseComponent implements OnInit {
       CourseName: {
         title: 'CourseName',
         type: 'string',
-      },     
+      },
       CreatedOn: {
         title: 'CreatedOn',
         type: 'date',
-      },      
+      },
       ModifiedOn: {
         title: 'ModifiedOn',
         type: 'date',
@@ -65,6 +65,6 @@ export class CourseComponent implements OnInit {
     }
   }
   ngOnInit(){
-
+    
   }
 }
