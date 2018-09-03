@@ -28,25 +28,17 @@ export class CourseComponent implements OnInit {
         type: 'number',
       },
       DegreeTypeId: {
-        title: 'DegreeTypeId',
-        type: 'number',
+        title: 'Degree Name',
+        type: 'string',
       },
       CourseCode: {
-        title: 'CourseCode',
+        title: 'Course Code',
         type: 'string',
       },
       CourseName: {
-        title: 'CourseName',
+        title: 'Course Name',
         type: 'string',
-      },
-      CreatedOn: {
-        title: 'CreatedOn',
-        type: 'date',
-      },
-      ModifiedOn: {
-        title: 'ModifiedOn',
-        type: 'date',
-      },
+      },     
     },
   };
 
@@ -64,7 +56,6 @@ export class CourseComponent implements OnInit {
       event.confirm.reject();
     }
   }
-  ngOnInit(){
-    
+  ngOnInit() {
   }
 }

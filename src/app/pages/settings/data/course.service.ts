@@ -5,7 +5,7 @@ export class CourseService {
 
   data = [{
     id: 1,
-    DegreeTypeId: 1,
+    DegreeTypeId: 'diploma',
     CourseCode: '101a',
     CourseName: 'networks',
     IsActive: 1,
@@ -15,7 +15,7 @@ export class CourseService {
     ModifiedOn: '2-2-2028',
   }, {
     id: 2,
-    DegreeTypeId: 2,
+    DegreeTypeId: 'pg',
     CourseCode: '102a',
     CourseName: 'Computers',
     IsActive: 1,
