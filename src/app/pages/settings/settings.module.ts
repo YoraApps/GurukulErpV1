@@ -7,10 +7,12 @@ import { CourseService } from './data/course.service';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { BranchService } from './data/branch.service';
+import { BatchService } from './data/batch.service';
 
 @NgModule({
   imports: [
     ThemeModule,
+    Ng2SmartTableModule,
     SettingsRoutingModule,
     Ng2SmartTableModule,
   ],
@@ -21,6 +23,7 @@ import { BranchService } from './data/branch.service';
     DegreeTypeService,
     DegreeCategoryService,
     CourseService,
+    BatchService,
     SmartTableService,
     BranchService,
   ],
