@@ -3,11 +3,13 @@ import { CommonModule } from '@angular/common';
 import { DegreeTypeService } from './degree-type.service';
 import { DegreeCategoryService } from './degree-category.service';
 import { CourseService } from './course.service';
+import { BatchService } from './batch.service';
 
 const SERVICES = [
   DegreeTypeService,
   CourseService,
   DegreeCategoryService,
+  BatchService,
 ];
 
 @NgModule({
