@@ -5,8 +5,8 @@ export class BranchService {
 
   data = [{
     id: 1,
-    CourseId:1,
-    CourseName:'1A',    
+    CourseId: 1,
+    CourseName: '1A',
     BranchCode: '101a',
     BranchName: 'ece',
     IsActive: 1,
@@ -16,7 +16,7 @@ export class BranchService {
   }, {
     id: 2,
     CourseId: 2,
-    CourseName:'2A',
+    CourseName: '2A',
     BranchCode: '102a',
     BranchName: 'eee',
     IsActive: 1,

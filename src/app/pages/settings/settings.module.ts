@@ -8,7 +8,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { BranchService } from './data/branch.service';
 
-@NgModule({ 
+@NgModule({
   imports: [
     ThemeModule,
     SettingsRoutingModule,

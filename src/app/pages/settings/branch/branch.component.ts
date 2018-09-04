@@ -43,7 +43,7 @@ export class BranchComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service:BranchService) {
+  constructor(private service: BranchService) {
     const data = this.service.getData();
     this.source.load(data);
    }
