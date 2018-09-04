@@ -49,14 +49,14 @@ export class AdmissionListComponent  {
         title: 'Batch Name',
         type: 'string',
       },
-      BranchName:{
+      BranchName: {
         title: 'Branch Name',
         type: 'string',
       },
-      AdmissionStatusName:{
-        title:'AdmissionStatusName',
-        type:'string'
-      }
+      AdmissionStatusName: {
+        title: 'AdmissionStatusName',
+        type: 'string',
+      },
     },
   };
   source: LocalDataSource = new LocalDataSource();

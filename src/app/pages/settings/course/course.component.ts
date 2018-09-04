@@ -38,7 +38,7 @@ export class CourseComponent implements OnInit {
       CourseName: {
         title: 'Course Name',
         type: 'string',
-      },     
+      },
     },
   };
 
