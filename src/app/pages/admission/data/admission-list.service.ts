@@ -4,20 +4,45 @@ import { Injectable } from '@angular/core';
 export class AdmissionListService {
 
   data = [{
-    id: 1,
-    firstName: 'Mark',
-    lastName: 'Otto',
-    username: '@mdo',
-    email: 'mdo@gmail.com',
-    age: '28',
-  }, {
-    id: 2,
-    firstName: 'Jacob',
-    lastName: 'Thornton',
-    username: '@fat',
-    email: 'fat@yandex.ru',
-    age: '45',
-  }];
+    AdmissionId: 1,
+    AdmissionNumber: 101,
+    CandidateId: 1,
+    CandidateName: 'krishna',
+    DegreeCategoryId: 1,
+    DegreeCategoryName: 'pg',
+    DegreeTypeId: 1,
+    DegreeTypeName: 'ug',
+    CourseId: 1,
+    CourseName: 'computers',
+    BatchId: 101,
+    BatchName: 'juniors',
+    BranchId: 505,
+    BranchName: 'cse',
+    AdmissionStatusId: 1001,
+    AdmissionStatusName: 'A',
+
+  },
+  {
+    AdmissionId: 2,
+    AdmissionNumber: 102,
+    CandidateId: 1,
+    CandidateName: 'krishna',
+    DegreeCategoryId: 1,
+    DegreeCategoryName: 'pg',
+    DegreeTypeId: 1,
+    DegreeTypeName: 'ug',
+    CourseId: 1,
+    CourseName: 'computers',
+    BatchId: 101,
+    BatchName: 'juniors',
+    BranchId: 505,
+    BranchName: 'cse',
+    AdmissionStatusId: 1001,
+    AdmissionStatusName: 'A',
+
+  },
+
+];
 
   getData() {
     return this.data;
