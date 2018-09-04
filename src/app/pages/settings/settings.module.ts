@@ -14,6 +14,7 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
 @NgModule({
   imports: [
     ThemeModule,
+    Ng2SmartTableModule,
     SettingsRoutingModule,
     Ng2SmartTableModule,
   ],
