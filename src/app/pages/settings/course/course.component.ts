@@ -27,7 +27,7 @@ export class CourseComponent implements OnInit {
         title: 'Id',
         type: 'number',
       },
-      DegreeTypeId: {
+      DegreeName: {
         title: 'Degree Name',
         type: 'string',
       },
