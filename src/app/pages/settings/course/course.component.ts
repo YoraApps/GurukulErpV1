@@ -27,7 +27,7 @@ export class CourseComponent implements OnInit {
       id: {
         title: 'Id',
         type: 'number',
-      }, 
+      },
       CourseCode: {
         title: 'Course Code',
         type: 'string',
@@ -40,12 +40,12 @@ export class CourseComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
-  degreeTypeList:any[];
+  degreeTypeList: any[];
 
-  constructor(private degreeTypeService:DegreeTypeService,private service: CourseService) {
+  constructor(degreeTypeService: DegreeTypeService, private service: CourseService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.degreeTypeList=degreeTypeService.getData();
+    this.degreeTypeList = degreeTypeService.getData();
   }
 
   onDeleteConfirm(event): void {
