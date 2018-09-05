@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { BranchService } from '../data/branch.service';
+import {CourseService} from '../data/course.service';
 @Component({
   selector: 'ngx-branch',
   templateUrl: './branch.component.html',
@@ -26,11 +27,7 @@ export class BranchComponent implements OnInit {
       id: {
         title: 'Id',
         type: 'number',
-      },
-      CourseName: {
-        title: 'Course Name',
-        type: 'string',
-      },
+      },    
       BranchCode: {
         title: 'Branch Code',
         type: 'string',
@@ -43,9 +40,11 @@ export class BranchComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: BranchService) {
+  CourseTypeList:any[];
+  constructor(courseService : CourseService,private service: BranchService) {
     const data = this.service.getData();
     this.source.load(data);
+    this.CourseTypeList = courseService.getData();
    }
 
    onDeleteConfirm(event): void {
