@@ -47,12 +47,12 @@ export class BatchComponent implements OnInit {
 
 
   source: LocalDataSource = new LocalDataSource();
-  branchList:any[];
+  branchList: any[];
 
-  constructor(private branchService: BranchService,private service: BatchService) {
+  constructor(branchService: BranchService, private service: BatchService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.branchList=branchService.getData(); 
+    this.branchList = branchService.getData();
   }
 
    onDeleteConfirm(event): void {

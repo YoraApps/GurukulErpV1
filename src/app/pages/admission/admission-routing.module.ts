@@ -16,7 +16,7 @@ const routes: Routes = [{
   }, {
     path: 'admission-form',
     component: AdmissionFormComponent,
-  },{
+  }, {
     path: 'counselling',
     component: CounsellingComponent,
   }],

@@ -6,7 +6,7 @@ import { CounsellingService } from '../data/counselling.service';
 @Component({
   selector: 'ngx-counselling',
   templateUrl: './counselling.component.html',
-  styleUrls: ['./counselling.component.scss']
+  styleUrls: ['./counselling.component.scss'],
 })
 export class CounsellingComponent {
   settings = {
