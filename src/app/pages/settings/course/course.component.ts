@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { CourseService } from '../../../pages/settings/data/course.service';
+import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
 @Component({
   selector: 'ngx-course',
   templateUrl: './course.component.html',
@@ -26,11 +27,7 @@ export class CourseComponent implements OnInit {
       id: {
         title: 'Id',
         type: 'number',
-      },
-      DegreeName: {
-        title: 'Degree Name',
-        type: 'string',
-      },
+      }, 
       CourseCode: {
         title: 'Course Code',
         type: 'string',
@@ -43,10 +40,12 @@ export class CourseComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
+  degreeTypeList:any[];
 
-  constructor(private service: CourseService) {
+  constructor(private degreeTypeService:DegreeTypeService,private service: CourseService) {
     const data = this.service.getData();
     this.source.load(data);
+    this.degreeTypeList=degreeTypeService.getData();
   }
 
   onDeleteConfirm(event): void {
@@ -59,3 +58,4 @@ export class CourseComponent implements OnInit {
   ngOnInit() {
   }
 }
+
