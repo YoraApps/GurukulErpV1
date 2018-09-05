@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { BatchService } from '../data/batch.service';
+import { BranchService } from '../data/branch.service';
 
 @Component({
   selector: 'ngx-batch',
@@ -44,12 +45,15 @@ export class BatchComponent implements OnInit {
     },
   };
 
-  source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: BatchService) {
+  source: LocalDataSource = new LocalDataSource();
+  branchList: any[];
+
+  constructor(branchService: BranchService, private service: BatchService) {
     const data = this.service.getData();
     this.source.load(data);
-   }
+    this.branchList = branchService.getData();
+  }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

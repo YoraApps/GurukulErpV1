@@ -7,6 +7,10 @@ import { AdmissionFormComponent } from './admission-form/admission-form.componen
 import { AdmissionListService } from './data/admission-list.service';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
+import { CounsellingComponent } from './counselling/counselling.component';
+import { CounsellingService } from './data/counselling.service';
+
+
 
 @NgModule({
   imports: [
@@ -18,10 +22,12 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
     ...routedComponents,
     AdmissionListComponent,
     AdmissionFormComponent,
+    CounsellingComponent,
   ],
   providers: [
     AdmissionListService,
     SmartTableService,
+    CounsellingService,
   ],
 })
 export class AdmissionModule { }
