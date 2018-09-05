@@ -2,6 +2,7 @@ import { Component  } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 
 import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
+import { DegreeCategoryService } from '../data/degree-category.service';
 
 @Component({
   selector: 'ngx-degree-type',
@@ -24,15 +25,12 @@ export class DegreeTypeComponent {
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
-    },
+    },   
+  
     columns: {
       Id: {
         title: 'ID',
         type: 'number',
-      },
-      DegreeCategoryName: {
-        title: 'DegreeCategory Name',
-        type: 'string',
       },
       DegreeTypeCode: {
         title: 'DegreeType Code',
@@ -41,22 +39,16 @@ export class DegreeTypeComponent {
       DegreeTypeName: {
         title: 'DegreeType Name',
         type: 'string',
-      },
-      // email: {
-      //   title: 'E-mail',
-      //   type: 'string',
-      // },
-      // age: {
-      //   title: 'Age',
-      //   type: 'number',
-      // },
+      },  
     },
   };
   source: LocalDataSource = new LocalDataSource();
+  DegreeCategoryList : any [];
 
-  constructor(private service: DegreeTypeService) {
+  constructor(private service: DegreeTypeService ,_Dservice:DegreeCategoryService) {
     const data = this.service.getData();
     this.source.load(data);
+    this.DegreeCategoryList = _Dservice.getData();
   }
 
   onDeleteConfirm(event): void {
