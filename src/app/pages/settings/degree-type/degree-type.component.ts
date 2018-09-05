@@ -25,8 +25,8 @@ export class DegreeTypeComponent {
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
-    },   
-  
+    },
+
     columns: {
       Id: {
         title: 'ID',
@@ -39,13 +39,13 @@ export class DegreeTypeComponent {
       DegreeTypeName: {
         title: 'DegreeType Name',
         type: 'string',
-      },  
+      },
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  DegreeCategoryList : any [];
+  DegreeCategoryList: any [];
 
-  constructor(private service: DegreeTypeService ,_Dservice:DegreeCategoryService) {
+  constructor(private service: DegreeTypeService , _Dservice: DegreeCategoryService) {
     const data = this.service.getData();
     this.source.load(data);
     this.DegreeCategoryList = _Dservice.getData();

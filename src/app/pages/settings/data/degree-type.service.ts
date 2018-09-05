@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
 export class DegreeTypeService {
 
   data = [{
-    Id: 1,   
+    Id: 1,
     DegreeTypeCode: '1A',
     DegreeTypeName: 'master',
     IsActive: '1',
@@ -12,7 +12,7 @@ export class DegreeTypeService {
     CreatedOn: '28/2/2018',
     ModifiedBy: 'bb',
     ModifiedOn: '2/2/2019',
-    DegreeCategoryId:1,
+    DegreeCategoryId: 1,
 
   }, {
     Id: 2,
@@ -23,7 +23,7 @@ export class DegreeTypeService {
     CreatedOn: '28/2/2018',
     ModifiedBy: 'aa',
     ModifiedOn: '29/2/2018',
-    DegreeCategoryId:1
+    DegreeCategoryId: 1,
   }];
 
   getData() {
