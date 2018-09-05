@@ -4,6 +4,9 @@ import { Routes, RouterModule } from '@angular/router';
 import { AdmissionComponent } from './admission.component';
 import { AdmissionListComponent } from './admission-list/admission-list.component';
 import { AdmissionFormComponent } from './admission-form/admission-form.component';
+import { CounsellingComponent } from './counselling/counselling.component';
+
+
 const routes: Routes = [{
   path: '',
   component: AdmissionComponent,
@@ -13,6 +16,9 @@ const routes: Routes = [{
   }, {
     path: 'admission-form',
     component: AdmissionFormComponent,
+  },{
+    path: 'counselling',
+    component: CounsellingComponent,
   }],
 }];
 
@@ -32,4 +38,5 @@ export const routedComponents = [
   AdmissionComponent,
   AdmissionListComponent,
   AdmissionFormComponent,
+  CounsellingComponent,
 ];

@@ -17,7 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Counselling',
-        link: '/pages/settings/degree-type',
+        link: '/pages/admission/counselling',
       },
       {
         title: 'Schedule Examination',

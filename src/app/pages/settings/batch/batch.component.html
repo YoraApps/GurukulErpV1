@@ -1,3 +1,11 @@
+<nb-card-body>
+  <div  style="width:200px;left: 60px;">          
+      <select class="form-control">  
+          <option >EEE</option> 
+        <option [value]="branch.BranchId" *ngFor="let branch of branchList">{{branch.BranchName}}</option>  
+      </select> 
+    </div>
+  </nb-card-body>
 <nb-card>
   <nb-card-header>
     Batch table
@@ -8,3 +16,4 @@
     </ng2-smart-table>
   </nb-card-body>
 </nb-card>
+
