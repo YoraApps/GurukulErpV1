@@ -54,7 +54,7 @@ export class AdmissionListComponent  {
         type: 'string',
       },
       AdmissionStatusName: {
-        title: 'AdmissionStatusName',
+        title: 'Admission Status Name',
         type: 'string',
       },
     },
