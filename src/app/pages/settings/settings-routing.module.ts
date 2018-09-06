@@ -8,6 +8,9 @@ import { CourseComponent } from './course/course.component';
 import { BranchComponent } from './branch/branch.component';
 import { BatchComponent } from './batch/batch.component';
 import { PresetComponent } from './preset/preset.component';
+import { LocationComponent } from './location/location.component';
+import { VehicleComponent } from './vehicle/vehicle.component';
+import { DriverMasterComponent } from './driver-master/driver-master.component';
 
 const routes: Routes = [{
   path: '',
@@ -30,7 +33,20 @@ const routes: Routes = [{
   }, {
     path: 'preset',
     component: PresetComponent,
-  }],
+  },
+  {
+    path: 'location',
+    component: LocationComponent,
+  },
+  {
+    path: 'vehicle',
+    component: VehicleComponent,
+  },
+  {
+    path: 'driver',
+    component:DriverMasterComponent,
+  },
+],
 }];
 
 @NgModule({
@@ -53,4 +69,7 @@ export const routedComponents = [
   BranchComponent,
   BatchComponent,
   PresetComponent,
+  LocationComponent,
+  VehicleComponent,
+ DriverMasterComponent
 ];

@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { BranchService } from '../data/branch.service';
-import {CourseService} from '../data/course.service';
+import { LocationService } from '../../../pages/settings/data/location.service';
 @Component({
-  selector: 'ngx-branch',
-  templateUrl: './branch.component.html',
-  styleUrls: ['./branch.component.scss'],
+  selector: 'ngx-location',
+  templateUrl: './location.component.html',
+  styleUrls: ['./location.component.scss']
 })
-export class BranchComponent implements OnInit {
+export class LocationComponent implements OnInit {
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -28,32 +27,33 @@ export class BranchComponent implements OnInit {
         title: 'Id',
         type: 'number',
       },
-      BranchCode: {
-        title: 'Branch Code',
+      LocationName: {
+        title: 'Location Name',
         type: 'string',
       },
-      BranchName: {
-        title: 'Branch Name',
+      Address: {
+        title: 'Address',
         type: 'string',
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
-  CourseTypeList: any[];
-  constructor(courseService: CourseService, private service: BranchService) {
+
+
+  constructor(private service: LocationService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.CourseTypeList = courseService.getData();
-   }
+  }
 
-   onDeleteConfirm(event): void {
+  onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
+
   ngOnInit() {
   }
 

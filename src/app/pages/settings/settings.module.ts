@@ -9,7 +9,10 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { BranchService } from './data/branch.service';
 import { BatchService } from './data/batch.service';
-
+import { LocationService } from './data/location.service';
+import { VehicleService } from './data/vehicle.service';
+import { DriverMasterComponent } from './driver-master/driver-master.component';
+import { DriverMasterService } from './data/driver-master.service';
 @NgModule({
   imports: [
     ThemeModule,
@@ -19,6 +22,7 @@ import { BatchService } from './data/batch.service';
   ],
   declarations: [
     ...routedComponents,
+    DriverMasterComponent,
   ],
   providers: [
     DegreeTypeService,
@@ -27,6 +31,9 @@ import { BatchService } from './data/batch.service';
     BatchService,
     SmartTableService,
     BranchService,
+    LocationService,
+    VehicleService,
+    DriverMasterService,
   ],
 })
 export class SettingsModule { }

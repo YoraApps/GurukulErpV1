@@ -5,13 +5,18 @@ import { DegreeCategoryService } from './degree-category.service';
 import { CourseService } from './course.service';
 import { BranchService } from './branch.service';
 import { BatchService } from './batch.service';
-
+import { LocationService } from './location.service';
+import { VehicleService } from './vehicle.service';
+import { DriverMasterService } from './driver-master.service';
 const SERVICES = [
   DegreeTypeService,
   CourseService,
   DegreeCategoryService,
   BranchService,
   BatchService,
+  LocationService,
+  VehicleService,
+  DriverMasterService,
 ];
 
 @NgModule({

@@ -1,13 +1,13 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { BranchService } from '../data/branch.service';
-import {CourseService} from '../data/course.service';
+import { VehicleService } from '../../../pages/settings/data/vehicle.service';
 @Component({
-  selector: 'ngx-branch',
-  templateUrl: './branch.component.html',
-  styleUrls: ['./branch.component.scss'],
+  selector: 'ngx-vehicle',
+  templateUrl: './vehicle.component.html',
+  styleUrls: ['./vehicle.component.scss']
 })
-export class BranchComponent implements OnInit {
+export class VehicleComponent implements OnInit {
+ 
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -28,32 +28,49 @@ export class BranchComponent implements OnInit {
         title: 'Id',
         type: 'number',
       },
-      BranchCode: {
-        title: 'Branch Code',
+      LicenseNumber: {
+        title: 'Location Name',
+        type: 'string',
+      },      
+      OwnerNumber:{        
+        title: 'OwnerNumber',
+        type: 'number',
+      },
+      WeightCapacity:{
+        title: 'Weight Capacity',
+        type: 'number',
+      },
+      VehicleStatus:{
+        title: 'Vehicle Status',
+        type: 'boolean',
+      },
+      RegistrationDate: {
+        title: 'Registration Date',
+        type: 'date',
+      },
+      InsuranceDetails:{
+        title:  'Insurance Details',
         type: 'string',
       },
-      BranchName: {
-        title: 'Branch Name',
-        type: 'string',
-      },
+      InsuranceExpiryDate:{
+        title: 	'Insurance Expiry Date',
+        type: 'date',
+      }
     },
   };
-
   source: LocalDataSource = new LocalDataSource();
-  CourseTypeList: any[];
-  constructor(courseService: CourseService, private service: BranchService) {
+  constructor(private service: VehicleService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.CourseTypeList = courseService.getData();
-   }
-
-   onDeleteConfirm(event): void {
+  }
+  onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
+
   ngOnInit() {
   }
 

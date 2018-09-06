@@ -94,6 +94,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Batch',
         link: '/pages/settings/batch',
       },
+      {
+        title: 'Location',
+        link: '/pages/settings/location',
+      },
+      {
+        title: 'Vehicle',
+        link: '/pages/settings/vehicle',
+      },
+      {
+        title: 'Driver',
+        link: '/pages/settings/driver',
+      },
     ],
   },
   {
