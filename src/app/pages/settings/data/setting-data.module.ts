@@ -5,6 +5,8 @@ import { DegreeCategoryService } from './degree-category.service';
 import { CourseService } from './course.service';
 import { BranchService } from './branch.service';
 import { BatchService } from './batch.service';
+import { ExamTypeService } from './exam-type.service';
+import { ChapterService } from './chapter.service';
 
 const SERVICES = [
   DegreeTypeService,
@@ -12,6 +14,8 @@ const SERVICES = [
   DegreeCategoryService,
   BranchService,
   BatchService,
+  ExamTypeService,
+  ChapterService,
 ];
 
 @NgModule({

@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
+import { ExamTypeService } from '../data/exam-type.service';
 import { LocalDataSource } from 'ng2-smart-table';
-import { BranchService } from '../data/branch.service';
-import {CourseService} from '../data/course.service';
+
 @Component({
-  selector: 'ngx-branch',
-  templateUrl: './branch.component.html',
-  styleUrls: ['./branch.component.scss'],
+  selector: 'ngx-exam-type',
+  templateUrl: './exam-type.component.html',
+  styleUrls: ['./exam-type.component.scss'],
 })
-export class BranchComponent implements OnInit {
+export class ExamTypeComponent implements OnInit {
+
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -25,26 +26,30 @@ export class BranchComponent implements OnInit {
     },
     columns: {
       id: {
-        title: 'Id',
+        title: 'ID',
         type: 'number',
       },
-      BranchCode: {
-        title: 'Branch Code',
+      ExamGroup: {
+        title: 'Exam Group',
         type: 'string',
       },
-      BranchName: {
-        title: 'Branch Name',
+      ExamName: {
+        title: 'Exam Name',
+        type: 'string',
+      },
+      Remarks: {
+        title: 'Remarks',
         type: 'string',
       },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
-  CourseTypeList: any[];
-  constructor(courseService: CourseService, private service: BranchService) {
+
+
+  constructor(private service: ExamTypeService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.CourseTypeList = courseService.getData();
    }
 
    onDeleteConfirm(event): void {
@@ -54,6 +59,7 @@ export class BranchComponent implements OnInit {
       event.confirm.reject();
     }
   }
+
   ngOnInit() {
   }
 
