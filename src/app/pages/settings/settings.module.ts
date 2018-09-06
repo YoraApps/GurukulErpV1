@@ -34,7 +34,7 @@ import { ClubService } from './data/club.service';
     SmartTableService,
     BranchService,
     ClassRoomService,
-    ClubService
+    ClubService,
   ],
 })
 export class SettingsModule { }

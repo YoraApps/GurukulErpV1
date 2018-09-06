@@ -5,7 +5,7 @@ import { ClassRoomService } from '../../../pages/settings/data/classroom.service
 @Component({
   selector: 'ngx-classroom',
   templateUrl: './classroom.component.html',
-  styleUrls: ['./classroom.component.scss']
+  styleUrls: ['./classroom.component.scss'],
 })
 export class ClassroomComponent  {
 
@@ -29,7 +29,7 @@ export class ClassroomComponent  {
       // ClassRoomId: {
       //   title: 'ID',
       //   type: 'number',
-      // },      
+      // },
       BuildingCode : {
         title: 'Building Code ',
         type: 'string',
@@ -54,16 +54,16 @@ export class ClassroomComponent  {
         title: 'Facility',
         type: 'string',
       },
-      Location:{
+      Location: {
         title: 'Location',
         type: 'string',
-      }
+      },
     },
   };
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ClassRoomService) {
     const data = this.service.getData();
-    this.source.load(data);   
+    this.source.load(data);
   }
 
   onDeleteConfirm(event): void {

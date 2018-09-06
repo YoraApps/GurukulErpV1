@@ -5,7 +5,7 @@ import { ClubService } from '../../../pages/settings/data/club.service';
 @Component({
   selector: 'ngx-club',
   templateUrl: './club.component.html',
-  styleUrls: ['./club.component.scss']
+  styleUrls: ['./club.component.scss'],
 })
 export class ClubComponent implements OnInit {
 
@@ -29,7 +29,7 @@ export class ClubComponent implements OnInit {
       ClubCode: {
         title: 'Club Code',
         type: 'number',
-      },      
+      },
       ClubName : {
         title: 'Club Name ',
         type: 'string',
@@ -37,13 +37,13 @@ export class ClubComponent implements OnInit {
       ClubDescription : {
         title: 'Club Description ',
         type: 'string',
-      },     
+      },
     },
   };
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ClubService) {
     const data = this.service.getData();
-    this.source.load(data);   
+    this.source.load(data);
   }
 
   onDeleteConfirm(event): void {

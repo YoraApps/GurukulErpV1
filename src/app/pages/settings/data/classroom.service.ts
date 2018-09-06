@@ -9,9 +9,9 @@ export class ClassRoomService {
     BuildingName: 'qwerty',
     RoomCode: '1',
     RoomName: '	Jason',
-    CapacityofRoom:50,
+    CapacityofRoom: 50,
     Facility: '	LCD, TV,AC',
-    Location:'hyd'
+    Location: 'hyd',
   },
    {
     ClassRoomId: 2,
@@ -21,7 +21,7 @@ export class ClassRoomService {
     RoomName: 'asdfg',
     CapacityofRoom: 45,
     Facility: '	LCD, TV,AC',
-    Location:'hyderabad'
+    Location: 'hyderabad',
   }];
 
   getData() {
