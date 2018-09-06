@@ -94,6 +94,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Batch',
         link: '/pages/settings/batch',
       },
+      {
+        title: 'classroom',
+        link: '/pages/settings/classroom',
+      },
+      {
+        title: 'club',
+        link: '/pages/settings/club',
+      },
     ],
   },
   {

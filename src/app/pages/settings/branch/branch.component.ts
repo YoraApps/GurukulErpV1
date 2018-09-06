@@ -27,7 +27,7 @@ export class BranchComponent implements OnInit {
       id: {
         title: 'Id',
         type: 'number',
-      },    
+      },
       BranchCode: {
         title: 'Branch Code',
         type: 'string',
@@ -40,8 +40,8 @@ export class BranchComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
-  CourseTypeList:any[];
-  constructor(courseService : CourseService,private service: BranchService) {
+  CourseTypeList: any[];
+  constructor(courseService: CourseService, private service: BranchService) {
     const data = this.service.getData();
     this.source.load(data);
     this.CourseTypeList = courseService.getData();
