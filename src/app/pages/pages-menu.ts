@@ -106,6 +106,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Driver',
         link: '/pages/settings/driver',
       },
+      {
+        title: 'classroom',
+        link: '/pages/settings/classroom',
+      },
+      {
+        title: 'club',
+        link: '/pages/settings/club',
+      },
     ],
   },
   {

@@ -1,13 +1,13 @@
-  <nb-card style="width:200px">
+  <nb-card >
       <nb-card-body >
         <div class="form-group" style="width:200px">
-          <label>Select Degree Category </label>
+          <label>Select Degree Category </label> 
           <select class="form-control">
-            <option style="display:non">Degree Category</option>
+            <option style="display:none">Degree Category</option>
               <option *ngFor="let item of DegreeCategoryList" [value]="item.id" >
                   <span>{{item.DegreeCategoryName}}</span>
               </option>
-          </select>
+          </select>         
         </div>
       </nb-card-body>
     </nb-card>

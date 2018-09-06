@@ -1,16 +1,15 @@
-import { Component  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-
-import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
-import { DegreeCategoryService } from '../data/degree-category.service';
+import { ClubService } from '../../../pages/settings/data/club.service';
 
 @Component({
-  selector: 'ngx-degree-type',
-  templateUrl: './degree-type.component.html',
-  styleUrls: ['./degree-type.component.scss'],
+  selector: 'ngx-club',
+  templateUrl: './club.component.html',
+  styleUrls: ['./club.component.scss'],
 })
-export class DegreeTypeComponent {
- settings = {
+export class ClubComponent implements OnInit {
+
+  settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -27,27 +26,24 @@ export class DegreeTypeComponent {
     },
 
     columns: {
-      Id: {
-        title: 'ID',
+      ClubCode: {
+        title: 'Club Code',
         type: 'number',
       },
-      DegreeTypeCode: {
-        title: 'DegreeType Code',
+      ClubName : {
+        title: 'Club Name ',
         type: 'string',
       },
-      DegreeTypeName: {
-        title: 'DegreeType Name',
+      ClubDescription : {
+        title: 'Club Description ',
         type: 'string',
       },
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  DegreeCategoryList: any [];
-
-  constructor(private service: DegreeTypeService , _Dservice: DegreeCategoryService) {
+  constructor(private service: ClubService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.DegreeCategoryList = _Dservice.getData();
   }
 
   onDeleteConfirm(event): void {
@@ -57,4 +53,9 @@ export class DegreeTypeComponent {
       event.confirm.reject();
     }
   }
+
+ ngOnInit() {
+
+  }
+
 }

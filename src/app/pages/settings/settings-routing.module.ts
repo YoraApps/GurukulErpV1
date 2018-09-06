@@ -11,6 +11,8 @@ import { PresetComponent } from './preset/preset.component';
 import { LocationComponent } from './location/location.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { DriverMasterComponent } from './driver-master/driver-master.component';
+import { ClassroomComponent } from './classroom/classroom.component';
+import { ClubComponent } from './club/club.component';
 
 const routes: Routes = [{
   path: '',
@@ -30,7 +32,16 @@ const routes: Routes = [{
   }, {
     path: 'batch',
     component: BatchComponent,
-  }, {
+  },
+  {
+    path: 'classroom',
+    component: ClassroomComponent,
+  },
+  {
+    path: 'club',
+    component: ClubComponent,
+  },
+   {
     path: 'preset',
     component: PresetComponent,
   },
@@ -71,5 +82,6 @@ export const routedComponents = [
   PresetComponent,
   LocationComponent,
   VehicleComponent,
- DriverMasterComponent
+  DriverMasterComponent,
+  ClassroomComponent,
 ];
