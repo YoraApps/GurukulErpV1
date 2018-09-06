@@ -8,7 +8,8 @@ import { CourseComponent } from './course/course.component';
 import { BranchComponent } from './branch/branch.component';
 import { BatchComponent } from './batch/batch.component';
 import { PresetComponent } from './preset/preset.component';
-
+import { ClassroomComponent } from './classroom/classroom.component';
+import { ClubComponent } from './club/club.component';
 const routes: Routes = [{
   path: '',
   component: SettingsComponent,
@@ -27,7 +28,16 @@ const routes: Routes = [{
   }, {
     path: 'batch',
     component: BatchComponent,
-  }, {
+  },
+  {
+    path: 'classroom',
+    component: ClassroomComponent,
+  },
+  {
+    path: 'club',
+    component: ClubComponent,
+  },
+   {
     path: 'preset',
     component: PresetComponent,
   }],
@@ -53,4 +63,5 @@ export const routedComponents = [
   BranchComponent,
   BatchComponent,
   PresetComponent,
+  ClassroomComponent,
 ];

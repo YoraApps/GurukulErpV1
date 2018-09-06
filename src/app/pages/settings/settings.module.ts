@@ -9,6 +9,10 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { BranchService } from './data/branch.service';
 import { BatchService } from './data/batch.service';
+import { ClassroomComponent } from './classroom/classroom.component';
+import { ClubComponent } from './club/club.component';
+import { ClassRoomService } from './data/classroom.service';
+import { ClubService } from './data/club.service';
 
 @NgModule({
   imports: [
@@ -19,6 +23,8 @@ import { BatchService } from './data/batch.service';
   ],
   declarations: [
     ...routedComponents,
+    ClassroomComponent,
+    ClubComponent,
   ],
   providers: [
     DegreeTypeService,
@@ -27,6 +33,8 @@ import { BatchService } from './data/batch.service';
     BatchService,
     SmartTableService,
     BranchService,
+    ClassRoomService,
+    ClubService
   ],
 })
 export class SettingsModule { }
