@@ -11,7 +11,14 @@ import { BranchService } from './data/branch.service';
 import { BatchService } from './data/batch.service';
 import { ExamTypeService } from './data/exam-type.service';
 import { ChapterService } from './data/chapter.service';
-
+import { LocationService } from './data/location.service';
+import { VehicleService } from './data/vehicle.service';
+import { DriverMasterComponent } from './driver-master/driver-master.component';
+import { DriverMasterService } from './data/driver-master.service';
+import { ClassroomComponent } from './classroom/classroom.component';
+import { ClubComponent } from './club/club.component';
+import { ClassRoomService } from './data/classroom.service';
+import { ClubService } from './data/club.service';
 
 @NgModule({
   imports: [
@@ -22,6 +29,9 @@ import { ChapterService } from './data/chapter.service';
   ],
   declarations: [
     ...routedComponents,
+    DriverMasterComponent,
+    ClassroomComponent,
+    ClubComponent,
   ],
   providers: [
     DegreeTypeService,
@@ -32,6 +42,11 @@ import { ChapterService } from './data/chapter.service';
     BranchService,
     ExamTypeService,
     ChapterService,
+    LocationService,
+    VehicleService,
+    DriverMasterService,
+    ClassRoomService,
+    ClubService,
   ],
 })
 export class SettingsModule { }

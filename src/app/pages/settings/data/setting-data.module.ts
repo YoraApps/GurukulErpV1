@@ -7,6 +7,12 @@ import { BranchService } from './branch.service';
 import { BatchService } from './batch.service';
 import { ExamTypeService } from './exam-type.service';
 import { ChapterService } from './chapter.service';
+import { LocationService } from './location.service';
+import { VehicleService } from './vehicle.service';
+import { DriverMasterService } from './driver-master.service';
+import { ClassRoomService } from './classroom.service';
+import { ClubService } from './club.service';
+
 
 const SERVICES = [
   DegreeTypeService,
@@ -16,6 +22,11 @@ const SERVICES = [
   BatchService,
   ExamTypeService,
   ChapterService,
+  LocationService,
+  VehicleService,
+  DriverMasterService,
+  ClassRoomService,
+  ClubService,
 ];
 
 @NgModule({

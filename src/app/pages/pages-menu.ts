@@ -102,6 +102,26 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Chapters',
         link: '/pages/settings/chapter',
       },
+      {
+        title: 'Location',
+        link: '/pages/settings/location',
+      },
+      {
+        title: 'Vehicle',
+        link: '/pages/settings/vehicle',
+      },
+      {
+        title: 'Driver',
+        link: '/pages/settings/driver',
+      },
+      {
+        title: 'classroom',
+        link: '/pages/settings/classroom',
+      },
+      {
+        title: 'club',
+        link: '/pages/settings/club',
+      },
     ],
   },
   {
