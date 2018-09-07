@@ -8,6 +8,10 @@ import { CourseComponent } from './course/course.component';
 import { BranchComponent } from './branch/branch.component';
 import { BatchComponent } from './batch/batch.component';
 import { PresetComponent } from './preset/preset.component';
+
+import { ExamTypeComponent } from './exam-type/exam-type.component';
+import { ChapterComponent } from './chapter/chapter.component';
+
 import { LocationComponent } from './location/location.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { DriverMasterComponent } from './driver-master/driver-master.component';
@@ -44,6 +48,13 @@ const routes: Routes = [{
    {
     path: 'preset',
     component: PresetComponent,
+  }, {
+    path: 'exam-type',
+    component: ExamTypeComponent,
+  }, {
+    path: 'chapter',
+    component: ChapterComponent,
+  }],
   },
   {
     path: 'location',
@@ -80,6 +91,8 @@ export const routedComponents = [
   BranchComponent,
   BatchComponent,
   PresetComponent,
+  ExamTypeComponent,
+  ChapterComponent,
   LocationComponent,
   VehicleComponent,
   DriverMasterComponent,

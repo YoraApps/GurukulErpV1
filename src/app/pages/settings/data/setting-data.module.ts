@@ -5,6 +5,8 @@ import { DegreeCategoryService } from './degree-category.service';
 import { CourseService } from './course.service';
 import { BranchService } from './branch.service';
 import { BatchService } from './batch.service';
+import { ExamTypeService } from './exam-type.service';
+import { ChapterService } from './chapter.service';
 import { LocationService } from './location.service';
 import { VehicleService } from './vehicle.service';
 import { DriverMasterService } from './driver-master.service';
@@ -18,6 +20,8 @@ const SERVICES = [
   DegreeCategoryService,
   BranchService,
   BatchService,
+  ExamTypeService,
+  ChapterService,
   LocationService,
   VehicleService,
   DriverMasterService,

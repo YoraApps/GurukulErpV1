@@ -9,6 +9,8 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { BranchService } from './data/branch.service';
 import { BatchService } from './data/batch.service';
+import { ExamTypeService } from './data/exam-type.service';
+import { ChapterService } from './data/chapter.service';
 import { LocationService } from './data/location.service';
 import { VehicleService } from './data/vehicle.service';
 import { DriverMasterComponent } from './driver-master/driver-master.component';
@@ -38,6 +40,8 @@ import { ClubService } from './data/club.service';
     BatchService,
     SmartTableService,
     BranchService,
+    ExamTypeService,
+    ChapterService,
     LocationService,
     VehicleService,
     DriverMasterService,

@@ -95,6 +95,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/batch',
       },
       {
+        title: 'Exam Type',
+        link: '/pages/settings/exam-type',
+      },
+      {
+        title: 'Chapters',
+        link: '/pages/settings/chapter',
+      },
+      {
         title: 'Location',
         link: '/pages/settings/location',
       },
