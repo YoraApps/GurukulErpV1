@@ -57,7 +57,8 @@ const routes: Routes = [{
   }, {
     path: 'chapter',
     component: ChapterComponent,
-  },{
+  },
+  {
     path: 'location',
     component: LocationComponent,
   },{
