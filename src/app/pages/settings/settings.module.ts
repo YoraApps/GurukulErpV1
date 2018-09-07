@@ -19,6 +19,12 @@ import { ClassroomComponent } from './classroom/classroom.component';
 import { ClubComponent } from './club/club.component';
 import { ClassRoomService } from './data/classroom.service';
 import { ClubService } from './data/club.service';
+import { AcademicMasterService } from './data/academic-master.service';
+import { AcademicMasterComponent } from './academic-master/academic-master.component';
+import { FeeComponent } from './fee/fee.component';
+import { GroupComponent } from './group/group.component';
+import { FeeService } from './data/fee.service';
+import { GroupService } from './data/group.service ';
 
 @NgModule({
   imports: [
@@ -32,6 +38,9 @@ import { ClubService } from './data/club.service';
     DriverMasterComponent,
     ClassroomComponent,
     ClubComponent,
+    AcademicMasterComponent,
+    FeeComponent,
+    GroupComponent,
   ],
   providers: [
     DegreeTypeService,
@@ -47,6 +56,9 @@ import { ClubService } from './data/club.service';
     DriverMasterService,
     ClassRoomService,
     ClubService,
+    AcademicMasterService,
+    FeeService,
+    GroupService,
   ],
 })
 export class SettingsModule { }

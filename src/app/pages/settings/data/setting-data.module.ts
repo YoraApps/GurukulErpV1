@@ -12,6 +12,9 @@ import { VehicleService } from './vehicle.service';
 import { DriverMasterService } from './driver-master.service';
 import { ClassRoomService } from './classroom.service';
 import { ClubService } from './club.service';
+import { AcademicMasterService } from './academic-master.service';
+import { GroupService } from './group.service ';
+import { FeeService } from './fee.service';
 
 
 const SERVICES = [
@@ -27,6 +30,9 @@ const SERVICES = [
   DriverMasterService,
   ClassRoomService,
   ClubService,
+  AcademicMasterService,
+  GroupService,
+  FeeService,
 ];
 
 @NgModule({

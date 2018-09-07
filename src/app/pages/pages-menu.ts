@@ -122,6 +122,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'club',
         link: '/pages/settings/club',
       },
+      {
+        title: 'academic-master',
+        link: '/pages/settings/academic-master',
+      },
+      {
+        title: 'fee',
+        link: '/pages/settings/fee',
+      },
+      {
+        title: 'group',
+        link: '/pages/settings/group',
+      },
     ],
   },
   {
