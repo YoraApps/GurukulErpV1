@@ -4,7 +4,7 @@ import { LocationService } from '../../../pages/transportation/data/location.ser
 @Component({
   selector: 'ngx-location',
   templateUrl: './location.component.html',
-  styleUrls: ['./location.component.scss']
+  styleUrls: ['./location.component.scss'],
 })
 export class LocationComponent implements OnInit {
   settings = {

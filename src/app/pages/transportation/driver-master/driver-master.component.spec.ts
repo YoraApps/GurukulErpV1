@@ -8,7 +8,7 @@ describe('DriverMasterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ DriverMasterComponent ]
+      declarations: [ DriverMasterComponent ],
     })
     .compileComponents();
   }));

@@ -4,10 +4,10 @@ import { VehicleService } from '../../../pages/transportation/data/vehicle.servi
 @Component({
   selector: 'ngx-vehicle',
   templateUrl: './vehicle.component.html',
-  styleUrls: ['./vehicle.component.scss']
+  styleUrls: ['./vehicle.component.scss'],
 })
 export class VehicleComponent implements OnInit {
- 
+
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -27,16 +27,16 @@ export class VehicleComponent implements OnInit {
       LicenseNumber: {
         title: 'Location Name',
         type: 'string',
-      },      
-      OwnerNumber:{        
+      },
+      OwnerNumber: {
         title: 'OwnerNumber',
         type: 'number',
       },
-      WeightCapacity:{
+      WeightCapacity: {
         title: 'Weight Capacity',
         type: 'number',
       },
-      VehicleStatus:{
+      VehicleStatus: {
         title: 'Vehicle Status',
         type: 'boolean',
       },
@@ -44,14 +44,14 @@ export class VehicleComponent implements OnInit {
         title: 'Registration Date',
         type: 'date',
       },
-      InsuranceDetails:{
+      InsuranceDetails: {
         title:  'Insurance Details',
         type: 'string',
       },
-      InsuranceExpiryDate:{
+      InsuranceExpiryDate: {
         title: 	'Insurance Expiry Date',
         type: 'date',
-      }
+      },
     },
   };
   source: LocalDataSource = new LocalDataSource();

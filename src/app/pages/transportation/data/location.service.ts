@@ -1,17 +1,17 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class LocationService {
 
   constructor() { }
   data = [{
-    id: 1,   
+    id: 1,
     LocationName: 'Marathahalli',
     Address : 'BUSSTOP',
   }, {
-     id: 2,   
+     id: 2,
     LocationName: 'hyderabad',
     Address : 'BUSSTOP',
   }];

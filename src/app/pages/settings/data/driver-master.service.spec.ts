@@ -5,7 +5,7 @@ import { DriverMasterService } from './driver-master.service';
 describe('DriverMasterService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [DriverMasterService]
+      providers: [DriverMasterService],
     });
   });
 

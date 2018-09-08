@@ -62,7 +62,7 @@ const routes: Routes = [{
   }, {
     path: 'group',
     component: GroupComponent,
-  },],
+  }],
 }];
 
 @NgModule({

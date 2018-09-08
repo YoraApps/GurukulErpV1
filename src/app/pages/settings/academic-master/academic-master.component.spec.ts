@@ -8,7 +8,7 @@ describe('AcademicMasterComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ AcademicMasterComponent ]
+      declarations: [ AcademicMasterComponent ],
     })
     .compileComponents();
   }));

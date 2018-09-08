@@ -5,7 +5,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-group',
   templateUrl: './group.component.html',
-  styleUrls: ['./group.component.scss']
+  styleUrls: ['./group.component.scss'],
 })
 export class GroupComponent implements OnInit {
 

@@ -7,7 +7,6 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
 
 import { LocationService } from './data/location.service';
 import { VehicleService } from './data/vehicle.service';
-import { DriverMasterComponent } from './driver-master/driver-master.component';
 import { DriverMasterService } from './data/driver-master.service';
 
 

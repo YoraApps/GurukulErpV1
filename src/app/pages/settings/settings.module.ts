@@ -12,14 +12,9 @@ import { BranchService } from './data/branch.service';
 import { BatchService } from './data/batch.service';
 import { ExamTypeService } from './data/exam-type.service';
 import { ChapterService } from './data/chapter.service';
-import { ClassroomComponent } from './classroom/classroom.component';
-import { ClubComponent } from './club/club.component';
 import { ClassRoomService } from './data/classroom.service';
 import { ClubService } from './data/club.service';
 import { AcademicMasterService } from './data/academic-master.service';
-import { AcademicMasterComponent } from './academic-master/academic-master.component';
-import { FeeComponent } from './fee/fee.component';
-import { GroupComponent } from './group/group.component';
 import { FeeService } from './data/fee.service';
 import { GroupService } from './data/group.service ';
 

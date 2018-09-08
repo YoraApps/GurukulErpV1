@@ -13,16 +13,16 @@ const routes: Routes = [{
   children: [{
     path: 'transportation',
     component: TransportationComponent,
-  },{
+  }, {
     path: 'location',
     component: LocationComponent,
-  },{
+  }, {
     path: 'vehicle',
     component: VehicleComponent,
-  },{
+  }, {
     path: 'driver',
-    component:DriverMasterComponent,
-  },],
+    component: DriverMasterComponent,
+  }],
 }];
 
 @NgModule({
