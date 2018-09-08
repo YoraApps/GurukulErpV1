@@ -95,6 +95,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/batch',
       },
       {
+        title: 'Exam Type',
+        link: '/pages/settings/exam-type',
+      },
+      {
+        title: 'Chapters',
+        link: '/pages/settings/chapter',
+      },
+      {
         title: 'Location',
         link: '/pages/settings/location',
       },
@@ -105,6 +113,26 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Driver',
         link: '/pages/settings/driver',
+      },
+      {
+        title: 'classroom',
+        link: '/pages/settings/classroom',
+      },
+      {
+        title: 'club',
+        link: '/pages/settings/club',
+      },
+      {
+        title: 'academic-master',
+        link: '/pages/settings/academic-master',
+      },
+      {
+        title: 'fee',
+        link: '/pages/settings/fee',
+      },
+      {
+        title: 'group',
+        link: '/pages/settings/group',
       },
     ],
   },

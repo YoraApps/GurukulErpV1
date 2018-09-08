@@ -1,16 +1,15 @@
-import { Component  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { AcademicMasterService } from '../data/academic-master.service';
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
-import { DegreeCategoryService } from '../data/degree-category.service';
-
 @Component({
-  selector: 'ngx-degree-type',
-  templateUrl: './degree-type.component.html',
-  styleUrls: ['./degree-type.component.scss'],
+  selector: 'ngx-academic-master',
+  templateUrl: './academic-master.component.html',
+  styleUrls: ['./academic-master.component.scss']
 })
-export class DegreeTypeComponent {
- settings = {
+export class AcademicMasterComponent implements OnInit {
+
+  settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,36 +24,51 @@ export class DegreeTypeComponent {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
-      Id: {
+      id: {
         title: 'ID',
         type: 'number',
       },
-      DegreeTypeCode: {
-        title: 'DegreeType Code',
+      AcademicId: {
+        title: 'Academic Id',
+        type: 'number',
+      },
+      AcademicCode: {
+        title: 'Academic Code',
         type: 'string',
       },
-      DegreeTypeName: {
-        title: 'DegreeType Name',
+      AcademicYear: {
+        title: 'Academic Year',
+        type: 'number',
+      },
+      AcademicTerm: {
+        title: 'Academic Term',
+        type: 'string',
+      },
+      ResultType: {
+        title: 'Result Type',
         type: 'string',
       },
     },
   };
-  source: LocalDataSource = new LocalDataSource();
-  DegreeCategoryList: any [];
 
-  constructor(private service: DegreeTypeService , _Dservice: DegreeCategoryService) {
+  source: LocalDataSource = new LocalDataSource();
+
+
+  constructor(private service: AcademicMasterService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.DegreeCategoryList = _Dservice.getData();
-  }
+   }
 
-  onDeleteConfirm(event): void {
+   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
+
+  ngOnInit() {
+  }
+
 }

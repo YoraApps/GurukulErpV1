@@ -5,18 +5,34 @@ import { DegreeCategoryService } from './degree-category.service';
 import { CourseService } from './course.service';
 import { BranchService } from './branch.service';
 import { BatchService } from './batch.service';
+import { ExamTypeService } from './exam-type.service';
+import { ChapterService } from './chapter.service';
 import { LocationService } from './location.service';
 import { VehicleService } from './vehicle.service';
 import { DriverMasterService } from './driver-master.service';
+import { ClassRoomService } from './classroom.service';
+import { ClubService } from './club.service';
+import { AcademicMasterService } from './academic-master.service';
+import { GroupService } from './group.service ';
+import { FeeService } from './fee.service';
+
+
 const SERVICES = [
   DegreeTypeService,
   CourseService,
   DegreeCategoryService,
   BranchService,
   BatchService,
+  ExamTypeService,
+  ChapterService,
   LocationService,
   VehicleService,
   DriverMasterService,
+  ClassRoomService,
+  ClubService,
+  AcademicMasterService,
+  GroupService,
+  FeeService,
 ];
 
 @NgModule({

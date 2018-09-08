@@ -1,16 +1,15 @@
-import { Component  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
+import { GroupService } from '../data/group.service ';
 import { LocalDataSource } from 'ng2-smart-table';
 
-import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
-import { DegreeCategoryService } from '../data/degree-category.service';
-
 @Component({
-  selector: 'ngx-degree-type',
-  templateUrl: './degree-type.component.html',
-  styleUrls: ['./degree-type.component.scss'],
+  selector: 'ngx-group',
+  templateUrl: './group.component.html',
+  styleUrls: ['./group.component.scss']
 })
-export class DegreeTypeComponent {
- settings = {
+export class GroupComponent implements OnInit {
+
+  settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,36 +24,39 @@ export class DegreeTypeComponent {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
-      Id: {
+      id: {
         title: 'ID',
         type: 'number',
       },
-      DegreeTypeCode: {
-        title: 'DegreeType Code',
+      GroupCode: {
+        title: 'Group Code',
         type: 'string',
       },
-      DegreeTypeName: {
-        title: 'DegreeType Name',
+      GroupName: {
+        title: 'Group Name',
         type: 'string',
       },
     },
   };
-  source: LocalDataSource = new LocalDataSource();
-  DegreeCategoryList: any [];
 
-  constructor(private service: DegreeTypeService , _Dservice: DegreeCategoryService) {
+  source: LocalDataSource = new LocalDataSource();
+
+
+  constructor(private service: GroupService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.DegreeCategoryList = _Dservice.getData();
-  }
+   }
 
-  onDeleteConfirm(event): void {
+   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
+
+  ngOnInit() {
+  }
+
 }

@@ -1,16 +1,15 @@
-import { Component  } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-
-import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
-import { DegreeCategoryService } from '../data/degree-category.service';
+import { FeeService } from '../data/fee.service';
 
 @Component({
-  selector: 'ngx-degree-type',
-  templateUrl: './degree-type.component.html',
-  styleUrls: ['./degree-type.component.scss'],
+  selector: 'ngx-fee',
+  templateUrl: './fee.component.html',
+  styleUrls: ['./fee.component.scss']
 })
-export class DegreeTypeComponent {
- settings = {
+export class FeeComponent implements OnInit {
+
+  settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,36 +24,43 @@ export class DegreeTypeComponent {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
-      Id: {
+      id: {
         title: 'ID',
         type: 'number',
       },
-      DegreeTypeCode: {
-        title: 'DegreeType Code',
+      FeeCategory: {
+        title: 'Fee Category',
         type: 'string',
       },
-      DegreeTypeName: {
-        title: 'DegreeType Name',
+      FeeType: {
+        title: 'Fee Type',
+        type: 'string',
+      },
+      Description: {
+        title: 'Description',
         type: 'string',
       },
     },
   };
-  source: LocalDataSource = new LocalDataSource();
-  DegreeCategoryList: any [];
 
-  constructor(private service: DegreeTypeService , _Dservice: DegreeCategoryService) {
+  source: LocalDataSource = new LocalDataSource();
+
+
+  constructor(private service: FeeService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.DegreeCategoryList = _Dservice.getData();
-  }
+   }
 
-  onDeleteConfirm(event): void {
+   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
+
+  ngOnInit() {
+  }
+
 }
