@@ -44,7 +44,7 @@ const routes: Routes = [{
   },
   {
     path: 'driver',
-    component:DriverMasterComponent,
+    component: DriverMasterComponent,
   },
 ],
 }];
@@ -71,5 +71,5 @@ export const routedComponents = [
   PresetComponent,
   LocationComponent,
   VehicleComponent,
- DriverMasterComponent
+ DriverMasterComponent,
 ];
