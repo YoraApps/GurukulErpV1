@@ -8,7 +8,7 @@ describe('ApplicantCourseFeeStatusComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ ApplicantCourseFeeStatusComponent ]
+      declarations: [ ApplicantCourseFeeStatusComponent ],
     })
     .compileComponents();
   }));
