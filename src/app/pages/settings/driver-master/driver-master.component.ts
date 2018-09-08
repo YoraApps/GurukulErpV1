@@ -5,7 +5,7 @@ import { DriverMasterService } from '../../../pages/settings/data/driver-master.
 @Component({
   selector: 'ngx-driver-master',
   templateUrl: './driver-master.component.html',
-  styleUrls: ['./driver-master.component.scss']
+  styleUrls: ['./driver-master.component.scss'],
 })
 export class DriverMasterComponent implements OnInit {
 
@@ -25,23 +25,19 @@ export class DriverMasterComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Id',
-        type: 'number',
-      },
       DriverName: {
         title: 'Driver Name',
         type: 'string',
-      },      
-      LicenseNo:{        
+      },
+      LicenseNo: {
         title: 'License No',
         type: 'string',
       },
-      DateOfBirth:{
+      DateOfBirth: {
         title: 'Date Of Birth',
         type: 'date',
       },
-      LicenseExpiryDate:{
+      LicenseExpiryDate: {
         title: 'License Expiry Date',
         type: 'date',
       },
@@ -49,22 +45,22 @@ export class DriverMasterComponent implements OnInit {
         title: 'Contact Number',
         type: 'number',
       },
-      NoOfYearsExperience:{
+      NoOfYearsExperience: {
         title:  'No Of Years Experience',
         type: 'number',
       },
-      ReferenceName:{
+      ReferenceName: {
         title: 	'Reference Name',
         type: 'string',
       },
-      ReferenceContactNo:{        
+      ReferenceContactNo: {
         title: 	'Reference ContactNo',
         type: 'number',
       },
-      Address:{        
+      Address: {
         title: 	' Address',
         type: 'string',
-      }
+      },
     },
   };
   source: LocalDataSource = new LocalDataSource();

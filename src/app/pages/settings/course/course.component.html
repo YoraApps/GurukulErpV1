@@ -1,14 +1,11 @@
-<nb-card >
-<nb-card-body style="width:200px;left: 60px;">
-    <div class="form-group"> 
-        <select class="form-control"> 
-          <option style="display:none">Degree name</option> 
+<nb-card-body>
+  <div  style="width:200px;left: 60px;">          
+      <select class="form-control">  
+          <option >master</option> 
           <option [value]="degreetype.DegreeTypeId" *ngFor="let degreetype of degreeTypeList">{{degreetype.DegreeTypeName}}</option>  
         </select> 
       </div>
   </nb-card-body> 
-</nb-card>
-
 <nb-card>     
   <nb-card-header>      
     Course    

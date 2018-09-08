@@ -25,10 +25,6 @@ export class DegreeCategoryComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       DegreeCategoryCode: {
         title: 'Degree Category Code',
         type: 'string',

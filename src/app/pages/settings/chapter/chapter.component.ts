@@ -25,10 +25,6 @@ export class ChapterComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       ChapterNumber: {
         title: 'Chapter Number',
         type: 'string',

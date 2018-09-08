@@ -26,12 +26,8 @@ export class BatchComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       BranchId: {
-        title: 'Branch Id',
+        title: 'Branch',
         type: 'string',
       },
       BatchCode: {

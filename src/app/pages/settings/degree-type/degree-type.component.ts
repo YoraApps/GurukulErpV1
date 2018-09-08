@@ -27,10 +27,6 @@ export class DegreeTypeComponent {
     },
 
     columns: {
-      Id: {
-        title: 'ID',
-        type: 'number',
-      },
       DegreeTypeCode: {
         title: 'DegreeType Code',
         type: 'string',
