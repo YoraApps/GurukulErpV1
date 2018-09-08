@@ -23,10 +23,6 @@ export class LocationComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Id',
-        type: 'number',
-      },
       LocationName: {
         title: 'Location Name',
         type: 'string',

@@ -25,14 +25,6 @@ export class AcademicMasterComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
-      AcademicId: {
-        title: 'Academic Id',
-        type: 'number',
-      },
       AcademicCode: {
         title: 'Academic Code',
         type: 'string',

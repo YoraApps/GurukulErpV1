@@ -25,10 +25,6 @@ export class FeeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       FeeCategory: {
         title: 'Fee Category',
         type: 'string',

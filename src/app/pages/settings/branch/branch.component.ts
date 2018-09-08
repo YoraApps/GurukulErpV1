@@ -24,10 +24,6 @@ export class BranchComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Id',
-        type: 'number',
-      },
       BranchCode: {
         title: 'Branch Code',
         type: 'string',

@@ -25,10 +25,6 @@ export class GroupComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       GroupCode: {
         title: 'Group Code',
         type: 'string',

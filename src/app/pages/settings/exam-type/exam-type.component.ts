@@ -25,10 +25,6 @@ export class ExamTypeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       ExamGroup: {
         title: 'Exam Group',
         type: 'string',

@@ -24,10 +24,6 @@ export class CourseComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Id',
-        type: 'number',
-      },
       CourseCode: {
         title: 'Course Code',
         type: 'string',
