@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { DriverMasterService } from '../../../pages/settings/data/driver-master.service';
+import { DriverMasterService } from '../../../pages/transportation/data/driver-master.service';
 
 @Component({
   selector: 'ngx-driver-master',
