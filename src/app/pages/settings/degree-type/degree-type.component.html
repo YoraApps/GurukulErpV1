@@ -1,17 +1,13 @@
-  <nb-card >
-      <nb-card-body >
-        <div class="form-group" style="width:200px">
-          <label>Select Degree Category </label> 
-          <select class="form-control">
-            <option style="display:none">Degree Category</option>
+<nb-card-body>
+  <div  style="width:200px;left: 60px;">          
+      <select class="form-control">  
+          <option >EEE</option> 
               <option *ngFor="let item of DegreeCategoryList" [value]="item.id" >
                   <span>{{item.DegreeCategoryName}}</span>
               </option>
-          </select>         
-        </div>
-      </nb-card-body>
-    </nb-card>
-
+      </select>         
+    </div>
+  </nb-card-body>
 <nb-card>
   <nb-card-header>
     Degree Type

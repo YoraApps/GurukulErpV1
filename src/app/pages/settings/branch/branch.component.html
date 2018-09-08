@@ -1,13 +1,11 @@
-<nb-card >
-    <nb-card-body style="width:200px;left: 60px;">
-        <div class="form-group"> 
-            <select class="form-control"> 
-              <option style="display:none">Course name</option> 
-              <option [value]="courseType.CourseId" *ngFor="let courseType of CourseTypeList">{{courseType.CourseName}}</option>  
-            </select> 
-          </div>
-      </nb-card-body> 
-    </nb-card>
+<nb-card-body>
+  <div  style="width:200px;left: 60px;">          
+      <select class="form-control">  
+          <option >networks</option> 
+            <option [value]="courseType.CourseId" *ngFor="let courseType of CourseTypeList">{{courseType.CourseName}}</option>  
+     </select> 
+  </div>
+ </nb-card-body> 
 
 <nb-card>
   <nb-card-header>
