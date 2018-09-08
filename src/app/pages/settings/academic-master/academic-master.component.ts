@@ -5,7 +5,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-academic-master',
   templateUrl: './academic-master.component.html',
-  styleUrls: ['./academic-master.component.scss']
+  styleUrls: ['./academic-master.component.scss'],
 })
 export class AcademicMasterComponent implements OnInit {
 
@@ -25,14 +25,6 @@ export class AcademicMasterComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
-      AcademicId: {
-        title: 'Academic Id',
-        type: 'number',
-      },
       AcademicCode: {
         title: 'Academic Code',
         type: 'string',

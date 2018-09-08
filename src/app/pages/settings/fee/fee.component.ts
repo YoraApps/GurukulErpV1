@@ -5,7 +5,7 @@ import { FeeService } from '../data/fee.service';
 @Component({
   selector: 'ngx-fee',
   templateUrl: './fee.component.html',
-  styleUrls: ['./fee.component.scss']
+  styleUrls: ['./fee.component.scss'],
 })
 export class FeeComponent implements OnInit {
 
@@ -25,10 +25,6 @@ export class FeeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'ID',
-        type: 'number',
-      },
       FeeCategory: {
         title: 'Fee Category',
         type: 'string',

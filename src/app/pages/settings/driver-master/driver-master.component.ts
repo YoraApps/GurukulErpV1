@@ -25,10 +25,6 @@ export class DriverMasterComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Id',
-        type: 'number',
-      },
       DriverName: {
         title: 'Driver Name',
         type: 'string',

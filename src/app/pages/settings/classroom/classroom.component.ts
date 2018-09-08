@@ -26,10 +26,6 @@ export class ClassroomComponent  {
     },
 
     columns: {
-      // ClassRoomId: {
-      //   title: 'ID',
-      //   type: 'number',
-      // },
       BuildingCode : {
         title: 'Building Code ',
         type: 'string',

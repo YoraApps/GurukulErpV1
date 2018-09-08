@@ -24,10 +24,6 @@ export class VehicleComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      id: {
-        title: 'Id',
-        type: 'number',
-      },
       LicenseNumber: {
         title: 'Location Name',
         type: 'string',

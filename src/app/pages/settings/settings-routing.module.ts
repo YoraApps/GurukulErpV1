@@ -42,10 +42,10 @@ const routes: Routes = [{
   }, {
     path: 'batch',
     component: BatchComponent,
-  },{
+  }, {
     path: 'classroom',
     component: ClassroomComponent,
-  },{
+  }, {
     path: 'club',
     component: ClubComponent,
   }, {
@@ -61,22 +61,22 @@ const routes: Routes = [{
   {
     path: 'location',
     component: LocationComponent,
-  },{
+  }, {
     path: 'vehicle',
     component: VehicleComponent,
-  },{
+  }, {
     path: 'driver',
-    component:DriverMasterComponent,
-  },{
+    component: DriverMasterComponent,
+  }, {
     path: 'academic-master',
     component: AcademicMasterComponent,
-  },{
+  }, {
     path: 'fee',
     component: FeeComponent,
-  },{
+  }, {
     path: 'group',
     component: GroupComponent,
-  },],
+  }],
 }];
 
 @NgModule({
