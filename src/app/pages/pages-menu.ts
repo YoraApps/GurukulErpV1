@@ -25,7 +25,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Admission Fee Status',
-        link: '/pages/settings/branch',
+        link: '/pages/admission/admission-fee-status',
       },
       {
         title: 'Exam Result Upload',
@@ -33,7 +33,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Applicant Course Fee',
-        link: '/pages/settings/batch',
+        link: '/pages/admission/applicant-course-fee-status',
       },
       {
         title: 'Review And Approve',
