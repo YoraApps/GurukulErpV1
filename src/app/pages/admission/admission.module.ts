@@ -19,7 +19,7 @@ import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fe
     ThemeModule,
     AdmissionRoutingModule,
     Ng2SmartTableModule,
-    
+
   ],
   declarations: [
     ...routedComponents,
