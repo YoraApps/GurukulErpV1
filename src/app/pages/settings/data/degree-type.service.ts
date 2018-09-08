@@ -4,22 +4,30 @@ import { Injectable } from '@angular/core';
 export class DegreeTypeService {
 
   data = [{
-    id: 1,
-    firstName: 'Mark',
-    lastName: 'Otto',
-    username: '@mdo',
-    email: 'mdo@gmail.com',
-    age: '28',
+    Id: 1,
+    DegreeTypeCode: '1A',
+    DegreeTypeName: 'master',
+    IsActive: '1',
+    CreatedBy: '1',
+    CreatedOn: '28/2/2018',
+    ModifiedBy: 'bb',
+    ModifiedOn: '2/2/2019',
+    DegreeCategoryId: 1,
+
   }, {
-    id: 2,
-    firstName: 'Jacob',
-    lastName: 'Thornton',
-    username: '@fat',
-    email: 'fat@yandex.ru',
-    age: '45',
+    Id: 2,
+    DegreeTypeCode: '1A',
+    DegreeTypeName: 'master',
+    IsActive: '1',
+    CreatedBy: '1',
+    CreatedOn: '28/2/2018',
+    ModifiedBy: 'aa',
+    ModifiedOn: '29/2/2018',
+    DegreeCategoryId: 1,
   }];
 
   getData() {
     return this.data;
   }
 }
+

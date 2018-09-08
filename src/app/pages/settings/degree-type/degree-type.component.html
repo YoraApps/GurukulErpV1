@@ -1,3 +1,19 @@
-<p>
-  degree-type works!
-</p>
+<nb-card-body>
+  <div  style="width:200px;left: 60px;">          
+      <select class="form-control">  
+          <option >EEE</option> 
+              <option *ngFor="let item of DegreeCategoryList" [value]="item.id" >
+                  <span>{{item.DegreeCategoryName}}</span>
+              </option>
+      </select>         
+    </div>
+  </nb-card-body>
+<nb-card>
+  <nb-card-header>
+    Degree Type
+  </nb-card-header>
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source" [source]="Csource" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

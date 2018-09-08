@@ -9,6 +9,17 @@ import { BranchComponent } from './branch/branch.component';
 import { BatchComponent } from './batch/batch.component';
 import { PresetComponent } from './preset/preset.component';
 
+import { ExamTypeComponent } from './exam-type/exam-type.component';
+import { ChapterComponent } from './chapter/chapter.component';
+
+import { ClassroomComponent } from './classroom/classroom.component';
+import { ClubComponent } from './club/club.component';
+import { AcademicMasterComponent } from './academic-master/academic-master.component';
+import { FeeComponent } from './fee/fee.component';
+import { GroupComponent } from './group/group.component';
+
+
+
 const routes: Routes = [{
   path: '',
   component: SettingsComponent,
@@ -28,8 +39,29 @@ const routes: Routes = [{
     path: 'batch',
     component: BatchComponent,
   }, {
+    path: 'classroom',
+    component: ClassroomComponent,
+  }, {
+    path: 'club',
+    component: ClubComponent,
+  }, {
     path: 'preset',
     component: PresetComponent,
+  }, {
+    path: 'exam-type',
+    component: ExamTypeComponent,
+  }, {
+    path: 'chapter',
+    component: ChapterComponent,
+  }, {
+    path: 'academic-master',
+    component: AcademicMasterComponent,
+  }, {
+    path: 'fee',
+    component: FeeComponent,
+  }, {
+    path: 'group',
+    component: GroupComponent,
   }],
 }];
 
@@ -53,4 +85,11 @@ export const routedComponents = [
   BranchComponent,
   BatchComponent,
   PresetComponent,
+  ExamTypeComponent,
+  ChapterComponent,
+  ClassroomComponent,
+  AcademicMasterComponent,
+  FeeComponent,
+  GroupComponent,
+  ClubComponent,
 ];

@@ -17,7 +17,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Counselling',
-        link: '/pages/settings/degree-type',
+        link: '/pages/admission/counselling',
       },
       {
         title: 'Schedule Examination',
@@ -25,7 +25,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Admission Fee Status',
-        link: '/pages/settings/branch',
+        link: '/pages/admission/admission-fee-status',
       },
       {
         title: 'Exam Result Upload',
@@ -33,7 +33,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Applicant Course Fee',
-        link: '/pages/settings/batch',
+        link: '/pages/admission/applicant-course-fee-status',
       },
       {
         title: 'Review And Approve',
@@ -42,6 +42,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Id Cards',
         link: '/pages/settings/batch',
+      },
+    ],
+  },
+  {
+    title: 'Transportation',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Location',
+        link: '/pages/settings/location',
+      },
+      {
+        title: 'Vehicle',
+        link: '/pages/settings/vehicle',
+      },
+      {
+        title: 'Driver',
+        link: '/pages/settings/driver',
       },
     ],
   },
@@ -93,6 +111,34 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Batch',
         link: '/pages/settings/batch',
+      },
+      {
+        title: 'Exam Type',
+        link: '/pages/settings/exam-type',
+      },
+      {
+        title: 'Chapters',
+        link: '/pages/settings/chapter',
+      },
+      {
+        title: 'classroom',
+        link: '/pages/settings/classroom',
+      },
+      {
+        title: 'club',
+        link: '/pages/settings/club',
+      },
+      {
+        title: 'academic-master',
+        link: '/pages/settings/academic-master',
+      },
+      {
+        title: 'fee',
+        link: '/pages/settings/fee',
+      },
+      {
+        title: 'group',
+        link: '/pages/settings/group',
       },
     ],
   },
