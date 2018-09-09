@@ -33,14 +33,6 @@ export class AdmissionListComponent  {
         title: 'Candidate Name ',
         type: 'string',
       },
-      DegreeCategoryName: {
-        title: 'DegreeCategory Name',
-        type: 'string',
-      },
-      DegreeTypeName: {
-        title: 'DegreeType Name',
-        type: 'string',
-      },
       CourseName: {
         title: 'Course Name',
         type: 'string',
@@ -59,6 +51,12 @@ export class AdmissionListComponent  {
       },
     },
   };
+//   date1: Date = new Date();
+// setting = {
+//     bigBanner: true,
+//     format: 'dd-MMM-yyyy hh:mm a',
+//     defaultOpen: true
+// }
   source: LocalDataSource = new LocalDataSource();
 
   constructor(private service: AdmissionListService) {
