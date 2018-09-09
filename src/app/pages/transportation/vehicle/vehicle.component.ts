@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { DriverMasterService } from '../../../pages/settings/data/driver-master.service';
-
+import { VehicleService } from '../../../pages/transportation/data/vehicle.service';
 @Component({
-  selector: 'ngx-driver-master',
-  templateUrl: './driver-master.component.html',
-  styleUrls: ['./driver-master.component.scss'],
+  selector: 'ngx-vehicle',
+  templateUrl: './vehicle.component.html',
+  styleUrls: ['./vehicle.component.scss'],
 })
-export class DriverMasterComponent implements OnInit {
+export class VehicleComponent implements OnInit {
 
   settings = {
     add: {
@@ -25,46 +24,38 @@ export class DriverMasterComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      DriverName: {
-        title: 'Driver Name',
+      LicenseNumber: {
+        title: 'Location Name',
         type: 'string',
       },
-      LicenseNo: {
-        title: 'License No',
-        type: 'string',
+      OwnerNumber: {
+        title: 'OwnerNumber',
+        type: 'number',
       },
-      DateOfBirth: {
-        title: 'Date Of Birth',
+      WeightCapacity: {
+        title: 'Weight Capacity',
+        type: 'number',
+      },
+      VehicleStatus: {
+        title: 'Vehicle Status',
+        type: 'boolean',
+      },
+      RegistrationDate: {
+        title: 'Registration Date',
         type: 'date',
       },
-      LicenseExpiryDate: {
-        title: 'License Expiry Date',
+      InsuranceDetails: {
+        title:  'Insurance Details',
+        type: 'string',
+      },
+      InsuranceExpiryDate: {
+        title: 	'Insurance Expiry Date',
         type: 'date',
-      },
-      ContactNumber: {
-        title: 'Contact Number',
-        type: 'number',
-      },
-      NoOfYearsExperience: {
-        title:  'No Of Years Experience',
-        type: 'number',
-      },
-      ReferenceName: {
-        title: 	'Reference Name',
-        type: 'string',
-      },
-      ReferenceContactNo: {
-        title: 	'Reference ContactNo',
-        type: 'number',
-      },
-      Address: {
-        title: 	' Address',
-        type: 'string',
       },
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: DriverMasterService) {
+  constructor(private service: VehicleService) {
     const data = this.service.getData();
     this.source.load(data);
   }

@@ -13,6 +13,10 @@ import { ApplicantCourseFeeStatusComponent } from './applicant-course-fee-status
 import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fee-status.component';
 import { ApplicantDetailModelComponent } from './counselling/applicant-detail-model/applicant-detail-model.component';
 
+import { ApplicantCourseFeeService } from './data/applicant-course-fee.service';
+import { BatchService } from '../settings/data/batch.service';
+import { CourseService } from '../settings/data/course.service';
+import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
 
 
 @NgModule({
@@ -20,6 +24,7 @@ import { ApplicantDetailModelComponent } from './counselling/applicant-detail-mo
     ThemeModule,
     AdmissionRoutingModule,
     Ng2SmartTableModule,
+
   ],
   declarations: [
     ...routedComponents,
@@ -37,6 +42,10 @@ import { ApplicantDetailModelComponent } from './counselling/applicant-detail-mo
     AdmissionListService,
     SmartTableService,
     CounsellingService,
+    ApplicantCourseFeeService,
+    BatchService,
+    CourseService,
+    AdmissionFeeStatusService,
   ],
 })
 export class AdmissionModule { }

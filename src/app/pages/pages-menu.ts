@@ -46,6 +46,24 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Transportation',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Location',
+        link: '/pages/settings/location',
+      },
+      {
+        title: 'Vehicle',
+        link: '/pages/settings/vehicle',
+      },
+      {
+        title: 'Driver',
+        link: '/pages/settings/driver',
+      },
+    ],
+  },
+  {
     title: 'Academics',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
@@ -101,18 +119,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Chapters',
         link: '/pages/settings/chapter',
-      },
-      {
-        title: 'Location',
-        link: '/pages/settings/location',
-      },
-      {
-        title: 'Vehicle',
-        link: '/pages/settings/vehicle',
-      },
-      {
-        title: 'Driver',
-        link: '/pages/settings/driver',
       },
       {
         title: 'classroom',
