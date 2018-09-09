@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from "ng2-smart-table";
-import { RoutecreationService } from "../data/routecreation.service";
+import { LocalDataSource } from 'ng2-smart-table';
+import { RoutecreationService } from '../data/routecreation.service';
 
 @Component({
   selector: 'ngx-routecreation',
   templateUrl: './routecreation.component.html',
-  styleUrls: ['./routecreation.component.scss']
+  styleUrls: ['./routecreation.component.scss'],
 })
 export class RoutecreationComponent implements OnInit {
 
@@ -45,7 +45,7 @@ export class RoutecreationComponent implements OnInit {
         title: 'Droping Points',
         type: 'string',
       },
-      
+
     },
   };
   source: LocalDataSource = new LocalDataSource();

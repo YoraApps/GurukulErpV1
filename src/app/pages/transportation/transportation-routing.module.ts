@@ -6,7 +6,7 @@ import { TransportationComponent } from './transportation.component';
 import { LocationComponent } from './location/location.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { DriverMasterComponent } from './driver-master/driver-master.component';
-import { RoutecreationComponent } from "./routecreation/routecreation.component";
+import { RoutecreationComponent } from './routecreation/routecreation.component';
 
 const routes: Routes = [{
   path: '',
