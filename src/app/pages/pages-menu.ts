@@ -53,6 +53,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Memo-Circular-Notice',
         link: '/pages/academics/memo-circular-notice',
       },
+      {
+        title: 'Campaign-Management',
+        link: '/pages/academics/Campaign-Management',
+      },
     ],
   },
   {

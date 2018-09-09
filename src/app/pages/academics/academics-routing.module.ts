@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AcademicsComponent } from './academics.component';
 import { MemoCircularNoticeComponent } from './memo-circular-notice/memo-circular-notice.component';
+import { CampaignManagementComponent } from './campaign-management/campaign-management.component';
 
 const routes: Routes = [{
   path: '',
@@ -10,6 +11,10 @@ const routes: Routes = [{
   children: [{
     path: 'memo-circular-notice',
     component: MemoCircularNoticeComponent,
+  },
+  {
+    path: 'Campaign-Management',
+    component: CampaignManagementComponent,
   }],
 }];
 
@@ -28,4 +33,5 @@ export class AcademicsRoutingModule {
 export const routedComponents = [
   AcademicsComponent,
   MemoCircularNoticeComponent,
+  CampaignManagementComponent
 ];
