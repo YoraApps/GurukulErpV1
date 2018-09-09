@@ -1,3 +1,41 @@
-<p>
-  applicant-course-fee-status works!
-</p>
+<div class="row">
+  <div class="col-md-12">
+    <nb-card>
+      <nb-card-header>
+        applicant-course-fee-status
+      </nb-card-header>
+      <nb-card-body>
+        <h5 class="grid-h">Manage applicant-course-fee-status</h5>
+        <div class="row show-grid">
+          <div style="width:200px;left: 60px;">
+            <select class="form-control">
+<option>select the batch</option>
+<option [value]="batch.id" *ngFor="let batch of batchList">{{batch.BatchName}}</option>
+</select>
+          </div>
+          <div style="width:200px;left: 60px;">
+            <select class="form-control">
+<option>select the course</option>
+<option [value]="course.id" *ngFor="let course of courseList">{{course.CourseName}}</option>
+</select>
+          </div>
+          <div class="col-md-4">
+        <button class="btn btn-secondary btn-demo" click="getApplicantCourseFeeStatus()">Show Details</button>
+      </div>
+        </div>
+      </nb-card-body>
+    </nb-card>
+  </div>
+</div>
+
+
+<nb-card>
+  <nb-card-header>
+   applicant-course-fee-status
+  </nb-card-header>
+
+  <nb-card-body>
+    <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
+    </ng2-smart-table>
+  </nb-card-body>
+</nb-card>

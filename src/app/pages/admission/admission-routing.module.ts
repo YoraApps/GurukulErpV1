@@ -22,7 +22,7 @@ const routes: Routes = [{
     path: 'counselling',
     component: CounsellingComponent,
   }, {
-    path: 'course-fee-status',
+    path: 'applicant-course-fee-status',
     component: ApplicantCourseFeeStatusComponent,
   }, {
     path: 'admission-fee-status',
