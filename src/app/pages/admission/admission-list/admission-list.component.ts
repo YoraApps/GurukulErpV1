@@ -74,7 +74,7 @@ export class AdmissionListComponent  {
     }
   }
 
-  btnClickForNewForm(){
+  btnClickForNewForm() {
     this.IsList = true;
   }
 }
