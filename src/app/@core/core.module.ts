@@ -10,6 +10,7 @@ import { AnalyticsService } from './utils/analytics.service';
 import { SettingDataModule } from '../pages/settings/data/setting-data.module';
 import { AdmissionDataModule } from '../pages/admission/data/admission-data.module';
 import { TransportationDataModule } from '../pages/transportation/data/transportation-data.module';
+import { AcademicsDataModule } from '../pages/academics/data/academics-data.module';
 
 const socialLinks = [
   {
@@ -41,6 +42,7 @@ export const NB_CORE_PROVIDERS = [
   ...SettingDataModule.forRoot().providers,
   ...AdmissionDataModule.forRoot().providers,
   ...TransportationDataModule.forRoot().providers,
+  ...AcademicsDataModule.forRoot().providers,
   ...NbAuthModule.forRoot({
 
     strategies: [
