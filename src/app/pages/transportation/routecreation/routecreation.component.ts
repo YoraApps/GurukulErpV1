@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { MemoCircularNoticeService } from '../data/memo-circular-notice.service';
+import { RoutecreationService } from '../data/routecreation.service';
 
 @Component({
-  selector: 'ngx-memo-circular-notice',
-  templateUrl: './memo-circular-notice.component.html',
-  styleUrls: ['./memo-circular-notice.component.scss'],
+  selector: 'ngx-routecreation',
+  templateUrl: './routecreation.component.html',
+  styleUrls: ['./routecreation.component.scss'],
 })
-export class MemoCircularNoticeComponent implements OnInit {
+export class RoutecreationComponent implements OnInit {
 
- settings = {
+  settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,34 +25,35 @@ export class MemoCircularNoticeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      Id: {
-        title: 'Id',
-        type: 'number',
-      },
-      Title: {
-        title: 'Title',
+      From: {
+        title: 'From',
         type: 'string',
       },
-       PublishedDate: {
-        title: 'Published Date',
+      To: {
+        title: 'To',
         type: 'string',
       },
-      Type: {
-        title: 'Type',
+      DriverInformation: {
+        title: 'DriverIn formation',
         type: 'string',
       },
+      VehicleDetails: {
+        title: 'Vehicle Details',
+        type: 'string',
+      },
+      DropingPoints: {
+        title: 'Droping Points',
+        type: 'string',
+      },
+
     },
   };
-
   source: LocalDataSource = new LocalDataSource();
-
-
-  constructor(private service: MemoCircularNoticeService) {
+  constructor(private service: RoutecreationService) {
     const data = this.service.getData();
     this.source.load(data);
-   }
-
-   onDeleteConfirm(event): void {
+  }
+  onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
@@ -64,4 +65,3 @@ export class MemoCircularNoticeComponent implements OnInit {
   }
 
 }
-

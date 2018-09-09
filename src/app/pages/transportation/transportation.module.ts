@@ -8,6 +8,8 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
 import { LocationService } from './data/location.service';
 import { VehicleService } from './data/vehicle.service';
 import { DriverMasterService } from './data/driver-master.service';
+import { RoutecreationComponent } from './routecreation/routecreation.component';
+import { RoutecreationService } from './data/routecreation.service';
 
 
 @NgModule({
@@ -18,12 +20,14 @@ import { DriverMasterService } from './data/driver-master.service';
   ],
   declarations: [
     ...routedComponents,
+    RoutecreationComponent,
   ],
   providers: [
     SmartTableService,
     LocationService,
     VehicleService,
     DriverMasterService,
+    RoutecreationService,
   ],
 })
 export class TransportationModule { }

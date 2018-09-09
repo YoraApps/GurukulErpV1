@@ -4,6 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { AcademicsComponent } from './academics.component';
 import { MemoCircularNoticeComponent } from './memo-circular-notice/memo-circular-notice.component';
 import { ConductComponent } from './conduct/conduct.component';
+import { CampaignManagementComponent } from './campaign-management/campaign-management.component';
 
 const routes: Routes = [{
   path: '',
@@ -12,12 +13,15 @@ const routes: Routes = [{
     {
     path: 'memo-circular-notice',
     component: MemoCircularNoticeComponent,
-  },
-   {
-        path: 'conduct',
-        component: ConductComponent,
-      },
-  ],
+    },
+    {
+          path: 'conduct',
+          component: ConductComponent,
+    },
+    {
+      path: 'Campaign-Management',
+      component: CampaignManagementComponent,
+  }],
 }];
 
 @NgModule({
@@ -36,4 +40,5 @@ export const routedComponents = [
   AcademicsComponent,
   MemoCircularNoticeComponent,
   ConductComponent,
+  CampaignManagementComponent,
 ];
