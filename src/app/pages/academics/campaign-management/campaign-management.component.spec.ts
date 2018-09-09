@@ -8,7 +8,7 @@ describe('CampaignManagementComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ CampaignManagementComponent ]
+      declarations: [ CampaignManagementComponent ],
     })
     .compileComponents();
   }));

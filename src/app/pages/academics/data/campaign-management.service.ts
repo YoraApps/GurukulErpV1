@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class CampaignManagementService {
 
@@ -12,7 +12,7 @@ export class CampaignManagementService {
     CityName: 'Bhubaneswar',
     FromDate: '	1-2-2019',
     ToDate: '2-2-2013',
-    Status: 'Aprroved',   
+    Status: 'Aprroved',
   }, {
     CampaignId: 2,
     CampaignName: 'sdasdasd',

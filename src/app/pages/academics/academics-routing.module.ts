@@ -33,5 +33,5 @@ export class AcademicsRoutingModule {
 export const routedComponents = [
   AcademicsComponent,
   MemoCircularNoticeComponent,
-  CampaignManagementComponent
+  CampaignManagementComponent,
 ];

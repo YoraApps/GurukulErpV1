@@ -4,7 +4,7 @@ import {CampaignManagementService} from './../data/campaign-management.service';
 @Component({
   selector: 'ngx-campaign-management',
   templateUrl: './campaign-management.component.html',
-  styleUrls: ['./campaign-management.component.scss']
+  styleUrls: ['./campaign-management.component.scss'],
 })
 export class CampaignManagementComponent implements OnInit {
 
@@ -42,7 +42,7 @@ export class CampaignManagementComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
   degreeTypeList: any[];
 
-  constructor(private campaignManagementService:CampaignManagementService) {
+  constructor(private campaignManagementService: CampaignManagementService) {
     const data = this.campaignManagementService.getData();
     this.source.load(data);
   }

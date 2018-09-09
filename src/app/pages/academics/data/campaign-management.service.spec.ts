@@ -5,7 +5,7 @@ import { CampaignManagementService } from './campaign-management.service';
 describe('CampaignManagementService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [CampaignManagementService]
+      providers: [CampaignManagementService],
     });
   });
 
