@@ -51,6 +51,7 @@ export class AdmissionListComponent  {
       },
     },
   };
+  IsList: boolean;
 //   date1: Date = new Date();
 // setting = {
 //     bigBanner: true,
@@ -61,6 +62,7 @@ export class AdmissionListComponent  {
 
   constructor(private service: AdmissionListService) {
     const data = this.service.getData();
+    this.IsList = false;
     this.source.load(data);
   }
 
@@ -70,6 +72,10 @@ export class AdmissionListComponent  {
     } else {
       event.confirm.reject();
     }
+  }
+
+  btnClickForNewForm() {
+    this.IsList = true;
   }
 }
 
