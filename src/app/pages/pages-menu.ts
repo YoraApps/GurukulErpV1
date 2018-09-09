@@ -75,6 +75,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Driver',
         link: '/pages/transportation/driver',
       },
+      {
+        title: 'Routecreation',
+        link: '/pages/transportation/routecreation',
+      },
     ],
   },
   {
