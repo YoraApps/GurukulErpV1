@@ -1,13 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { VehicleService } from '../../../pages/settings/data/vehicle.service';
+import { LocationService } from '../../../pages/transportation/data/location.service';
 @Component({
-  selector: 'ngx-vehicle',
-  templateUrl: './vehicle.component.html',
-  styleUrls: ['./vehicle.component.scss'],
+  selector: 'ngx-location',
+  templateUrl: './location.component.html',
+  styleUrls: ['./location.component.scss'],
 })
-export class VehicleComponent implements OnInit {
-
+export class LocationComponent implements OnInit {
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -24,41 +23,25 @@ export class VehicleComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      LicenseNumber: {
+      LocationName: {
         title: 'Location Name',
         type: 'string',
       },
-      OwnerNumber: {
-        title: 'OwnerNumber',
-        type: 'number',
-      },
-      WeightCapacity: {
-        title: 'Weight Capacity',
-        type: 'number',
-      },
-      VehicleStatus: {
-        title: 'Vehicle Status',
-        type: 'boolean',
-      },
-      RegistrationDate: {
-        title: 'Registration Date',
-        type: 'date',
-      },
-      InsuranceDetails: {
-        title:  'Insurance Details',
+      Address: {
+        title: 'Address',
         type: 'string',
-      },
-      InsuranceExpiryDate: {
-        title: 	'Insurance Expiry Date',
-        type: 'date',
       },
     },
   };
+
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: VehicleService) {
+
+
+  constructor(private service: LocationService) {
     const data = this.service.getData();
     this.source.load(data);
   }
+
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
