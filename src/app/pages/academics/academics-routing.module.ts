@@ -3,14 +3,21 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AcademicsComponent } from './academics.component';
 import { MemoCircularNoticeComponent } from './memo-circular-notice/memo-circular-notice.component';
+import { ConductComponent } from "./conduct/conduct.component";
 
 const routes: Routes = [{
   path: '',
   component: AcademicsComponent,
-  children: [{
+  children: [
+    {
     path: 'memo-circular-notice',
     component: MemoCircularNoticeComponent,
-  }],
+  },
+   {
+        path: 'conduct',
+        component: ConductComponent,
+      },
+  ],
 }];
 
 @NgModule({
@@ -28,4 +35,5 @@ export class AcademicsRoutingModule {
 export const routedComponents = [
   AcademicsComponent,
   MemoCircularNoticeComponent,
+  ConductComponent
 ];

@@ -6,6 +6,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 
 import { AcademicsRoutingModule , routedComponents} from './academics-routing.module';
+import { ConductComponent } from './conduct/conduct.component';
 
 
 @NgModule({
@@ -16,6 +17,7 @@ import { AcademicsRoutingModule , routedComponents} from './academics-routing.mo
   ],
   declarations: [
     ...routedComponents,
+    ConductComponent,
   ],
   providers: [
     SmartTableService,
