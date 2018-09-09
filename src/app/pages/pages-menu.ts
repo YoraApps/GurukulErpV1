@@ -51,15 +51,15 @@ export const MENU_ITEMS: NbMenuItem[] = [
     children: [
       {
         title: 'Location',
-        link: '/pages/settings/location',
+        link: '/pages/transportation/location',
       },
       {
         title: 'Vehicle',
-        link: '/pages/settings/vehicle',
+        link: '/pages/transportation/vehicle',
       },
       {
         title: 'Driver',
-        link: '/pages/settings/driver',
+        link: '/pages/transportation/driver',
       },
     ],
   },
