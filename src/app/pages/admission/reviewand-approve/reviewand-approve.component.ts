@@ -6,7 +6,7 @@ import { CourseService } from '../../settings/data/course.service';
 
 
 @Component({
-  selector: 'button-view',
+  selector: 'ngx-button-view',
   template: `
     <button (click)="onClick()">{{ renderValue }}</button>
   `,
