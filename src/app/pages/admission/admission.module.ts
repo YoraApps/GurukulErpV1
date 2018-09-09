@@ -11,6 +11,7 @@ import { CounsellingComponent } from './counselling/counselling.component';
 import { CounsellingService } from './data/counselling.service';
 import { ApplicantCourseFeeStatusComponent } from './applicant-course-fee-status/applicant-course-fee-status.component';
 import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fee-status.component';
+import { ApplicantDetailModelComponent } from './counselling/applicant-detail-model/applicant-detail-model.component';
 
 
 
@@ -27,6 +28,10 @@ import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fe
     CounsellingComponent,
     ApplicantCourseFeeStatusComponent,
     AdmissionFeeStatusComponent,
+    ApplicantDetailModelComponent,
+  ],
+  entryComponents: [
+    ApplicantDetailModelComponent,
   ],
   providers: [
     AdmissionListService,

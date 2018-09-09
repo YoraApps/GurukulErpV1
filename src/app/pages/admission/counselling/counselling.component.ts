@@ -2,6 +2,10 @@ import { Component } from '@angular/core';
 
 import { LocalDataSource } from 'ng2-smart-table';
 import { CounsellingService } from '../data/counselling.service';
+import { BatchService } from '../../settings/data/batch.service';
+import { CourseService } from '../../settings/data/course.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap/modal/modal';
+import { ApplicantDetailModelComponent } from './applicant-detail-model/applicant-detail-model.component';
 
 @Component({
   selector: 'ngx-counselling',
@@ -9,6 +13,7 @@ import { CounsellingService } from '../data/counselling.service';
   styleUrls: ['./counselling.component.scss'],
 })
 export class CounsellingComponent {
+
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -64,10 +69,20 @@ export class CounsellingComponent {
     },
   };
   source: LocalDataSource = new LocalDataSource();
+  batchList: any[];
+  courseList: any[];
 
-  constructor(private service: CounsellingService) {
-    const data = this.service.getData();
+  constructor(private couservice: CounsellingService, service: BatchService, _service: CourseService,
+    private modalService: NgbModal) {
+    const data = this.couservice.getData();
     this.source.load(data);
+    this.batchList = service.getData();
+    this.courseList = _service.getData();
+  }
+  showLargeModal() {
+    const activeModal = this.modalService.open(ApplicantDetailModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
   }
 
   onDeleteConfirm(event): void {
