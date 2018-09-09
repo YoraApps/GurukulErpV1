@@ -5,7 +5,7 @@ import { ApplicantCourseFeeService } from './applicant-course-fee.service';
 describe('ApplicantCourseFeeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ApplicantCourseFeeService]
+      providers: [ApplicantCourseFeeService],
     });
   });
 

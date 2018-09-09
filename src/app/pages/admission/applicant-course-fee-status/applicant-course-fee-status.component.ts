@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { BatchService } from "../../settings/data/batch.service";
-import { CourseService } from "../../settings/data/course.service";
-import { ApplicantCourseFeeService } from "../data/applicant-course-fee.service";
+import { BatchService } from '../../settings/data/batch.service';
+import { CourseService } from '../../settings/data/course.service';
+import { ApplicantCourseFeeService } from '../data/applicant-course-fee.service';
 
 @Component({
   selector: 'ngx-applicant-course-fee-status',
@@ -54,7 +54,7 @@ export class ApplicantCourseFeeStatusComponent implements OnInit {
 
   batchList: any[];
   courseList: any[];
-  constructor(private service: BatchService, _service: CourseService,private services:ApplicantCourseFeeService) {
+  constructor(service: BatchService, _service: CourseService, private services: ApplicantCourseFeeService) {
     this.batchList = service.getData();
     this.courseList = _service.getData();
     const data = this.services.getData();
