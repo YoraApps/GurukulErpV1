@@ -1,0 +1,23 @@
+
+    <div class="col-md-12 col-lg-12">
+      <nb-card size="small">
+        <nb-tabset>
+          <nb-tab tabTitle="Campaign Management">
+              <nb-card>     
+               <nb-card-body>
+                    <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
+                    </ng2-smart-table>
+                  </nb-card-body>
+                </nb-card>
+          </nb-tab>
+          <nb-tab tabTitle="Campaign Management Approve">
+              <nb-card> 
+                  <nb-card-body>
+                    <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
+                    </ng2-smart-table>
+                  </nb-card-body>
+                </nb-card>
+          </nb-tab>          
+        </nb-tabset>
+      </nb-card>
+ 
