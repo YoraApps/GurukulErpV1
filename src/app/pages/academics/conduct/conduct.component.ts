@@ -1,12 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { StudentCharacterSupervisionService } from "../data/student-character-supervision.service";
-import { MeritAndDemeritsService } from "../data/merit-and-demerits.service";
+import { StudentCharacterSupervisionService } from '../data/student-character-supervision.service';
+import { MeritAndDemeritsService } from '../data/merit-and-demerits.service';
 
 @Component({
   selector: 'ngx-conduct',
   templateUrl: './conduct.component.html',
-  styleUrls: ['./conduct.component.scss']
+  styleUrls: ['./conduct.component.scss'],
 })
 export class ConductComponent implements OnInit {
 

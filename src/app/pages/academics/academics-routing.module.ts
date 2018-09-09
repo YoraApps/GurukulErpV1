@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { AcademicsComponent } from './academics.component';
 import { MemoCircularNoticeComponent } from './memo-circular-notice/memo-circular-notice.component';
-import { ConductComponent } from "./conduct/conduct.component";
+import { ConductComponent } from './conduct/conduct.component';
 
 const routes: Routes = [{
   path: '',
@@ -35,5 +35,5 @@ export class AcademicsRoutingModule {
 export const routedComponents = [
   AcademicsComponent,
   MemoCircularNoticeComponent,
-  ConductComponent
+  ConductComponent,
 ];
