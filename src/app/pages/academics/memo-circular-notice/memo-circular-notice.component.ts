@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from "ng2-smart-table";
-import { MemoCircularNoticeService } from "../data/memo-circular-notice.service";
+import { LocalDataSource } from 'ng2-smart-table';
+import { MemoCircularNoticeService } from '../data/memo-circular-notice.service';
 
 @Component({
   selector: 'ngx-memo-circular-notice',
