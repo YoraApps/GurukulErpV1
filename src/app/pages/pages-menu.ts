@@ -46,6 +46,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Academics',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Memo-Circular-Notice',
+        link: '/pages/academics/memo-circular-notice',
+      },
+    ],
+  },
+  {
     title: 'Transportation',
     icon: 'nb-keypad',
     children: [
@@ -62,16 +72,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/transportation/driver',
       },
     ],
-  },
-  {
-    title: 'Academics',
-    icon: 'nb-plus-circled',
-    link: '/pages/ui-features',
-  },
-    {
-    title: 'Transportation',
-    icon: 'nb-plus-circled',
-    link: '/pages/ui-features',
   },
   {
     title: 'PayRoll',

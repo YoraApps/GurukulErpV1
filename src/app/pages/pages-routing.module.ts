@@ -17,6 +17,9 @@ const routes: Routes = [{
       path: 'admission',
       loadChildren: './admission/admission.module#AdmissionModule',
     }, {
+      path: 'academics',
+      loadChildren: './academics/academics.module#AcademicsModule',
+    }, {
       path: 'transportation',
       loadChildren: './transportation/transportation.module#TransportationModule',
     }, {
