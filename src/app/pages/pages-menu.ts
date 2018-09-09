@@ -46,7 +46,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'Academics', 
+    title: 'Academics',
     icon: 'nb-keypad',
     children: [
       {

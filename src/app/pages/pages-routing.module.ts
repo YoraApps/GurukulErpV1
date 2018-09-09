@@ -19,7 +19,7 @@ const routes: Routes = [{
     }, {
       path: 'academics',
       loadChildren: './academics/academics.module#AcademicsModule',
-    },{
+    }, {
       path: 'transportation',
       loadChildren: './transportation/transportation.module#TransportationModule',
     }, {

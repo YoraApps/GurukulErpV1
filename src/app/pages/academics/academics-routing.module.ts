@@ -10,7 +10,7 @@ const routes: Routes = [{
   children: [{
     path: 'memo-circular-notice',
     component: MemoCircularNoticeComponent,
-  },],
+  }],
 }];
 
 @NgModule({
