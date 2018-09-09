@@ -37,11 +37,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Review And Approve',
-        link: '/pages/settings/batch',
+        link: '/pages/admission/reviewand-approve',
       },
       {
         title: 'Id Cards',
-        link: '/pages/settings/batch',
+        link: '/pages/admission/batch',
       },
     ],
   },
