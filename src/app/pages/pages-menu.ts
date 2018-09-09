@@ -37,11 +37,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Review And Approve',
-        link: '/pages/settings/batch',
+        link: '/pages/admission/reviewand-approve',
       },
       {
         title: 'Id Cards',
-        link: '/pages/settings/batch',
+        link: '/pages/admission/batch',
       },
     ],
   },
@@ -56,6 +56,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'conduct',
         link: '/pages/academics/conduct',
+      },
+      {
+        title: 'Campaign-Management',
+        link: '/pages/academics/Campaign-Management',
       },
     ],
   },
@@ -74,6 +78,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Driver',
         link: '/pages/transportation/driver',
+      },
+      {
+        title: 'Routecreation',
+        link: '/pages/transportation/routecreation',
       },
     ],
   },

@@ -4,27 +4,17 @@ import { Injectable } from '@angular/core';
 export class MemoCircularNoticeService {
 
   data = [{
-    ApplicationNumber: 103652,
-    CandidateName: 'Gopi',
-    EmailId: 'gopi@gmail.com',
-    Address	: 'Guntur',
-    DegreeCategory: 'pg',
-    DegreeType: 'Master',
-    Course: 'EEE',
-    Batch: 101,
-    AdmissionVerificationStatus: 'Completed',
+    Id: 1,
+    Title: 'Asiad Games',
+    PublishedDate: '2018-08-24',
+    Type	: 'Student',
 
   },
   {
-    ApplicationNumber: 102356,
-    CandidateName: 'Vijay',
-    EmailId: 'vijay@gmail.com',
-    Address: 'Ongole',
-    DegreeCategory: 'pg',
-    DegreeType: 'Doctorate',
-    Course: 'EEE',
-    Batch: 101,
-    AdmissionVerificationStatus: 'Ongoing',
+    Id: 2,
+    Title: 'National-Level Seminar 123',
+    PublishedDate: '2018-08-20',
+    Type: 'Staff',
 
   },
 
