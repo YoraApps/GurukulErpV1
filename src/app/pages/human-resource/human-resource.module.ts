@@ -18,4 +18,4 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
     SmartTableService,
   ],
 })
-export class TransportationModule { }
+export class HumanResourceModule { }

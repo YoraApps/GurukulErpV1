@@ -110,21 +110,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
-    title: 'PayRoll',
-    icon: 'nb-plus-circled',
-    link: '/pages/ui-features',
-  },
-  {
-    title: 'Accounting',
-    icon: 'nb-plus-circled',
-    link: '/pages/ui-features',
-  },
-  {
-    title: 'Presets',
-    icon: 'nb-plus-circled',
-    link: '/pages/settings/preset',
-  },
-  {
     title: 'Academic Settings',
     icon: 'nb-keypad',
     children: [

@@ -16,7 +16,6 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
   ],
   declarations: [
     ...routedComponents,
-    AccountRoutingModule,
   ],
   providers: [
     SmartTableService,
