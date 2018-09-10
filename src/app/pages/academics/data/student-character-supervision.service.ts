@@ -11,7 +11,6 @@ export class StudentCharacterSupervisionService {
     Standard: '	NA',
     Disturbance: '	NA',
     Remark: '	NA',
-
   },
  {
     ReportName: 'Disturbance',
@@ -22,7 +21,6 @@ export class StudentCharacterSupervisionService {
     Disturbance: 'NA',
     Remark: 'NA',
   },
-
 ];
 LossAndFounddata = [{
   Name : 'Santanu',
@@ -40,7 +38,6 @@ LossAndFounddata = [{
   FoundDate: '2018-05-22T00:00:00',
   Type: 'Lost',
 },
-
 ];
 LetterPermissiondata = [{
   Name : 'Santanu',
@@ -56,7 +53,6 @@ LetterPermissiondata = [{
   TimeIn: '2018-05-22T00:00:00',
   TimeOut: '2018-05-22T00:00:00',
 },
-
 ];
   getData() {
     return this.data;
