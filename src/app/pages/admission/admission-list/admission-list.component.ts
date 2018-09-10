@@ -55,7 +55,7 @@ export class AdmissionListComponent  {
 
   constructor(private service: AdmissionListService) {
     const data = this.service.getData();
-    //this.IsList = false;
+  // this.IsList = false;
     this.source.load(data);
   }
   onDeleteConfirm(event): void {
@@ -64,7 +64,6 @@ export class AdmissionListComponent  {
     } else {
       event.confirm.reject();
     }
-  }
- 
+  } 
 }
 
