@@ -98,13 +98,101 @@ export class ConductComponent implements OnInit {
       },
     },
   };
+   LossAndFoundsettings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
+    },
+    columns: {
+      Name: {
+        title: 'Name',
+        type: 'string',
+      },
+      Class: {
+        title: 'Class',
+        type: 'string',
+      },
+      Things: {
+        title: 'Things',
+        type: 'string',
+      },
+      LostDate: {
+        title: 'Lost Date',
+        type: 'date',
+      },
+      FoundDate: {
+        title: 'Found Date',
+        type: 'date',
+      },
+      Type: {
+        title:  'Type ',
+        type: 'string',
+      },
+    },
+  };
+  LetterPermissionsettings = {
+    add: {
+      addButtonContent: '<i class="nb-plus"></i>',
+      createButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    edit: {
+      editButtonContent: '<i class="nb-edit"></i>',
+      saveButtonContent: '<i class="nb-checkmark"></i>',
+      cancelButtonContent: '<i class="nb-close"></i>',
+    },
+    delete: {
+      deleteButtonContent: '<i class="nb-trash"></i>',
+      confirmDelete: true,
+    },
+    columns: {
+      Name: {
+        title: 'Name',
+        type: 'string',
+      },
+      Course: {
+        title: 'Course',
+        type: 'string',
+      },
+      Date: {
+        title: 'Date',
+        type: 'date',
+      },
+      TimeIn: {
+        title: 'Time In',
+        type: 'date',
+      },
+      TimeOut: {
+        title: 'Time Out',
+        type: 'date',
+      },
+    },
+  };
+ 
+ 
   source: LocalDataSource = new LocalDataSource();
   _source: LocalDataSource = new LocalDataSource();
+  LossAndFoundsource: LocalDataSource = new LocalDataSource();
+  LetterPermissionsource: LocalDataSource = new LocalDataSource();
   constructor(private service: StudentCharacterSupervisionService, private  _service: MeritAndDemeritsService) {
     const data = this.service.getData();
     const data1 = this._service.getData1();
+    const LossAndFounddata =this.service.getLossAndFounddata();
+    const LetterPermissiondata =this.service.getLetterPermissiondata();
     this.source.load(data);
     this._source.load(data1);
+    this.LossAndFoundsource.load(LossAndFounddata);
+    this.LetterPermissionsource.load(LetterPermissiondata);
   }
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
