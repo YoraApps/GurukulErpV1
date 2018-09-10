@@ -178,8 +178,8 @@ export class ConductComponent implements OnInit {
       },
     },
   };
- 
- 
+
+
   source: LocalDataSource = new LocalDataSource();
   _source: LocalDataSource = new LocalDataSource();
   LossAndFoundsource: LocalDataSource = new LocalDataSource();
@@ -187,8 +187,8 @@ export class ConductComponent implements OnInit {
   constructor(private service: StudentCharacterSupervisionService, private  _service: MeritAndDemeritsService) {
     const data = this.service.getData();
     const data1 = this._service.getData1();
-    const LossAndFounddata =this.service.getLossAndFounddata();
-    const LetterPermissiondata =this.service.getLetterPermissiondata();
+    const LossAndFounddata = this.service.getLossAndFounddata();
+    const LetterPermissiondata = this.service.getLetterPermissiondata();
     this.source.load(data);
     this._source.load(data1);
     this.LossAndFoundsource.load(LossAndFounddata);
