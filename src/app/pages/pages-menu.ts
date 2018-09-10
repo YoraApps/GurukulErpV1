@@ -96,6 +96,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Account',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'account-summary',
+        link: '/pages/account/account-summary',
+      },
+    ],
+  },
+  {
     title: 'PayRoll',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
