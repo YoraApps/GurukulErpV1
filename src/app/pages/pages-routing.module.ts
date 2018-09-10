@@ -22,6 +22,12 @@ const routes: Routes = [{
     }, {
       path: 'transportation',
       loadChildren: './transportation/transportation.module#TransportationModule',
+    },{
+      path: 'human-resource',
+      loadChildren: './human-resource/human-resource.module#HumanResourceModule',
+    },{
+      path: 'account',
+      loadChildren: './account/account.module#AccountModule',
     }, {
     path: 'dashboard',
     component: ECommerceComponent,

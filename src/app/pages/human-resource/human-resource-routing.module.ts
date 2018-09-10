@@ -5,13 +5,14 @@ import { HumanResourceComponent } from './human-resource.component';
 import { StaffManagementComponent } from './staff-management/staff-management.component';
 
 
+
 const routes: Routes = [{
   path: '',
   component: HumanResourceComponent,
   children: [{
     path: 'staff-management',
     component: StaffManagementComponent,
-  }],
+  }], 
 }];
 
 @NgModule({
@@ -28,4 +29,5 @@ export class HumanResourceRoutingModule {
 
 export const routedComponents = [
   HumanResourceComponent,
+  StaffManagementComponent
 ];
