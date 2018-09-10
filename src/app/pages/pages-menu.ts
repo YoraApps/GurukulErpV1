@@ -86,6 +86,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Human-Resourse',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Staff-Management',
+        link: '/pages/human-resource/staff-management',
+      },
+    ],
+  },
+  {
     title: 'PayRoll',
     icon: 'nb-plus-circled',
     link: '/pages/ui-features',
