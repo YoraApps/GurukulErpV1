@@ -12,9 +12,6 @@ const routes: Routes = [{
   path: '',
   component: TransportationComponent,
   children: [{
-    path: 'transportation',
-    component: TransportationComponent,
-  }, {
     path: 'location',
     component: LocationComponent,
   }, {
