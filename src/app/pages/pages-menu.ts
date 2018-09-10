@@ -12,8 +12,12 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-keypad',
     children: [
       {
-        title: 'Admission Forms',
+        title: 'Admission list',
         link: '/pages/admission/admission-list',
+      },
+      {
+        title: 'Admission Forms',
+        link: '/pages/admission/admission-form',
       },
       {
         title: 'Counselling',
