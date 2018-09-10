@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-
 import { LocalDataSource } from 'ng2-smart-table';
 import { AdmissionListService } from '../data/admission-list.service';
 
@@ -52,20 +51,13 @@ export class AdmissionListComponent  {
     },
   };
   IsList: boolean;
-//   date1: Date = new Date();
-// setting = {
-//     bigBanner: true,
-//     format: 'dd-MMM-yyyy hh:mm a',
-//     defaultOpen: true
-// }
   source: LocalDataSource = new LocalDataSource();
 
   constructor(private service: AdmissionListService) {
     const data = this.service.getData();
-    this.IsList = false;
+    //this.IsList = false;
     this.source.load(data);
   }
-
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
@@ -73,9 +65,6 @@ export class AdmissionListComponent  {
       event.confirm.reject();
     }
   }
-
-  btnClickForNewForm() {
-    this.IsList = true;
-  }
+ 
 }
 
