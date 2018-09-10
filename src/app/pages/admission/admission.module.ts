@@ -17,6 +17,8 @@ import { ApplicantCourseFeeService } from './data/applicant-course-fee.service';
 import { BatchService } from '../settings/data/batch.service';
 import { CourseService } from '../settings/data/course.service';
 import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
+import { ReviewandApproveComponent } from './reviewand-approve/reviewand-approve.component';
+import { ReviewandApproveService } from './data/reviewand-approve.service';
 
 
 @NgModule({
@@ -34,6 +36,7 @@ import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
     ApplicantCourseFeeStatusComponent,
     AdmissionFeeStatusComponent,
     ApplicantDetailModelComponent,
+    ReviewandApproveComponent,
   ],
   entryComponents: [
     ApplicantDetailModelComponent,
@@ -46,6 +49,7 @@ import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
     BatchService,
     CourseService,
     AdmissionFeeStatusService,
+    ReviewandApproveService,
   ],
 })
 export class AdmissionModule { }

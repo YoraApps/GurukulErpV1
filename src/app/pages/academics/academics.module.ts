@@ -6,6 +6,7 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 
 import { AcademicsRoutingModule , routedComponents} from './academics-routing.module';
+import { ConductComponent } from './conduct/conduct.component';
 import { MemoCircularNoticeService } from './data/memo-circular-notice.service';
 
 
@@ -17,6 +18,7 @@ import { MemoCircularNoticeService } from './data/memo-circular-notice.service';
   ],
   declarations: [
     ...routedComponents,
+    ConductComponent,
   ],
   providers: [
     SmartTableService,
