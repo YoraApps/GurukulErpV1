@@ -9,16 +9,13 @@ import { CampaignManagementComponent } from './campaign-management/campaign-mana
 const routes: Routes = [{
   path: '',
   component: AcademicsComponent,
-  children: [
-    {
-    path: 'memo-circular-notice',
-    component: MemoCircularNoticeComponent,
-    },
-    {
-          path: 'conduct',
-          component: ConductComponent,
-    },
-    {
+  children: [{
+      path: 'memo-circular-notice',
+      component: MemoCircularNoticeComponent,
+    }, {
+      path: 'conduct',
+      component: ConductComponent,
+    }, {
       path: 'Campaign-Management',
       component: CampaignManagementComponent,
   }],
