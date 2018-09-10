@@ -12,7 +12,7 @@ const routes: Routes = [{
   children: [{
     path: 'staff-management',
     component: StaffManagementComponent,
-  }], 
+  }],
 }];
 
 @NgModule({
@@ -29,5 +29,5 @@ export class HumanResourceRoutingModule {
 
 export const routedComponents = [
   HumanResourceComponent,
-  StaffManagementComponent
+  StaffManagementComponent,
 ];

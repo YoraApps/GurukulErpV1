@@ -104,7 +104,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/account/account-summary',
       },
     ],
-  },  
+  },
   {
     title: 'Academic Settings',
     icon: 'nb-keypad',
