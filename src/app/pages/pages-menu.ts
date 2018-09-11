@@ -62,7 +62,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/academics/conduct',
       },
       {
-        title: 'Campaign-Management',
+        title: 'Campaign Management',
         link: '/pages/academics/Campaign-Management',
       },
     ],

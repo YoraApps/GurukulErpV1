@@ -1,285 +1,297 @@
 <div class="row">
-    <div class="col-md-12 col-lg-12">
-      <nb-card  style="height: 100%;">
-          <nb-tabset fullWidth style="height: 100%;display: flex;flex-direction: column;">
-              <nb-tab tabTitle="Personal Details" style="padding: nb-theme(padding);"> 
-                <br/>
-              <div class="col-lg-12 ">                
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-3 form-group">
-                        <select class="form-control">
-                          <option display:none>Mr/Mrs/Miss</option>
-                          <option>Mr</option>
-                          <option>Mrs</option>
-                          <option>Miss</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-3 input-group">
-                        <input type="text" placeholder="Enter First Name" class="form-control" />
-                      </div>
-                      <div class="col-sm-3 input-group">
-                        <input type="text" placeholder="Enter Middle Name" class="form-control" />
-                      </div>
-                      <div class="col-sm-3 input-group">
-                        <input type="text" placeholder="Enater Last Name" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-lg-2">
-                        <!-- <label for="Date">Date
+    
+  <div class="col-md-12 col-lg-12">
+    <nb-card style="height: 100%;">
+        <nb-card-header _ngcontent-c19=""><a _ngcontent-c19="" [routerLink]="['/pages/admission/admission-list']" style="width: 40px;text-decoration: none;"><i _ngcontent-c19="" style="font-size: 2rem;font-weight: bold;" class="nb-arrow-thin-left"></i></a></nb-card-header>
+        <nb-tabset fullWidth style="height: 100%;display: flex;flex-direction: column;">
+        <nb-tab tabTitle="Personal Details" style="padding: nb-theme(padding);">
+          <br/>
+          <div class="col-lg-12 ">
+            <div class="row full-name-inputs">
+              <div class="col-sm-3 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Mr/Mrs/Miss</option>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Miss</option>
+                </select>
+              </div>
+              <div class="col-sm-3">
+                <input type="text" style="height: 50px;" placeholder="Enter First Name" class="form-control" />
+              </div>
+              <div class="col-sm-3 input-group-md">
+                <input type="text" style="height: 50px;" placeholder="Enter Middle Name" class="form-control" />
+              </div>
+              <div class="col-sm-3 input-group-md">
+                <input type="text" style="height: 50px;" placeholder="Enter Last Name" class="form-control" />
+              </div>
+            </div>
+            <div class="row full-name-inputs">
+              <div class="col-lg-2">
+                <!-- <label for="Date">Date
                                   <span class="text-danger">*</span>
                                 </label>-->
-                        <input class="form-control" placeholder="Select To date" moment-picker="dailyAttendanceObj.Date" format="DD/MM/YYYY">
-                      </div>
-                      <div class="col-sm-2 form-group">
-                        <select class="form-control">
-                          <option display:none>Gender</option>
-                          <option>Female</option>
-                          <option>Male</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-2 form-group">
-                        <select class="form-control">
-                          <option display:none>Blood Group</option>
-                          <option>Mr</option>
-                          <option>Mrs</option>
-                          <option>Miss</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-6 form-group">
-                        <select class="form-control">
-                          <option display:none>Religion</option>
-                          <option>Buddism</option>
-                          <option>islam</option>
-                          <option>Hinduism</option>
-                        </select>
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-3 form-group">
-                        <select class="form-control">
-                          <option display:none>Maritalstatus</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-3 form-group">
-                        <select class="form-control">
-                          <option display:none>Working/NotWorking</option>
-                          <option>Working</option>
-                          <option>NotWorking</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter your EmailId" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Home TelePhone Number" class="form-control" />
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Your Mobile Number" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <!-- <label for="Date">Home Address
-                                  <span class="text-danger">*</span>
-                                </label> -->
-                        <textarea rows="5" placeholder="Enter Home Address" class="form-control"></textarea>
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <textarea rows="5" placeholder="Enter Hobbies" class="form-control"></textarea>
-                      </div>
-                    </div>
-                 
+                <input class="form-control" placeholder="Select To date" moment-picker="dailyAttendanceObj.Date" format="DD/MM/YYYY">
               </div>
-        
-          </nb-tab>
-          <nb-tab tabTitle="Parents Details">
-           <br/>
-              <div class="col-lg-12">
-               
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Father Name" class="form-control" />
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enater Mother Name" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Father Occupation" class="form-control" />
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enater Mother Occupation" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <!-- <label for="Date">Home Address
-                                  <span class="text-danger">*</span>
-                                </label> -->
-                        <textarea rows="5" placeholder="Enter Current Address" class="form-control"></textarea>
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <!-- <label for="Date">Hobby
-                                  <span class="text-danger">*</span>
-                                </label> -->
-                        <textarea rows="5" placeholder="Enter permanent Address" class="form-control"></textarea>
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Phone Number" class="form-control" />
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Alternet Phone Number" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 form-group">
-                        <select class="form-control">
-                          <option display:none>MAritalstatus</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                    </div>  
+              <div class="col-sm-2 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Gender</option>
+                  <option>Female</option>
+                  <option>Male</option>
+                </select>
+              </div>
+              <div class="col-sm-2 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Blood Group</option>
+                  <option>Mr</option>
+                  <option>Mrs</option>
+                  <option>Miss</option>
+                </select>
+              </div>
+              <div class="col-sm-6 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Religion</option>
+                  <option>Buddism</option>
+                  <option>islam</option>
+                  <option>Hinduism</option>
+                </select>
+              </div>
             </div>
-          </nb-tab>
-          <nb-tab tabTitle="Last Education"> 
-            <br/>          
-              <div class="col-lg-12">               
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 form-group">
-                        <select class="form-control">
-                          <option display:none>Last Education</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enater Graduation Year" class="form-control" />
-                      </div>
-                    </div>
-                    <br/>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 input-group">
-                        <input type="text" placeholder="Enter Home Town" class="form-control" />
-                      </div>
-                      <div class="col-sm-6 form-group">
-                        <select class="form-control">
-                          <option display:none>Enter Province Here If You are beyond the Middle East</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                    </div>              
+            <div class="row full-name-inputs">
+              <div class="col-sm-3 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Maritalstatus</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+              <div class="col-sm-3 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Working/NotWorking</option>
+                  <option>Working</option>
+                  <option>NotWorking</option>
+                </select>
+              </div>
+              <!-- <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter your EmailId" class="form-control" />
+              </div> -->
+              <div class="input-group mail-btn-group col-sm-6">
+                <span class="input-group-prepend">
+                  <button class="btn btn-primary btn-icon input-group-text" style="height: 48px;">
+                    <i class="ion-ios-email-outline"></i>
+                  </button>
+                </span>
+                <input type="text" class="form-control" placeholder="Enter your EmailId" style="height: 48px;">
+                <span class="input-group-append">
+                  <button class="btn btn-primary input-group-text" style="height: 48px;">
+                    @gmail.com
+                  </button>
+                </span>
+              </div>
             </div>
-          </nb-tab>
-          <nb-tab tabTitle="Select Study Program"> 
-            <br/>         
-              <div class="col-lg-12">               
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-6 form-group">
-                        <select class="form-control">
-                          <option display:none>Please Select The Program Study</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-6 form-group">
-                        <select class="form-control">
-                          <option display:none>Please Select The Program Study</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                    </div>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Home TelePhone Number" class="form-control" />
+              </div>
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Your Mobile Number" class="form-control" />
+              </div>
             </div>
-          </nb-tab>
-          <nb-tab tabTitle="Upload Documents">
             <br/>
-              <div class="col-lg-12">                
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-4 form-group">
-                        <select class="form-control">
-                          <option display:none>Please Select Value</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-4 custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Upload file</label>
-                      </div>
-                      <!-- <input type="file" name="pic" accept="image/*"> -->
-  
-                    </div>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-4 form-group">
-                        <select class="form-control">
-                          <option display:none>Please Select The Registraion Path</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-4 form-group">
-                        <select class="form-control">
-                          <option display:none>Enter charity Donation</option>
-                          <option>Married</option>
-                          <option>Single</option>
-                        </select>
-                      </div>
-                      <div class="col-sm-4 input-group">
-                        <input type="text" placeholder="Enter First Name" class="form-control" />
-                      </div>
-                    </div>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-12 form-group">
-                        <label>Thus the form is acctually filled to be used as it should be unnecessary strikethrough</label>
-                      </div>
-                      <div class="col-sm-12 form-group">
-                        <label>*) Cross the unnecessary ones</label>
-                      </div>
-                      <div class="col-sm-12 form-group">
-                        <label>*) Charity Donation ()</label>
-                      </div>
-                    </div>
-                    <div class="row full-name-inputs">
-                      <div class="col-sm-4 custom-file">
-                        <input type="file" class="custom-file-input" id="customFile">
-                        <label class="custom-file-label" for="customFile">Upload file</label>
-                      </div>
-                      <label>Palangka Raya,2018
-  
-                      </label>
-                      <div class="col-sm-4 form-group">
-  
-                        <!-- <label>Palangka Raya,2018</label> -->
-                        <input type="text" placeholder=" " class="form-control" />
-                      </div>
-                    </div>
-                    <hr>
-                    <div class="form-group row">
-                      <div class="offset-sm-3 col-sm-9">
-                        <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Submit</button>
-                      </div>
-                    </div>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <!-- <label for="Date">Home Address
+                                  <span class="text-danger">*</span>
+                                </label> -->
+                <textarea rows="5" placeholder="Enter Home Address" class="form-control"></textarea>
+              </div>
+              <div class="col-sm-6 input-group">
+                <textarea rows="5" placeholder="Enter Hobbies" class="form-control"></textarea>
+              </div>
             </div>
-          </nb-tab>
-        </nb-tabset>
-      </nb-card>
-    </div>
+
+          </div>
+
+        </nb-tab>
+        <nb-tab tabTitle="Parents Details">
+          <br/>
+          <div class="col-lg-12">
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Father Name" class="form-control" />
+              </div>
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enater Mother Name" class="form-control" />
+              </div>
+            </div>
+            <br/>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Father Occupation" class="form-control" />
+              </div>
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enater Mother Occupation" class="form-control" />
+              </div>
+            </div>
+            <br/>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <!-- <label for="Date">Home Address
+                                  <span class="text-danger">*</span>
+                                </label> -->
+                <textarea rows="5" placeholder="Enter Current Address" class="form-control"></textarea>
+              </div>
+              <div class="col-sm-6 input-group">
+                <!-- <label for="Date">Hobby
+                                  <span class="text-danger">*</span>
+                                </label> -->
+                <textarea rows="5" placeholder="Enter permanent Address" class="form-control"></textarea>
+              </div>
+            </div>
+            <br/>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Phone Number" class="form-control" />
+              </div>
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Alternet Phone Number" class="form-control" />
+              </div>
+            </div>
+            <br/>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>MAritalstatus</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </nb-tab>
+        <nb-tab tabTitle="Last Education">
+          <br/>
+          <div class="col-lg-12">
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Last Education</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enater Graduation Year" class="form-control" />
+              </div>
+            </div>
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 input-group">
+                <input type="text" style="height: 50px;" placeholder="Enter Home Town" class="form-control" />
+              </div>
+              <div class="col-sm-6 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Enter Province Here If You are beyond the Middle East</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </nb-tab>
+        <nb-tab tabTitle="Select Study Program">
+          <br/>
+          <div class="col-lg-12">
+            <div class="row full-name-inputs">
+              <div class="col-sm-6 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Please Select The Program Study</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+              <div class="col-sm-6 form-group">
+                <select class="form-control" style="height: 48px;">
+                  <option display:none>Please Select The Program Study</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+            </div>
+          </div>
+        </nb-tab>
+        <nb-tab tabTitle="Upload Documents">
+          <br/>
+          <div class="col-lg-12">
+            <div class="row full-name-inputs">
+              <div class="col-sm-4 form-group">
+                <select class="form-control" style="height: 40px;">
+                  <option display:none>Please Select Value</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+              <div class="col-sm-4 custom-file" style="left: 15px;">
+                <input type="file"  class="custom-file-input" id="customFile" >
+                <label class="custom-file-label" for="customFile">Upload file</label>
+              </div>
+              <!-- <input type="file" name="pic" accept="image/*"> -->
+
+            </div>
+            <div class="row full-name-inputs">
+              <div class="col-sm-4 form-group">
+                <select class="form-control" style="height: 40px;" >
+                  <option display:none>Please Select The Registraion Path</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+              <div class="col-sm-4 form-group">
+                <select class="form-control" style="height: 40px;">
+                  <option display:none>Enter charity Donation</option>
+                  <option>Married</option>
+                  <option>Single</option>
+                </select>
+              </div>
+              <div class="col-sm-4 input-group">
+                <input type="text" style="height: 45px;" placeholder="Enter First Name" class="form-control" />
+              </div>
+            </div>
+            <div class="row full-name-inputs">
+              <div class="col-sm-12 form-group">
+                <label>Thus the form is acctually filled to be used as it should be unnecessary strikethrough</label>
+              </div>
+              <div class="col-sm-12 form-group">
+                <label>*) Cross the unnecessary ones</label>
+              </div>
+              <div class="col-sm-12 form-group">
+                <label>*) Charity Donation ()</label>
+              </div>
+            </div>
+            <div class="row full-name-inputs">
+              <div class="col-sm-4 custom-file" style="left: 12px;width: 20px;">
+                <input type="file"  class="custom-file-input" id="customFile" >
+                <label class="custom-file-label" for="customFile">Upload file</label>
+              </div>
+              <div class="col-sm-4 form-group" style="top: -25px;left:60px">
+              <label>
+                Palangka Raya,2018</label>
+                <input type="text" style="height: 37px;" placeholder=" " class="form-control" />
+              
+            </div>
+              <div class="col-sm-4 form-group">
+                <!-- <label>Palangka Raya,2018</label> -->
+                
+              
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Submit</button>
+              </div>
+            </div>
+          </div>
+        </nb-tab>
+      </nb-tabset>
+    </nb-card>
   </div>
