@@ -25,10 +25,6 @@ export class MemoCircularNoticeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      Id: {
-        title: 'Id',
-        type: 'number',
-      },
       Title: {
         title: 'Title',
         type: 'string',
