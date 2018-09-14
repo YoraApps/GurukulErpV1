@@ -107,6 +107,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'account-summary',
         link: '/pages/account/account-summary',
       },
+       {
+        title: 'managepayment',
+        link: '/pages/account/managepayment',
+      },
     ],
   },
   {

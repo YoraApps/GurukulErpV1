@@ -1,14 +1,15 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { AdmissionListService } from '../data/admission-list.service';
+import { ManagepaymentService } from "../data/managepayment.service";
 
 @Component({
-  selector: 'ngx-admission-list',
-  templateUrl: './admission-list.component.html',
-  styleUrls: ['./admission-list.component.scss'],
+  selector: 'ngx-managepayment',
+  templateUrl: './managepayment.component.html',
+  styleUrls: ['./managepayment.component.scss']
 })
-export class AdmissionListComponent  {
-  settings = {
+export class ManagepaymentComponent implements OnInit {
+
+   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -24,46 +25,50 @@ export class AdmissionListComponent  {
       confirmDelete: true,
     },
     columns: {
-      AdmissionNumber: {
-        title: 'Admission Number',
+      DocumentNumber: {
+        title: 'Document Number',
         type: 'number',
       },
-      CandidateName: {
-        title: 'Candidate Name ',
+      Description: {
+        title: 'Description',
         type: 'string',
       },
-      CourseName: {
-        title: 'Course Name',
+      PostedDate: {
+        title: 'Posted Date',
+        type: 'date',
+      },
+      Month: {
+        title:  'Month',
         type: 'string',
       },
-      BatchName: {
-        title: 'Batch Name',
-        type: 'string',
+      Year: {
+        title: 	'Year',
+        type: 'date',
       },
-      BranchName: {
-        title: 'Branch Name',
-        type: 'string',
-      },
-      AdmissionStatusName: {
-        title: 'Admission Status Name',
-        type: 'string',
+       Amount: {
+        title: 	'Amount',
+        type: 'number',
       },
     },
   };
-  IsList: boolean;
+
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: AdmissionListService) {
-    const data = this.service.getData();
-  // this.IsList = false;
+
+  constructor(private service: ManagepaymentService) {
+    const data = this.service.getData1();
     this.source.load(data);
-  }
-  onDeleteConfirm(event): void {
+   }
+
+   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
-}
 
+  ngOnInit() {
+  }
+
+}
