@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from "ng2-smart-table";
-import { AccountSummaryService } from "../data/account-summary.service";
+import { LocalDataSource } from 'ng2-smart-table';
+import { ManagepaymentService } from "../data/managepayment.service";
 
 @Component({
-  selector: 'ngx-account-summary',
-  templateUrl: './account-summary.component.html',
-  styleUrls: ['./account-summary.component.scss'],
+  selector: 'ngx-managepayment',
+  templateUrl: './managepayment.component.html',
+  styleUrls: ['./managepayment.component.scss']
 })
-export class AccountSummaryComponent implements OnInit {
+export class ManagepaymentComponent implements OnInit {
 
-settings = {
+   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -29,10 +29,6 @@ settings = {
         title: 'Document Number',
         type: 'number',
       },
-      DocumentType: {
-        title: 'Document Type',
-        type: 'string',
-      },
       Description: {
         title: 'Description',
         type: 'string',
@@ -40,10 +36,6 @@ settings = {
       PostedDate: {
         title: 'Posted Date',
         type: 'date',
-      },
-      Status: {
-        title: 'Status',
-        type: 'string',
       },
       Month: {
         title:  'Month',
@@ -53,13 +45,17 @@ settings = {
         title: 	'Year',
         type: 'date',
       },
+       Amount: {
+        title: 	'Amount',
+        type: 'number',
+      },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
 
-  constructor(private service: AccountSummaryService) {
+  constructor(private service: ManagepaymentService) {
     const data = this.service.getData1();
     this.source.load(data);
    }

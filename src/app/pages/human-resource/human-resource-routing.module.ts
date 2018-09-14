@@ -4,8 +4,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { HumanResourceComponent } from './human-resource.component';
 import { StaffManagementComponent } from './staff-management/staff-management.component';
 import { PayrollComponent } from './payroll/payroll.component';
-
-
+import { LeavesComponent } from './leaves/leaves.component';
 
 const routes: Routes = [{
   path: '',
@@ -16,8 +15,10 @@ const routes: Routes = [{
   }, {
     path: 'payroll',
     component: PayrollComponent,
-  },
-],
+  }, {
+    path: 'Leaves',
+    component: LeavesComponent,
+  }],
 }];
 
 @NgModule({
@@ -36,4 +37,5 @@ export const routedComponents = [
   HumanResourceComponent,
   StaffManagementComponent,
   PayrollComponent,
+  LeavesComponent,
 ];

@@ -5,6 +5,7 @@ import { HumanResourceRoutingModule, routedComponents } from './human-resource-r
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { PayrollComponent } from './payroll/payroll.component';
+import { LeavesComponent } from './leaves/leaves.component';
 
 @NgModule({
   imports: [
@@ -15,6 +16,7 @@ import { PayrollComponent } from './payroll/payroll.component';
   declarations: [
     ...routedComponents,
     PayrollComponent,
+    LeavesComponent,
   ],
   providers: [
     SmartTableService,

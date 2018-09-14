@@ -62,7 +62,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/academics/conduct',
       },
       {
-        title: 'Campaign-Management',
+        title: 'Campaign Management',
         link: '/pages/academics/Campaign-Management',
       },
     ],
@@ -101,6 +101,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Payroll',
         link: '/pages/human-resource/payroll',
       },
+      {
+        title: 'Leaves',
+        link: '/pages/human-resource/Leaves',
+      },
     ],
   },
   {
@@ -110,6 +114,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'account-summary',
         link: '/pages/account/account-summary',
+      },
+       {
+        title: 'managepayment',
+        link: '/pages/account/managepayment',
       },
     ],
   },
