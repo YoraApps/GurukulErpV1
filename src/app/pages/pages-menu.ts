@@ -97,6 +97,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Staff-Management',
         link: '/pages/human-resource/staff-management',
       },
+      {
+        title: 'Payroll',
+        link: '/pages/human-resource/payroll',
+      },
     ],
   },
   {
