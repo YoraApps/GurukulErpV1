@@ -64,6 +64,6 @@ export class AdmissionListComponent  {
     } else {
       event.confirm.reject();
     }
-  } 
+  }
 }
 

@@ -13,10 +13,10 @@ const routes: Routes = [{
   children: [{
     path: 'staff-management',
     component: StaffManagementComponent,
-  },{
+  }, {
     path: 'payroll',
     component: PayrollComponent,
-  }
+  },
 ],
 }];
 
