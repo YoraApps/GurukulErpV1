@@ -1,8 +1,10 @@
 import { NgModule, ModuleWithProviders } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { LeavesService } from './leaves.service';
 
 
 const SERVICES = [
+  LeavesService,
 ];
 
 @NgModule({
@@ -11,6 +13,7 @@ const SERVICES = [
   ],
   providers: [
     ...SERVICES,
+   
   ],
 })
 
