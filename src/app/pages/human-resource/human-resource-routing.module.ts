@@ -3,6 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 
 import { HumanResourceComponent } from './human-resource.component';
 import { StaffManagementComponent } from './staff-management/staff-management.component';
+import { LeavesComponent } from './leaves/leaves.component';
 
 
 
@@ -12,6 +13,10 @@ const routes: Routes = [{
   children: [{
     path: 'staff-management',
     component: StaffManagementComponent,
+  },
+  {
+    path: 'Leaves',
+    component: LeavesComponent,
   }],
 }];
 
@@ -30,4 +35,5 @@ export class HumanResourceRoutingModule {
 export const routedComponents = [
   HumanResourceComponent,
   StaffManagementComponent,
+  LeavesComponent
 ];
