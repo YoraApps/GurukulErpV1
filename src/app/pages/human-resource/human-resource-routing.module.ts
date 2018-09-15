@@ -35,5 +35,5 @@ export class HumanResourceRoutingModule {
 export const routedComponents = [
   HumanResourceComponent,
   StaffManagementComponent,
-  LeavesComponent
+  LeavesComponent,
 ];
