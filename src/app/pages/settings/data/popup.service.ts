@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable()
-export class BatchService {
+export class PopupService {
 
   data = [{
     id: 1,

@@ -10,6 +10,7 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
 
 import { BranchService } from './data/branch.service';
 import { BatchService } from './data/batch.service';
+import { PopupService } from './data/popup.service';
 import { ExamTypeService } from './data/exam-type.service';
 import { ChapterService } from './data/chapter.service';
 import { ClassRoomService } from './data/classroom.service';
@@ -17,6 +18,7 @@ import { ClubService } from './data/club.service';
 import { AcademicMasterService } from './data/academic-master.service';
 import { FeeService } from './data/fee.service';
 import { GroupService } from './data/group.service ';
+import { ModalComponent } from '../ui-features/modals/modal/modal.component';
 
 @NgModule({
   imports: [
@@ -27,12 +29,14 @@ import { GroupService } from './data/group.service ';
   ],
   declarations: [
     ...routedComponents,
+    ModalComponent,
   ],
   providers: [
     DegreeTypeService,
     DegreeCategoryService,
     CourseService,
     BatchService,
+    PopupService,
     SmartTableService,
     BranchService,
     ExamTypeService,
@@ -42,6 +46,9 @@ import { GroupService } from './data/group.service ';
     AcademicMasterService,
     FeeService,
     GroupService,
+  ],
+  entryComponents: [
+    ModalComponent
   ],
 })
 export class SettingsModule { }

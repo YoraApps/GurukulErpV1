@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from "ng2-smart-table";
-import { AccountSummaryService } from "../data/account-summary.service";
+import { LocalDataSource } from 'ng2-smart-table';
+import { AccountSummaryService } from '../data/account-summary.service';
 
 @Component({
   selector: 'ngx-account-summary',

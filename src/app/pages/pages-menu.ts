@@ -25,7 +25,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Schedule Examination',
-        link: '/pages/settings/course',
+        link: '/pages/settings/Schedule-Examination',
       },
       {
         title: 'Admission Fee Status',
@@ -33,7 +33,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Exam Result Upload',
-        link: '/pages/settings/batch',
+        link: '/pages/settings/Exam-Result-Upload',
       },
       {
         title: 'Applicant Course Fee',
@@ -84,7 +84,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/transportation/driver',
       },
       {
-        title: 'Routecreation',
+        title: 'Route Creation',
         link: '/pages/transportation/routecreation',
       },
     ],
@@ -112,11 +112,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-keypad',
     children: [
       {
-        title: 'account-summary',
+        title: 'Account-Summary',
         link: '/pages/account/account-summary',
       },
        {
-        title: 'managepayment',
+        title: 'Manage-Payment',
         link: '/pages/account/managepayment',
       },
     ],
@@ -150,7 +150,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/exam-type',
       },
       {
-        title: 'Chapters',
+        title: 'Chapter',
         link: '/pages/settings/chapter',
       },
       {
@@ -162,16 +162,20 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/club',
       },
       {
-        title: 'academic-master',
+        title: 'Academic-Master',
         link: '/pages/settings/academic-master',
       },
       {
-        title: 'fee',
+        title: 'Fee',
         link: '/pages/settings/fee',
       },
       {
-        title: 'group',
+        title: 'Group',
         link: '/pages/settings/group',
+      },
+      {
+        title: 'Popup',
+        link: '/pages/settings/popupbranch',
       },
     ],
   },
