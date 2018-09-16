@@ -96,7 +96,5 @@ export const routedComponents = [
   FeeComponent,
   GroupComponent,
   ClubComponent,
-
-  //Sample
-  PopupbranchComponent
+  PopupbranchComponent,
 ];

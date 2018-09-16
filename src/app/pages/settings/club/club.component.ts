@@ -8,7 +8,6 @@ import { ClubService } from '../../../pages/settings/data/club.service';
   styleUrls: ['./club.component.scss'],
 })
 export class ClubComponent implements OnInit {
-
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -24,17 +23,16 @@ export class ClubComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
       ClubId: {
         title: 'Club Code',
         type: 'number',
       },
-      ClubName : {
+      ClubName: {
         title: 'Club Name ',
         type: 'string',
       },
-      ClubDescription : {
+      ClubDescription: {
         title: 'Club Description ',
         type: 'string',
       },
@@ -42,10 +40,7 @@ export class ClubComponent implements OnInit {
   };
   source: LocalDataSource = new LocalDataSource();
   data;
-  constructor(private service: ClubService) {
-
-
-  }
+  constructor(private service: ClubService) {}
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
@@ -55,12 +50,10 @@ export class ClubComponent implements OnInit {
     }
   }
 
- ngOnInit() {
-this.service.getData()
-      .subscribe( data => {
-        this.data = data.results;
-        this.source.load(this.data);
-      });
+  ngOnInit() {
+    this.service.getData().subscribe(data => {
+      this.data = data.results;
+      this.source.load(this.data);
+    });
   }
-
 }
