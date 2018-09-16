@@ -15,16 +15,19 @@ import { PopupService } from '../data/popup.service';
 export class ButtonViewComponent implements ViewCell, OnInit {
   renderValue: string;
 
-  @Input() value: string | number;
-  @Input() rowData: any;
+  @Input()
+  value: string | number;
+  @Input()
+  rowData: any;
 
-  @Output() save: EventEmitter<any> = new EventEmitter();
+  @Output()
+  save: EventEmitter<any> = new EventEmitter();
 
   ngOnInit() {
     this.renderValue = this.value.toString().toUpperCase();
   }
   constructor(modalService: NgbModal) { }
-
+  
   onClick() {
     this.save.emit(this.rowData);
   }
@@ -36,11 +39,13 @@ export class ButtonViewComponent implements ViewCell, OnInit {
   styleUrls: ['./popupbranch.component.scss'],
 })
 export class PopupbranchComponent implements OnInit {
-
   source: LocalDataSource = new LocalDataSource();
   branchList: any[];
-
-  constructor(branchService: BranchService, private service: PopupService, private modalService: NgbModal) {
+  constructor(
+    branchService: BranchService,
+    private service: PopupService,
+    private modalService: NgbModal,
+  ) {
     const data = this.service.getData();
     this.source.load(data);
     this.branchList = branchService.getData();
@@ -78,9 +83,12 @@ export class PopupbranchComponent implements OnInit {
         title: 'Button',
         type: 'custom',
         renderComponent: ButtonViewComponent,
-        onComponentInitFunction: (instance) => {
+        onComponentInitFunction: instance => {
           instance.save.subscribe(row => {
-            const activeModal = this.modalService.open(ModalComponent, { size: 'lg', container: 'nb-layout' });
+            const activeModal = this.modalService.open(ModalComponent, {
+              size: 'lg',
+              container: 'nb-layout',
+            });
             activeModal.componentInstance.modalHeader = 'Batch Details';
           });
         },
@@ -96,7 +104,5 @@ export class PopupbranchComponent implements OnInit {
     }
   }
 
-  ngOnInit() {
-  }
-
+  ngOnInit() {}
 }

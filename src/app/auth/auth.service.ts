@@ -2,12 +2,9 @@ import { Injectable } from '@angular/core';
 
 @Injectable()
 export class AuthService {
-
-  constructor() { }
-
+  constructor() {}
   // ...
   public isAuthenticated(): boolean {
-
     const token = localStorage.getItem('token');
 
     // Check whether the token is expired and return
@@ -15,7 +12,6 @@ export class AuthService {
     if (token != null) {
       return false;
     }
-
   }
-
+  
 }
