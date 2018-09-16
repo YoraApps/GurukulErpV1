@@ -8,7 +8,6 @@ import { ClubService } from '../../../pages/settings/data/club.service';
   styleUrls: ['./club.component.scss'],
 })
 export class ClubComponent implements OnInit {
-
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -26,7 +25,6 @@ export class ClubComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
       ClubId: {
         title: 'Club Code',
@@ -47,9 +45,21 @@ export class ClubComponent implements OnInit {
   SetAction: string;
   dataArray: any = [];
   constructor(private service: ClubService) {
-
   }
 
+
+  onSaveConfirm(event): void {
+    if (window.confirm('Are you sure you want to save?')) {
+      event.newData['name'] += ' + added in code';
+      event.confirm.resolve(event.newData);
+      event.newData.SetAction = 'UPDATE';
+      this.dataArray.push(event.newData);
+      this.service.saveData(this.dataArray);
+    } else {
+      event.confirm.reject();
+    }
+  }
+  
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);

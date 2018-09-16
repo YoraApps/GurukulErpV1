@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ExamTypeService } from '../data/exam-type.service';
-import { LocalDataSource } from 'ng2-smart-table';
+import { LocalDataSource } from "ng2-smart-table";
+import { GradeService } from "../data/grade.service";
 
 @Component({
-  selector: 'ngx-exam-type',
-  templateUrl: './exam-type.component.html',
-  styleUrls: ['./exam-type.component.scss'],
+  selector: 'ngx-grade',
+  templateUrl: './grade.component.html',
+  styleUrls: ['./grade.component.scss']
 })
-export class ExamTypeComponent implements OnInit {
+export class GradeComponent implements OnInit {
 
-  settings = {
+   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,30 +25,31 @@ export class ExamTypeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      ExaminationTypeId: {
-        title: 'Examination TypeId',
+      GradeCode: {
+        title: 'Grade Code',
         type: 'number',
       },
-      ExamGroup: {
-        title: 'Exam Group',
+      GradeName: {
+        title: 'Grade Name',
         type: 'string',
       },
-      ExamName: {
-        title: 'Exam Name',
+      GradeValue: {
+        title: 'Grade Value',
         type: 'string',
       },
-
+       Percentage: {
+        title: 'Grade Value',
+        type: 'string',
+      },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
-  data;
 
-  UniversityId: number = 1;
-
-  constructor(private service: ExamTypeService) {
-
+  constructor(private service: GradeService) {
+    const data = this.service.getData();
+    this.source.load(data);
    }
 
    onDeleteConfirm(event): void {
@@ -60,11 +61,6 @@ export class ExamTypeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getData(this.UniversityId)
-          .subscribe( data => {
-            this.data = data.results;
-            this.source.load(this.data);
-          });
-      }
+  }
 
 }

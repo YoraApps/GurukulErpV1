@@ -1,49 +1,29 @@
-<div style ="width:1000px" class="col-lg-12">
-  <nb-card size="small">
-    <nb-tabset fullWidth>
-      <nb-tab tabTitle=" Student Character Supervision">
-        <nb-card>
-          <nb-card-header>
-            Student Character Supervision
-          </nb-card-header>
-          <nb-card-body>
-            <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
-            </ng2-smart-table>
-          </nb-card-body>
-        </nb-card>
+<div class="col-md-12">
+  <nb-card>
+    <nb-tabset>
+      <nb-tab tabTitle="Student Character Supervision">
+        <nb-card-body>
+          <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
+          </ng2-smart-table>
+        </nb-card-body>
       </nb-tab>
-      <nb-tab tabTitle=" Merit/Demerits">
-         <nb-card>
-          <nb-card-header>
-           Merit/Demerits
-          </nb-card-header>
-          <nb-card-body>
-            <ng2-smart-table [settings]="conductsettings" [source]="_source.data" (deleteConfirm)="onDeleteConfirm($event)">
-            </ng2-smart-table>
-          </nb-card-body>
-        </nb-card>
+      <nb-tab tabTitle="Merit/Demerits">
+        <nb-card-body>
+          <ng2-smart-table [settings]="conductsettings" [source]="_source.data" (deleteConfirm)="onDeleteConfirm($event)">
+          </ng2-smart-table>
+        </nb-card-body>
       </nb-tab>
       <nb-tab tabTitle="Loss and Found">
-         <nb-card>
-          <nb-card-header>
-          Loss and Found
-          </nb-card-header>
-          <nb-card-body>
-            <ng2-smart-table [settings]="LossAndFoundsettings" [source]="LossAndFoundsource.data" (deleteConfirm)="onDeleteConfirm($event)">
-            </ng2-smart-table>
-          </nb-card-body>
-        </nb-card>
+        <nb-card-body>
+          <ng2-smart-table [settings]="LossAndFoundsettings" [source]="LossAndFoundsource.data" (deleteConfirm)="onDeleteConfirm($event)">
+          </ng2-smart-table>
+        </nb-card-body>
       </nb-tab>
-      <nb-tab tabTitle="Letter Permission">
-         <nb-card>
-          <nb-card-header>
-         Letter Permission
-          </nb-card-header>
-          <nb-card-body>
-            <ng2-smart-table [settings]="LetterPermissionsettings" [source]="LetterPermissionsource.data" (deleteConfirm)="onDeleteConfirm($event)">
-            </ng2-smart-table>
-          </nb-card-body>
-        </nb-card>
+      <nb-tab tabTitle="Letter of Permission">
+        <nb-card-body>
+          <ng2-smart-table [settings]="LetterPermissionsettings" [source]="LetterPermissionsource.data" (deleteConfirm)="onDeleteConfirm($event)">
+          </ng2-smart-table>
+        </nb-card-body>
       </nb-tab>
     </nb-tabset>
   </nb-card>

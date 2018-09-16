@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from "ng2-smart-table";
-import { FacultyDepartmentService } from "../data/faculty-department.service";
+import { LocalDataSource } from 'ng2-smart-table';
+import { FacultyDepartmentService } from '../data/faculty-department.service';
 
 @Component({
   selector: 'ngx-faculty-department',
   templateUrl: './faculty-department.component.html',
-  styleUrls: ['./faculty-department.component.scss']
+  styleUrls: ['./faculty-department.component.scss'],
 })
 export class FacultyDepartmentComponent implements OnInit {
 
