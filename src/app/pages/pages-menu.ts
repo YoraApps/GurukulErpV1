@@ -173,6 +173,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Group',
         link: '/pages/settings/group',
       },
+      {
+        title: 'Popup',
+        link: '/pages/settings/popupbranch',
+      },
     ],
   },
   {
