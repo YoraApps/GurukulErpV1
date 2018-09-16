@@ -18,8 +18,9 @@ import { AcademicMasterComponent } from './academic-master/academic-master.compo
 import { FeeComponent } from './fee/fee.component';
 import { GroupComponent } from './group/group.component';
 import { PopupbranchComponent } from './popupbranch/popupbranch.component';
-import { ProgramStudyComponent } from "./program-study/program-study.component";
-import { FacultyDepartmentComponent } from "./faculty-department/faculty-department.component";
+import { ProgramStudyComponent } from './program-study/program-study.component';
+import { FacultyDepartmentComponent } from './faculty-department/faculty-department.component';
+import { GradeComponent } from "./grade/grade.component";
 
 
 
@@ -65,12 +66,16 @@ const routes: Routes = [{
   }, {
     path: 'group',
     component: GroupComponent,
-  },{
+  }, {
     path: 'faculty-department',
     component: FacultyDepartmentComponent,
   }, {
     path: 'program-study',
     component: ProgramStudyComponent,
+  },
+  {
+    path: 'grade',
+    component: GradeComponent,
   },
    {
     path: 'popupbranch',
@@ -107,5 +112,6 @@ export const routedComponents = [
   ClubComponent,
   ProgramStudyComponent,
   FacultyDepartmentComponent,
-  PopupbranchComponent
+  PopupbranchComponent,
+  GradeComponent,
 ];

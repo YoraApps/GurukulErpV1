@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ProgramStudyService } from "../data/program-study.service";
+import { ProgramStudyService } from '../data/program-study.service';
 
 @Component({
   selector: 'ngx-program-study',
   templateUrl: './program-study.component.html',
-  styleUrls: ['./program-study.component.scss']
+  styleUrls: ['./program-study.component.scss'],
 })
 export class ProgramStudyComponent implements OnInit {
 

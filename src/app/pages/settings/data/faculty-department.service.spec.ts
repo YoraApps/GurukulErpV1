@@ -5,7 +5,7 @@ import { FacultyDepartmentService } from './faculty-department.service';
 describe('FacultyDepartmentService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [FacultyDepartmentService]
+      providers: [FacultyDepartmentService],
     });
   });
 

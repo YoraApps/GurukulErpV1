@@ -1,16 +1,16 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root',
+  providedIn: 'root'
 })
-export class ProgramStudyService {
+export class GradeService {
 
    data = [{
     id: 1,
-    ProgramStudyCode: '78125',
-    ProgramStudyName: 'Farmasi',
-    AcademicTerm: 'Semester',
-    SKS: '150',
+    GradeCode: '15',
+    GradeName: 'Refundable',
+    GradeValue: 'Tuition Fee',
+    Percentage:'85%',
     IsActive: '1',
     CreatedBy: '53',
     CreatedOn: '03/09/2018',
@@ -18,10 +18,10 @@ export class ProgramStudyService {
     ModifiedOn: '02/09/2018',
   }, {
     id: 2,
-    ProgramStudyCode: '47986',
-    ProgramStudyName: 'Teknik Lingkungan',
-    AcademicTerm: 'Semester',
-    SKS: '170',
+    GradeCode: 'Laboratory Fee',
+    GradeName: 'Non-Refundable',
+    GradeValue: 'Laboratory Fee',
+    Percentage:'75%',
     IsActive: '1',
     CreatedBy: '43',
     CreatedOn: '03/09/2018',
@@ -31,5 +31,4 @@ export class ProgramStudyService {
 
   getData() {
     return this.data;
-  }
 }
