@@ -27,7 +27,7 @@ export class ButtonViewComponent implements ViewCell, OnInit {
     this.renderValue = this.value.toString().toUpperCase();
   }
   constructor(modalService: NgbModal) { }
-  
+
   onClick() {
     this.save.emit(this.rowData);
   }

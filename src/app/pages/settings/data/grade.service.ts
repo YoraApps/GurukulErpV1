@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 
 @Injectable({
-  providedIn: 'root'
+  providedIn: 'root',
 })
 export class GradeService {
 
@@ -10,7 +10,7 @@ export class GradeService {
     GradeCode: '15',
     GradeName: 'Refundable',
     GradeValue: 'Tuition Fee',
-    Percentage:'85%',
+    Percentage: '85%',
     IsActive: '1',
     CreatedBy: '53',
     CreatedOn: '03/09/2018',
@@ -21,7 +21,7 @@ export class GradeService {
     GradeCode: 'Laboratory Fee',
     GradeName: 'Non-Refundable',
     GradeValue: 'Laboratory Fee',
-    Percentage:'75%',
+    Percentage: '75%',
     IsActive: '1',
     CreatedBy: '43',
     CreatedOn: '03/09/2018',
@@ -31,4 +31,5 @@ export class GradeService {
 
   getData() {
     return this.data;
+  }
 }

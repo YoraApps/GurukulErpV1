@@ -20,7 +20,7 @@ import { GroupComponent } from './group/group.component';
 import { PopupbranchComponent } from './popupbranch/popupbranch.component';
 import { ProgramStudyComponent } from './program-study/program-study.component';
 import { FacultyDepartmentComponent } from './faculty-department/faculty-department.component';
-import { GradeComponent } from "./grade/grade.component";
+import { GradeComponent } from './grade/grade.component';
 
 const routes: Routes = [{
   path: '',

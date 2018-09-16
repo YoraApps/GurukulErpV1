@@ -5,7 +5,7 @@ import { GradeService } from './grade.service';
 describe('GradeService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [GradeService]
+      providers: [GradeService],
     });
   });
 
