@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 @Injectable()
 export class AuthService {
 
-  constructor() {}
+  constructor() { }
 
   // ...
   public isAuthenticated(): boolean {
@@ -12,10 +12,10 @@ export class AuthService {
 
     // Check whether the token is expired and return
     // true or false
-    if(token != null){
-        return false;
+    if (token != null) {
+      return false;
     }
-    
+
   }
 
 }

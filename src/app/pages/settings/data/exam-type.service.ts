@@ -4,10 +4,10 @@ import { HttpClient } from '@angular/common/http';
 export class ExamTypeService {
 
   constructor(private http: HttpClient) { }
-  baseUrl: string = 'http://testyora-001-site1.itempurl.com';  
+  baseUrl: string = 'http://testyora-001-site1.itempurl.com';
 
   getData(id) {
-    return this.http.get<ExamObject>(this.baseUrl+"/api/ExaminationTypes/GetAllExamType?UniversityId="+ id);
+    return this.http.get<ExamObject>(this.baseUrl + '/api/ExaminationTypes/GetAllExamType?UniversityId=' + id);
   }
 }
 

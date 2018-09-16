@@ -48,7 +48,7 @@ import { ModalComponent } from '../ui-features/modals/modal/modal.component';
     GroupService,
   ],
   entryComponents: [
-    ModalComponent
+    ModalComponent,
   ],
 })
 export class SettingsModule { }

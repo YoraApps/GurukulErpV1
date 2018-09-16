@@ -37,7 +37,7 @@ export class ExamTypeComponent implements OnInit {
         title: 'Exam Name',
         type: 'string',
       },
-     
+
     },
   };
 
@@ -45,10 +45,10 @@ export class ExamTypeComponent implements OnInit {
 
   data;
 
-  UniversityId:number =1;
+  UniversityId: number = 1;
 
   constructor(private service: ExamTypeService) {
-    
+
    }
 
    onDeleteConfirm(event): void {

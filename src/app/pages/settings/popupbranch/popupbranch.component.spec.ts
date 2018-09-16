@@ -8,7 +8,7 @@ describe('PopupbranchComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ PopupbranchComponent ]
+      declarations: [ PopupbranchComponent ],
     })
     .compileComponents();
   }));
