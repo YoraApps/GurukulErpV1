@@ -5,7 +5,7 @@ import { ProgramStudyService } from './program-study.service';
 describe('ProgramStudyService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ProgramStudyService]
+      providers: [ProgramStudyService],
     });
   });
 

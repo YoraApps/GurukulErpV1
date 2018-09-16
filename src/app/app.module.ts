@@ -19,7 +19,7 @@ import { AuthGuardService } from './auth/auth-guard.service';
 import { AuthService } from './auth/auth.service';
 
 @NgModule({
-  declarations: [AppComponent,ButtonViewComponent, ],
+  declarations: [AppComponent, ButtonViewComponent ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,

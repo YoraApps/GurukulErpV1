@@ -7,7 +7,7 @@ import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 import { PopupService } from '../data/popup.service';
 
 @Component({
-  selector: 'button-view',
+  selector: 'ngx-button-view',
   template: `
     <button (click)="onClick()" class="btn btn-success btn-rectangle btn-demo">{{ renderValue }}</button>
   `,
@@ -23,7 +23,7 @@ export class ButtonViewComponent implements ViewCell, OnInit {
   ngOnInit() {
     this.renderValue = this.value.toString().toUpperCase();
   }
-  constructor(private modalService: NgbModal) {}
+  constructor(modalService: NgbModal) { }
 
   onClick() {
     this.save.emit(this.rowData);
@@ -33,14 +33,14 @@ export class ButtonViewComponent implements ViewCell, OnInit {
 @Component({
   selector: 'ngx-popupbranch',
   templateUrl: './popupbranch.component.html',
-  styleUrls: ['./popupbranch.component.scss']
+  styleUrls: ['./popupbranch.component.scss'],
 })
 export class PopupbranchComponent implements OnInit {
 
   source: LocalDataSource = new LocalDataSource();
   branchList: any[];
 
-  constructor(branchService: BranchService, private service: PopupService,private modalService: NgbModal) {
+  constructor(branchService: BranchService, private service: PopupService, private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
     this.branchList = branchService.getData();
@@ -83,12 +83,12 @@ export class PopupbranchComponent implements OnInit {
             const activeModal = this.modalService.open(ModalComponent, { size: 'lg', container: 'nb-layout' });
             activeModal.componentInstance.modalHeader = 'Batch Details';
           });
-        }
+        },
       },
     },
   };
 
-   onDeleteConfirm(event): void {
+  onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
