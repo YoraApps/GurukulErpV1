@@ -32,11 +32,11 @@ export class ClubComponent implements OnInit {
         title: 'Club Code',
         type: 'number',
       },
-      ClubName : {
+      ClubName: {
         title: 'Club Name ',
         type: 'string',
       },
-      ClubDescription : {
+      ClubDescription: {
         title: 'Club Description ',
         type: 'string',
       },
@@ -44,8 +44,8 @@ export class ClubComponent implements OnInit {
   };
   source: LocalDataSource = new LocalDataSource();
   data;
-  SetAction:string;
-  dataArray:any = [];
+  SetAction: string;
+  dataArray: any = [];
   constructor(private service: ClubService) {
 
   }
@@ -53,25 +53,27 @@ export class ClubComponent implements OnInit {
   onDeleteConfirm(event): void {
     debugger
     if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve(event.newData);
-      this.service.saveData(event.newData.CodeId);
+      event.confirm.resolve(event.data);
+      if (event.data.ClubId != null) {
+        this.service.removeData(event.data.ClubId);
+      }
     } else {
       event.confirm.reject();
     }
   }
 
- ngOnInit() {
-  this.service.getData()
-      .subscribe( data => {
+  ngOnInit() {
+    this.service.getData()
+      .subscribe(data => {
         this.data = data.results;
         this.source.load(this.data);
       });
   }
 
-  onSaveConfirm(event):void {
+  onSaveConfirm(event): void {
     debugger
     if (window.confirm('Are you sure you want to save?')) {
-      event.newData['name'] += ' + added in code'; 
+      event.newData['name'] += ' + added in code';
       event.confirm.resolve(event.newData);
       event.newData.SetAction = 'UPDATE';
       this.dataArray.push(event.newData);
@@ -81,12 +83,12 @@ export class ClubComponent implements OnInit {
     }
   }
 
-  onCreateConfirm(event):void { 
+  onCreateConfirm(event): void {
     debugger
-      event.confirm.resolve(event.newData);
-      event.newData.SetAction = 'INSERT';
-      this.dataArray.push(event.newData);
-      this.service.saveData(this.dataArray);
+    event.confirm.resolve(event.newData);
+    event.newData.SetAction = 'INSERT';
+    this.dataArray.push(event.newData);
+    this.service.saveData(this.dataArray);
   }
-  
+
 }
