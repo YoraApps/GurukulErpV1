@@ -11,20 +11,45 @@ export class ClubService {
   getData() {
      return this.http.get<ClubObject>(this.baseUrl+"/api/ClubMaster/GetClubMaster");
   }
+
+  saveData(data){
+      debugger
+    this.http.post(this.baseUrl+"/api/ClubMaster/UpdateClubMasterDetails",data)
+    .subscribe(
+        data => {
+            console.log("POST Request is successful ", data);
+        },
+        error => {
+            console.log("Error", error);
+        }
+    ); 
+  }
+  
+  removeData(id){
+    this.http.patch(this.baseUrl+"/api/ClubMaster/RemoveClubMaster"+ id,null)
+    .subscribe(
+            data => {
+                console.log("PUT Request is successful ", data);
+            },
+            error => {
+                console.log("Error", error);
+            }
+    ); 
+  }
 }
 
 export interface Club {
-        SetAction?: any;
-        ClubId: number;
-        ClubName: string;
-        ClubDescription: string;
-        Active: boolean;
-        lastupdateddt: Date;
-        lastupdatedby: number;
-    }
+    SetAction?: any;
+    ClubId: number;
+    ClubName: string;
+    ClubDescription: string;
+    Active: boolean;
+    lastupdateddt: Date;
+    lastupdatedby: number;
+}
 
-    export interface ClubObject {
-        results: Club[];
-    }
+export interface ClubObject {
+    results: Club[];
+}
 
 
