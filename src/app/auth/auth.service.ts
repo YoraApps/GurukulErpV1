@@ -12,6 +12,7 @@ export class AuthService {
     if (token != null) {
       return false;
     }
+
   }
 
 }

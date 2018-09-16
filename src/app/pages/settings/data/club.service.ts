@@ -11,6 +11,7 @@ export class ClubService {
       this.baseUrl + '/api/ClubMaster/GetClubMaster',
     );
   }
+  
   saveData(data) {
     this.http
       .post(this.baseUrl + '/api/ClubMaster/UpdateClubMasterDetails', data)
@@ -39,15 +40,16 @@ export class ClubService {
 }
 
 export interface Club {
-  SetAction?: any;
-  ClubId: number;
-  ClubName: string;
-  ClubDescription: string;
-  Active: boolean;
-  lastupdateddt: Date;
-  lastupdatedby: number;
+    SetAction?: any;
+    ClubId: number;
+    ClubName: string;
+    ClubDescription: string;
+    Active: boolean;
+    lastupdateddt: Date;
+    lastupdatedby: number;
 }
 
 export interface ClubObject {
-  results: Club[];
+    results: Club[];
 }
+

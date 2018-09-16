@@ -1,31 +1,23 @@
 import { Injectable } from '@angular/core';
-
+import { HttpClient } from '@angular/common/http';
 @Injectable()
 export class ExamTypeService {
 
-  data = [{
-    id: 1,
-    ExamGroup: 'AN001',
-    ExamName: 'Half Yealry Exam',
-    Remarks: 'You are absence',
-    IsActive: '1',
-    CreatedBy: '53',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }, {
-    id: 2,
-    ExamGroup: 'HLF001',
-    ExamName: 'Annual Exam',
-    Remarks: 'Exam postponed',
-    IsActive: '1',
-    CreatedBy: '43',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }];
+  constructor(private http: HttpClient) { }
+  baseUrl: string = 'http://testyora-001-site1.itempurl.com';
 
-  getData() {
-    return this.data;
+  getData(id) {
+    return this.http.get<ExamObject>(this.baseUrl + '/api/ExaminationTypes/GetAllExamType?UniversityId=' + id);
   }
 }
+
+export interface Exam {
+      ExaminationTypeId: number;
+      ExamGroup: string;
+      ExamName: string;
+}
+
+export interface ExamObject {
+    results: Exam[];
+}
+
