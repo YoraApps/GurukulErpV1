@@ -47,13 +47,6 @@ export class ClubComponent implements OnInit {
   constructor(private service: ClubService) {
   }
 
-  ngOnInit() {
-    this.service.getData()
-      .subscribe(data => {
-        this.data = data.results;
-        this.source.load(this.data);
-      });
-  }
 
   onSaveConfirm(event): void {
     if (window.confirm('Are you sure you want to save?')) {
@@ -73,6 +66,26 @@ export class ClubComponent implements OnInit {
       if (event.data.ClubId != null) {
         this.service.removeData(event.data.ClubId);
       }
+    } else {
+      event.confirm.reject();
+    }
+  }
+
+  ngOnInit() {
+    this.service.getData()
+      .subscribe(data => {
+        this.data = data.results;
+        this.source.load(this.data);
+      });
+  }
+
+  onSaveConfirm(event): void {
+    if (window.confirm('Are you sure you want to save?')) {
+      event.newData['name'] += ' + added in code';
+      event.confirm.resolve(event.newData);
+      event.newData.SetAction = 'UPDATE';
+      this.dataArray.push(event.newData);
+      this.service.saveData(this.dataArray);
     } else {
       event.confirm.reject();
     }
