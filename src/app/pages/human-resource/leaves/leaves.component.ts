@@ -4,7 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 @Component({
   selector: 'ngx-leaves',
   templateUrl: './leaves.component.html',
-  styleUrls: ['./leaves.component.scss']
+  styleUrls: ['./leaves.component.scss'],
 })
 export class LeavesComponent implements OnInit {
 
@@ -32,19 +32,19 @@ export class LeavesComponent implements OnInit {
         title: 'Leave Type',
         type: 'string',
       },
-      StartDate:{
+      StartDate: {
         title: 'Start Date',
         type: 'date',
       },
-      EndDate:{
+      EndDate: {
         title: 'End Date',
         type: 'date',
       },
-      ApplyDate:{
+      ApplyDate: {
         title: 'Apply Date',
         type: 'date',
       },
-      Days:{
+      Days: {
         title: 'Days',
         type: 'number',
       },
@@ -52,7 +52,7 @@ export class LeavesComponent implements OnInit {
         title: 'Status',
         type: 'string',
       },
-      Remarks:{
+      Remarks: {
         title: 'Status',
         type: 'string',
       },
@@ -82,19 +82,19 @@ export class LeavesComponent implements OnInit {
         title: 'Leave Type',
         type: 'string',
       },
-      StartDate:{
+      StartDate: {
         title: 'Start Date',
         type: 'date',
       },
-      EndDate:{
+      EndDate: {
         title: 'End Date',
         type: 'date',
       },
-      ApplyDate:{
+      ApplyDate: {
         title: 'Apply Date',
         type: 'date',
       },
-      Days:{
+      Days: {
         title: 'Days',
         type: 'number',
       },
@@ -102,7 +102,7 @@ export class LeavesComponent implements OnInit {
         title: 'Status',
         type: 'string',
       },
-      Remarks:{
+      Remarks: {
         title: 'Status',
         type: 'string',
       },
@@ -128,19 +128,19 @@ export class LeavesComponent implements OnInit {
         title: 'Full Name',
         type: 'string',
       },
-      StartDate:{
+      StartDate: {
         title: 'Start Date',
         type: 'date',
       },
-      EndDate:{
+      EndDate: {
         title: 'End Date',
         type: 'date',
       },
-      ApplyDate:{
+      ApplyDate: {
         title: 'Apply Date',
         type: 'date',
       },
-      Days:{
+      Days: {
         title: 'Days',
         type: 'number',
       },
@@ -148,13 +148,13 @@ export class LeavesComponent implements OnInit {
         title: 'Status',
         type: 'string',
       },
-      Remarks:{
+      Remarks: {
         title: 'Status',
         type: 'string',
       },
     },
   };
-  
+
 
   source1: LocalDataSource = new LocalDataSource();
   source2: LocalDataSource = new LocalDataSource();

@@ -5,7 +5,7 @@ import { ManagepaymentService } from './managepayment.service';
 describe('ManagepaymentService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [ManagepaymentService]
+      providers: [ManagepaymentService],
     });
   });
 

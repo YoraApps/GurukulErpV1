@@ -15,6 +15,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ButtonViewComponent } from './pages/settings/popupbranch/popupbranch.component';
+import { AuthGuardService } from './auth/auth-guard.service';
+import { AuthService } from './auth/auth.service';
 
 @NgModule({
   declarations: [AppComponent,ButtonViewComponent, ],
@@ -31,6 +33,8 @@ import { ButtonViewComponent } from './pages/settings/popupbranch/popupbranch.co
   bootstrap: [AppComponent],
   providers: [
     { provide: APP_BASE_HREF, useValue: '/' },
+    AuthGuardService,
+    AuthService,
   ],
   entryComponents: [
     ButtonViewComponent,
