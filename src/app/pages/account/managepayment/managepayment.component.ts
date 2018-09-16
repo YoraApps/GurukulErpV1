@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ClubService } from '../../../pages/settings/data/club.service';
+import { ManagepaymentService } from '../data/managepayment.service';
 
 @Component({
-  selector: 'ngx-club',
-  templateUrl: './club.component.html',
-  styleUrls: ['./club.component.scss'],
+  selector: 'ngx-managepayment',
+  templateUrl: './managepayment.component.html',
+  styleUrls: ['./managepayment.component.scss'],
 })
-export class ClubComponent implements OnInit {
+export class ManagepaymentComponent implements OnInit {
 
-  settings = {
+   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -24,30 +24,43 @@ export class ClubComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
-      ClubId: {
-        title: 'Club Code',
+      DocumentNumber: {
+        title: 'Document Number',
         type: 'number',
       },
-      ClubName : {
-        title: 'Club Name ',
+      Description: {
+        title: 'Description',
         type: 'string',
       },
-      ClubDescription : {
-        title: 'Club Description ',
+      PostedDate: {
+        title: 'Posted Date',
+        type: 'date',
+      },
+      Month: {
+        title:  'Month',
         type: 'string',
+      },
+      Year: {
+        title: 	'Year',
+        type: 'date',
+      },
+       Amount: {
+        title: 	'Amount',
+        type: 'number',
       },
     },
   };
+
   source: LocalDataSource = new LocalDataSource();
-  data;
-  constructor(private service: ClubService) {
 
 
-  }
+  constructor(private service: ManagepaymentService) {
+    const data = this.service.getData1();
+    this.source.load(data);
+   }
 
-  onDeleteConfirm(event): void {
+   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
@@ -55,12 +68,7 @@ export class ClubComponent implements OnInit {
     }
   }
 
- ngOnInit() {
-this.service.getData()
-      .subscribe( data => {
-        this.data = data.results;
-        this.source.load(this.data);
-      });
+  ngOnInit() {
   }
 
 }

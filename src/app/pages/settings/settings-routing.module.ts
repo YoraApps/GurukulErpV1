@@ -17,6 +17,7 @@ import { ClubComponent } from './club/club.component';
 import { AcademicMasterComponent } from './academic-master/academic-master.component';
 import { FeeComponent } from './fee/fee.component';
 import { GroupComponent } from './group/group.component';
+import { PopupbranchComponent } from './popupbranch/popupbranch.component';
 
 
 
@@ -62,6 +63,9 @@ const routes: Routes = [{
   }, {
     path: 'group',
     component: GroupComponent,
+  }, {
+    path: 'popupbranch',
+    component: PopupbranchComponent,
   }],
 }];
 
@@ -92,4 +96,7 @@ export const routedComponents = [
   FeeComponent,
   GroupComponent,
   ClubComponent,
+
+  //Sample
+  PopupbranchComponent
 ];

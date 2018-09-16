@@ -1,0 +1,45 @@
+<div class="col-md-12">
+  <nb-card size="small">
+    <nb-tabset>
+      <nb-tab tabTitle=" Employee Pay Details">
+        <nb-card-header> Manage Employee </nb-card-header>
+        <br><br><br><br>
+        <div class="form-group row">
+          <label for="inputEmail3" class="col-md-3 form-control-label">Employee Number</label>
+          <div class="col-md-3">
+            <input type="email" class="form-control" id="inputEmail3" placeholder="EmployeeNumber">
+          </div>
+          <button type="submit" class="btn btn-warning">EmployeeDetails</button>
+        </div>
+      </nb-tab>
+      <nb-tab tabTitle=" Salary Data Upload">
+        <br><br><br><br>
+        <div class="col-sm-4 custom-file">
+          <input type="file" class="custom-file-input" id="customFile">
+          <label class="custom-file-label" for="customFile">Upload file</label>
+        </div>
+        <a href="" download="" class="ng-binding">
+          Download Template
+        </a> <br>
+        <br><br>
+        <div>
+          <input type="button" value="Import" class="btn btn-success" ng-disabled="!SelectedFileForUpload" ng-click="ParseExcelDataAndSave()"
+            onclick="document.getElementById('filexl').value=''" disabled="disabled">
+        </div>
+      </nb-tab>
+      <nb-tab tabTitle=" Payroll Control">
+        <br><br><br><br>
+        <div class="form-group row">
+          <label for="inputEmail3" style="left:40px;" class="col-md-4 form-control-label">Employee Number</label>
+          <div class="col-md-3">
+            <select class="form-control">
+              <option display:none>Select Payroll Area</option>
+            </select>
+          </div>
+        </div>
+      </nb-tab>
+      <nb-tab tabTitle=" Payroll Leave Deduction">
+      </nb-tab>
+    </nb-tabset>
+  </nb-card>
+</div>

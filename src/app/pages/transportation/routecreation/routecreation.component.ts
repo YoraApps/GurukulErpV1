@@ -34,7 +34,7 @@ export class RoutecreationComponent implements OnInit {
         type: 'string',
       },
       DriverInformation: {
-        title: 'DriverIn formation',
+        title: 'Driver Information',
         type: 'string',
       },
       VehicleDetails: {
