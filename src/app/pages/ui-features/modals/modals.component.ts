@@ -1,7 +1,6 @@
 import { Component } from '@angular/core';
 import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
-import { ModalComponent } from './modal/modal.component';
 
 @Component({
   selector: 'ngx-modals',
