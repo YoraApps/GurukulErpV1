@@ -5,7 +5,7 @@ import { AccountSummaryService } from './account-summary.service';
 describe('AccountSummaryService', () => {
   beforeEach(() => {
     TestBed.configureTestingModule({
-      providers: [AccountSummaryService]
+      providers: [AccountSummaryService],
     });
   });
 
