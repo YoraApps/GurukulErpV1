@@ -63,8 +63,5 @@ import { GradeService } from './data/grade.service';
   entryComponents: [
     ModalComponent,
   ],
-  entryComponents: [
-    ModalComponent,
-  ],
 })
 export class SettingsModule { }

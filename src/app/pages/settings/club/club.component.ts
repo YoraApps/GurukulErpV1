@@ -47,19 +47,6 @@ export class ClubComponent implements OnInit {
   constructor(private service: ClubService) {
   }
 
-
-  onSaveConfirm(event): void {
-    if (window.confirm('Are you sure you want to save?')) {
-      event.newData['name'] += ' + added in code';
-      event.confirm.resolve(event.newData);
-      event.newData.SetAction = 'UPDATE';
-      this.dataArray.push(event.newData);
-      this.service.saveData(this.dataArray);
-    } else {
-      event.confirm.reject();
-    }
-  }
-  
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
