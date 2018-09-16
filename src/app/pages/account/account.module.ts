@@ -5,8 +5,8 @@ import { AccountRoutingModule, routedComponents } from './account-routing.module
 import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { ManagepaymentComponent } from './managepayment/managepayment.component';
-import { AccountSummaryService } from "./data/account-summary.service";
-import { ManagepaymentService } from "./data/managepayment.service";
+import { AccountSummaryService } from './data/account-summary.service';
+import { ManagepaymentService } from './data/managepayment.service';
 
 
 

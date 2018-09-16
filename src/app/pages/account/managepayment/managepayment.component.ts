@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ManagepaymentService } from "../data/managepayment.service";
+import { ManagepaymentService } from '../data/managepayment.service';
 
 @Component({
   selector: 'ngx-managepayment',
   templateUrl: './managepayment.component.html',
-  styleUrls: ['./managepayment.component.scss']
+  styleUrls: ['./managepayment.component.scss'],
 })
 export class ManagepaymentComponent implements OnInit {
 
