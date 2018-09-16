@@ -25,6 +25,10 @@ export class ExamTypeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
+      ExaminationTypeId: {
+        title: 'Examination TypeId',
+        type: 'number',
+      },
       ExamGroup: {
         title: 'Exam Group',
         type: 'string',
@@ -33,19 +37,18 @@ export class ExamTypeComponent implements OnInit {
         title: 'Exam Name',
         type: 'string',
       },
-      Remarks: {
-        title: 'Remarks',
-        type: 'string',
-      },
+     
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
+  data;
+
+  UniversityId:number =1;
 
   constructor(private service: ExamTypeService) {
-    const data = this.service.getData();
-    this.source.load(data);
+    
    }
 
    onDeleteConfirm(event): void {
@@ -57,6 +60,11 @@ export class ExamTypeComponent implements OnInit {
   }
 
   ngOnInit() {
-  }
+    this.service.getData(this.UniversityId)
+          .subscribe( data => {
+            this.data = data.results;
+            this.source.load(this.data);
+          });
+      }
 
 }
