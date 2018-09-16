@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from "ng2-smart-table";
-import { GradeService } from "../data/grade.service";
+import { LocalDataSource } from 'ng2-smart-table';
+import { GradeService } from '../data/grade.service';
 
 @Component({
   selector: 'ngx-grade',
   templateUrl: './grade.component.html',
-  styleUrls: ['./grade.component.scss']
+  styleUrls: ['./grade.component.scss'],
 })
 export class GradeComponent implements OnInit {
 
@@ -38,7 +38,7 @@ export class GradeComponent implements OnInit {
         type: 'string',
       },
        Percentage: {
-        title: 'Grade Value',
+        title: 'Percentage',
         type: 'string',
       },
     },

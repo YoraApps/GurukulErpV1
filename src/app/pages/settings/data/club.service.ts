@@ -10,10 +10,8 @@ export class ClubService {
   getData() {
      return this.http.get<ClubObject>(this.baseUrl + '/api/ClubMaster/GetClubMaster');
   }
-}
 
     saveData(data) {
-        debugger
         this.http.post(this.baseUrl + "/api/ClubMaster/UpdateClubMasterDetails", data)
             .subscribe(
             data => {
