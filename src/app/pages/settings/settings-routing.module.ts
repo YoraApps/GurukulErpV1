@@ -107,7 +107,5 @@ export const routedComponents = [
   ClubComponent,
   ProgramStudyComponent,
   FacultyDepartmentComponent,
-
-  //Sample
   PopupbranchComponent
 ];

@@ -8,7 +8,6 @@ import { ClubService } from '../../../pages/settings/data/club.service';
   styleUrls: ['./club.component.scss'],
 })
 export class ClubComponent implements OnInit {
-
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -26,7 +25,6 @@ export class ClubComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-
     columns: {
       ClubId: {
         title: 'Club Code',
@@ -63,6 +61,7 @@ export class ClubComponent implements OnInit {
   }
 
   ngOnInit() {
+
     this.service.getData()
       .subscribe(data => {
         this.data = data.results;
@@ -90,5 +89,4 @@ export class ClubComponent implements OnInit {
     this.dataArray.push(event.newData);
     this.service.saveData(this.dataArray);
   }
-
 }

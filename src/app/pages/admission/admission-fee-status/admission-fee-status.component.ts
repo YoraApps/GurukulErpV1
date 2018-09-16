@@ -43,7 +43,7 @@ export class AdmissionFeeStatusComponent implements OnInit {
         type: 'number',
       },
       TotalFeesToBePaid: {
-        title: 'otal Fees to be paid',
+        title: 'Total Fees to be paid',
         type: 'number',
       },
       TotalFeesPaid	: {

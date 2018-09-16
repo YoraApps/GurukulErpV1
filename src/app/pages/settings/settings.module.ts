@@ -56,7 +56,7 @@ import { ProgramStudyService } from "./data/program-study.service";
     ProgramStudyService,
   ],
   entryComponents: [
-    ModalComponent
+    ModalComponent,
   ],
 })
 export class SettingsModule { }
