@@ -177,6 +177,14 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Popup',
         link: '/pages/settings/popupbranch',
       },
+       {
+        title: 'Faculty-Department',
+        link: '/pages/settings/faculty-department',
+      },
+      {
+        title: 'Program-Study',
+        link: '/pages/settings/program-study',
+      },
     ],
   },
   {
