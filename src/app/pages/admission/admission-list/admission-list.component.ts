@@ -7,7 +7,7 @@ import { AdmissionListService } from '../data/admission-list.service';
   templateUrl: './admission-list.component.html',
   styleUrls: ['./admission-list.component.scss'],
 })
-export class AdmissionListComponent  {
+export class AdmissionListComponent {
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -55,7 +55,7 @@ export class AdmissionListComponent  {
 
   constructor(private service: AdmissionListService) {
     const data = this.service.getData();
-  // this.IsList = false;
+    // this.IsList = false;
     this.source.load(data);
   }
   onDeleteConfirm(event): void {
@@ -64,6 +64,6 @@ export class AdmissionListComponent  {
     } else {
       event.confirm.reject();
     }
-  } 
+  }
 }
 
