@@ -26,7 +26,7 @@ export class ClubComponent implements OnInit {
     },
 
     columns: {
-      ClubCode: {
+      ClubId: {
         title: 'Club Code',
         type: 'number',
       },
@@ -41,9 +41,10 @@ export class ClubComponent implements OnInit {
     },
   };
   source: LocalDataSource = new LocalDataSource();
+  data;
   constructor(private service: ClubService) {
-    const data = this.service.getData();
-    this.source.load(data);
+
+
   }
 
   onDeleteConfirm(event): void {
@@ -55,7 +56,11 @@ export class ClubComponent implements OnInit {
   }
 
  ngOnInit() {
-
+this.service.getData()
+      .subscribe( data => {
+        this.data = data.results;
+        this.source.load(this.data);
+      });
   }
 
 }
