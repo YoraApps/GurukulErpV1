@@ -26,7 +26,7 @@ export class ClubService {
     }
 
     removeData(id) {
-        this.http.patch(this.baseUrl + "/api/ClubMaster/RemoveClubMaster/" + id, null)
+        this.http.post(this.baseUrl + "/api/ClubMaster/RemoveClubMaster/" + id, null)
             .subscribe(
             data => {
                 console.log("PUT Request is successful ", data);
