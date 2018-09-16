@@ -154,11 +154,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/chapter',
       },
       {
-        title: 'classroom',
+        title: 'Class Room',
         link: '/pages/settings/classroom',
       },
       {
-        title: 'club',
+        title: 'Club',
         link: '/pages/settings/club',
       },
       {
