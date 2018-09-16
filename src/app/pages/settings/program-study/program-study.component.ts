@@ -1,13 +1,14 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { AdmissionListService } from '../data/admission-list.service';
+import { ProgramStudyService } from "../data/program-study.service";
 
 @Component({
-  selector: 'ngx-admission-list',
-  templateUrl: './admission-list.component.html',
-  styleUrls: ['./admission-list.component.scss'],
+  selector: 'ngx-program-study',
+  templateUrl: './program-study.component.html',
+  styleUrls: ['./program-study.component.scss']
 })
-export class AdmissionListComponent {
+export class ProgramStudyComponent implements OnInit {
+
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -24,46 +25,42 @@ export class AdmissionListComponent {
       confirmDelete: true,
     },
     columns: {
-      AdmissionNumber: {
-        title: 'Admission Number',
+      ProgramStudyCode: {
+        title: 'Program Study Code',
         type: 'number',
       },
-      CandidateName: {
-        title: 'Candidate Name ',
+      ProgramStudyName: {
+        title: 'Program Study Name',
         type: 'string',
       },
-      CourseName: {
-        title: 'Course Name',
+      AcademicTerm: {
+        title: 'Academic Term',
         type: 'string',
       },
-      BatchName: {
-        title: 'Batch Name',
-        type: 'string',
-      },
-      BranchName: {
-        title: 'Branch Name',
-        type: 'string',
-      },
-      AdmissionStatusName: {
-        title: 'Admission Status Name',
-        type: 'string',
+       SKS: {
+        title: 'SKS',
+        type: 'number',
       },
     },
   };
-  IsList: boolean;
+
   source: LocalDataSource = new LocalDataSource();
 
-  constructor(private service: AdmissionListService) {
+
+  constructor(private service: ProgramStudyService) {
     const data = this.service.getData();
-    // this.IsList = false;
     this.source.load(data);
-  }
-  onDeleteConfirm(event): void {
+   }
+
+   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
       event.confirm.reject();
     }
   }
-}
 
+  ngOnInit() {
+  }
+
+}
