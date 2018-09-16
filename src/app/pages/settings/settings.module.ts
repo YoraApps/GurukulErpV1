@@ -20,6 +20,13 @@ import { FeeService } from './data/fee.service';
 import { GroupService } from './data/group.service ';
 import { ModalComponent } from '../ui-features/modals/modal/modal.component';
 
+import { ProgramStudyComponent } from './program-study/program-study.component';
+import { FacultyDepartmentComponent } from './faculty-department/faculty-department.component';
+import { FacultyDepartmentService } from './data/faculty-department.service';
+import { ProgramStudyService } from './data/program-study.service';
+import { GradeComponent } from './grade/grade.component';
+import { GradeService } from "./data/grade.service";
+
 @NgModule({
   imports: [
     ThemeModule,
@@ -30,6 +37,9 @@ import { ModalComponent } from '../ui-features/modals/modal/modal.component';
   declarations: [
     ...routedComponents,
     ModalComponent,
+    ProgramStudyComponent,
+    FacultyDepartmentComponent,
+    GradeComponent,
   ],
   providers: [
     DegreeTypeService,
@@ -46,6 +56,12 @@ import { ModalComponent } from '../ui-features/modals/modal/modal.component';
     AcademicMasterService,
     FeeService,
     GroupService,
+    FacultyDepartmentService,
+    ProgramStudyService,
+    GradeService,
+  ],
+  entryComponents: [
+    ModalComponent,
   ],
   entryComponents: [
     ModalComponent,
