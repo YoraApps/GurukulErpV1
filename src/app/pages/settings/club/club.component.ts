@@ -49,7 +49,6 @@ export class ClubComponent implements OnInit {
   }
 
   onDeleteConfirm(event): void {
-    debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
       if (event.data.ClubId != null) {
@@ -70,7 +69,6 @@ export class ClubComponent implements OnInit {
   }
 
   onSaveConfirm(event): void {
-    debugger
     if (window.confirm('Are you sure you want to save?')) {
       event.newData['name'] += ' + added in code';
       event.confirm.resolve(event.newData);
@@ -83,7 +81,6 @@ export class ClubComponent implements OnInit {
   }
 
   onCreateConfirm(event): void {
-    debugger
     event.confirm.resolve(event.newData);
     event.newData.SetAction = 'INSERT';
     this.dataArray.push(event.newData);

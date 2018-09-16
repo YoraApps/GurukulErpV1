@@ -24,7 +24,7 @@ import { FacultyDepartmentComponent } from './faculty-department/faculty-departm
 import { FacultyDepartmentService } from './data/faculty-department.service';
 import { ProgramStudyService } from './data/program-study.service';
 import { GradeComponent } from './grade/grade.component';
-import { GradeService } from "./data/grade.service";
+import { GradeService } from './data/grade.service';
 
 @NgModule({
   imports: [

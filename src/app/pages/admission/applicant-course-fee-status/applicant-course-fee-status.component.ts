@@ -61,6 +61,14 @@ export class ApplicantCourseFeeStatusComponent implements OnInit {
     this.source.load(data);
    }
 
+   onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve();
+    } else {
+      event.confirm.reject();
+    }
+  }
+
   ngOnInit() {
   }
 
