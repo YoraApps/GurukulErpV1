@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
-import { FacultyDepartmentService } from '../data/faculty-department.service';
+import { LocalDataSource } from "ng2-smart-table";
+import { GradeService } from "../data/grade.service";
 
 @Component({
-  selector: 'ngx-faculty-department',
-  templateUrl: './faculty-department.component.html',
-  styleUrls: ['./faculty-department.component.scss'],
+  selector: 'ngx-grade',
+  templateUrl: './grade.component.html',
+  styleUrls: ['./grade.component.scss']
 })
-export class FacultyDepartmentComponent implements OnInit {
+export class GradeComponent implements OnInit {
 
-  settings = {
+   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,16 +25,20 @@ export class FacultyDepartmentComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      FacultyDepartmentCode: {
-        title: 'Faculty Department Code',
+      GradeCode: {
+        title: 'Grade Code',
         type: 'number',
       },
-      FacultyDepartmentName: {
-        title: 'Faculty Department Name',
+      GradeName: {
+        title: 'Grade Name',
         type: 'string',
       },
-      FacultyDepartmentDescription: {
-        title: 'Faculty Department Description',
+      GradeValue: {
+        title: 'Grade Value',
+        type: 'string',
+      },
+       Percentage: {
+        title: 'Grade Value',
         type: 'string',
       },
     },
@@ -43,7 +47,7 @@ export class FacultyDepartmentComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
 
 
-  constructor(private service: FacultyDepartmentService) {
+  constructor(private service: GradeService) {
     const data = this.service.getData();
     this.source.load(data);
    }
@@ -55,7 +59,6 @@ export class FacultyDepartmentComponent implements OnInit {
       event.confirm.reject();
     }
   }
-
 
   ngOnInit() {
   }

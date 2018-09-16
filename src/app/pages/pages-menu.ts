@@ -185,6 +185,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Program-Study',
         link: '/pages/settings/program-study',
       },
+      {
+        title: 'Grade',
+        link: '/pages/settings/grade',
+      },
     ],
   },
   {
