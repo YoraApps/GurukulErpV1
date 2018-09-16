@@ -45,23 +45,9 @@ export class ClubComponent implements OnInit {
   SetAction: string;
   dataArray: any = [];
   constructor(private service: ClubService) {
-
-  }
-
-  onDeleteConfirm(event): void {
-    debugger
-    if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve(event.data);
-      if (event.data.ClubId != null) {
-        this.service.removeData(event.data.ClubId);
-      }
-    } else {
-      event.confirm.reject();
-    }
   }
 
   ngOnInit() {
-
     this.service.getData()
       .subscribe(data => {
         this.data = data.results;
@@ -70,7 +56,6 @@ export class ClubComponent implements OnInit {
   }
 
   onSaveConfirm(event): void {
-    debugger
     if (window.confirm('Are you sure you want to save?')) {
       event.newData['name'] += ' + added in code';
       event.confirm.resolve(event.newData);
@@ -81,12 +66,23 @@ export class ClubComponent implements OnInit {
       event.confirm.reject();
     }
   }
+  
+  onDeleteConfirm(event): void {
+    if (window.confirm('Are you sure you want to delete?')) {
+      event.confirm.resolve(event.data);
+      if (event.data.ClubId != null) {
+        this.service.removeData(event.data.ClubId);
+      }
+    } else {
+      event.confirm.reject();
+    }
+  }
 
   onCreateConfirm(event): void {
-    debugger
     event.confirm.resolve(event.newData);
     event.newData.SetAction = 'INSERT';
     this.dataArray.push(event.newData);
     this.service.saveData(this.dataArray);
   }
+
 }
