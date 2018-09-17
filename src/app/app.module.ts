@@ -17,9 +17,10 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { ButtonViewComponent } from './pages/settings/popupbranch/popupbranch.component';
 import { AuthGuardService } from './auth/auth-guard.service';
 import { AuthService } from './auth/auth.service';
-
+import { ReviewButtonViewComponent } from './pages/admission/reviewand-approve/reviewand-approve.component';
+import {ModalComponent} from './pages/ui-features/modals/modal/modal.component'
 @NgModule({
-  declarations: [AppComponent, ButtonViewComponent ],
+  declarations: [AppComponent, ButtonViewComponent,ReviewButtonViewComponent,ModalComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -38,6 +39,8 @@ import { AuthService } from './auth/auth.service';
   ],
   entryComponents: [
     ButtonViewComponent,
+    ReviewButtonViewComponent,
+    ModalComponent
   ],
 })
 export class AppModule {

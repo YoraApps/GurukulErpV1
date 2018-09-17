@@ -18,7 +18,6 @@ import { ClubService } from './data/club.service';
 import { AcademicMasterService } from './data/academic-master.service';
 import { FeeService } from './data/fee.service';
 import { GroupService } from './data/group.service ';
-import { ModalComponent } from '../ui-features/modals/modal/modal.component';
 
 import { ProgramStudyComponent } from './program-study/program-study.component';
 import { FacultyDepartmentComponent } from './faculty-department/faculty-department.component';
@@ -36,7 +35,6 @@ import { GradeService } from './data/grade.service';
   ],
   declarations: [
     ...routedComponents,
-    ModalComponent,
     ProgramStudyComponent,
     FacultyDepartmentComponent,
     GradeComponent,
@@ -61,7 +59,6 @@ import { GradeService } from './data/grade.service';
     GradeService,
   ],
   entryComponents: [
-    ModalComponent,
   ],
 })
 export class SettingsModule { }

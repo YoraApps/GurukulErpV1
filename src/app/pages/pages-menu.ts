@@ -186,6 +186,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/program-study',
       },
       {
+        title: 'NbAccordion',
+        link: '/pages/settings/NbAccordion',
+      },
+      {
         title: 'Grade',
         link: '/pages/settings/grade',
       },

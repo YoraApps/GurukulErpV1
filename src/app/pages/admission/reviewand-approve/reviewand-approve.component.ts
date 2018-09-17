@@ -3,30 +3,62 @@ import { LocalDataSource, ViewCell } from 'ng2-smart-table';
 import { ReviewandApproveService } from '../data/reviewand-approve.service';
 import { BatchService } from '../../settings/data/batch.service';
 import { CourseService } from '../../settings/data/course.service';
-
+import { ProgramStudyService } from '../../settings/data/program-study.service';
+import { ModalComponent } from '../../ui-features/modals/modal/modal.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { PopupService } from '../../settings/data/popup.service';
 
 @Component({
   selector: 'ngx-button-view',
   template: `
-    <button (click)="onClick()">{{ renderValue }}</button>
-  `,
+  <a href=" " ><i (click)="onClick()" style="font-size:20px;height:30px;color:#4bd396" class="nb-compose"></i></a>
+  <a href=" " ><i (click)="onClick()" style="font-size:25px;color:#4bd396;text-decoration:none;" class="nb-edit"></i></a>
+  <a href=" " ><i (click)="onClick()" style="font-size:25px;color:#4bd396;text-decoration:none;" class="nb-checkmark"></i></a> 
+    `,
 })
-export class ButtonViewComponent implements ViewCell, OnInit {
+export class ReviewButtonViewComponent implements ViewCell, OnInit {
   renderValue: string;
 
-  @Input() value: string | number;
-  @Input() rowData: any;
+  @Input()
+  value: string | number;
+  @Input()
+  rowData: any;
 
-  @Output() save: EventEmitter<any> = new EventEmitter();
+  @Output()
+  save: EventEmitter<any> = new EventEmitter();
 
-  ngOnInit() {
+   ngOnInit() {
     this.renderValue = this.value.toString().toUpperCase();
   }
+  constructor(modalService: NgbModal) { }
 
   onClick() {
     this.save.emit(this.rowData);
   }
 }
+
+// @Component({
+//   selector: 'ngx-button-view',
+//   template: `
+//     <button (click)="onClick()">{{ renderValue }}</button>
+//   `,
+// })
+// export class ButtonViewComponent implements ViewCell, OnInit {
+//   renderValue: string;
+
+//   @Input() value: string | number;
+//   @Input() rowData: any;
+
+//   @Output() save: EventEmitter<any> = new EventEmitter();
+
+//   ngOnInit() {
+//     this.renderValue = this.value.toString().toUpperCase();
+//   }
+
+//   onClick() {
+//     this.save.emit(this.rowData);
+//   }
+// }
 
 
 @Component({
@@ -51,15 +83,43 @@ export class ReviewandApproveComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-    columns: {
+    columns: {     
       ApplicationNumber: {
         title: 'Application Number',
         type: 'number',
       },
-      ApplicantName: {
-        title: 'Applicant Name ',
+      FullName: {
+        title: 'Full Name ',
         type: 'string',
       },
+      Gender:{
+        title: 'Gender ',
+        type: 'string',
+      },
+      EmailId:{
+        title: 'Email Id',
+        type: 'string',
+      },
+      Address:{
+        title: 'Address',
+        type: 'string',
+      },
+      BatchName:{
+        title: 'Batch Name',
+        type: 'string',
+      },
+      ProgramStudyChoice1:{
+        title: 'Program Study Choice 1',
+        type: 'string',
+      },
+      ProgramStudyChoice2:{
+        title: 'Program Study Choice 2',
+        type: 'string',
+      },
+      ProgramStudyChoice3:{
+        title: 'Program Study Choice3',
+        type: 'string',
+      },     
       DocumentStatus: {
         title: 'Document Status',
         type: 'string',
@@ -68,13 +128,27 @@ export class ReviewandApproveComponent implements OnInit {
         title: 'Application Status',
         type: 'string',
       },
+      // button: {
+      //   title: 'Button',
+      //   type: 'custom',
+      //   renderComponent: ButtonViewComponent,
+      //   onComponentInitFunction(instance) {
+      //     instance.save.subscribe(row => {
+      //       alert(`${row.ApplicantName} saved!`);
+      //     });
+      //   },
+      // },
       button: {
         title: 'Button',
         type: 'custom',
-        renderComponent: ButtonViewComponent,
-        onComponentInitFunction(instance) {
+        renderComponent: ReviewButtonViewComponent,
+        onComponentInitFunction: instance => {
           instance.save.subscribe(row => {
-            alert(`${row.ApplicantName} saved!`);
+            const activeModal = this.modalService.open(ModalComponent, {
+              size: 'lg',
+              container: 'nb-layout',
+            });
+            activeModal.componentInstance.modalHeader = 'Batch Details';
           });
         },
       },
@@ -83,12 +157,13 @@ export class ReviewandApproveComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
   batchList: any[];
   courseList: any[];
-
-  constructor(private Reservice: ReviewandApproveService, service: BatchService, _service: CourseService,
+  ProgramStudyList: any[];
+  constructor(private Reservice: ReviewandApproveService, bservice: BatchService, _service: CourseService,pservice:ProgramStudyService,private modalService: NgbModal, private service: PopupService,
     ) {
     const data = this.Reservice.getData();
     this.source.load(data);
-    this.batchList = service.getData();
+    this.batchList = bservice.getData();
+    this.ProgramStudyList=pservice.getData();
     this.courseList = _service.getData();
   }
 

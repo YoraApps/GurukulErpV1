@@ -36,10 +36,10 @@ import { ReviewandApproveService } from './data/reviewand-approve.service';
     ApplicantCourseFeeStatusComponent,
     AdmissionFeeStatusComponent,
     ApplicantDetailModelComponent,
-    ReviewandApproveComponent,
+    ReviewandApproveComponent
   ],
   entryComponents: [
-    ApplicantDetailModelComponent,
+    ApplicantDetailModelComponent
   ],
   providers: [
     AdmissionListService,

@@ -9,6 +9,7 @@ export class CourseService {
     DegreeName: 'diploma',
     CourseCode: '101a',
     CourseName: 'networks',
+    TotalSKS:10,
     IsActive: 1,
     CourseBy: 1,
     CreatedOn: '2-2-2019',

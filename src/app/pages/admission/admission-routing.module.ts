@@ -7,7 +7,7 @@ import { AdmissionFormComponent } from './admission-form/admission-form.componen
 import { CounsellingComponent } from './counselling/counselling.component';
 import { ApplicantCourseFeeStatusComponent } from './applicant-course-fee-status/applicant-course-fee-status.component';
 import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fee-status.component';
-import { ReviewandApproveComponent, ButtonViewComponent } from './reviewand-approve/reviewand-approve.component';
+import { ReviewandApproveComponent} from './reviewand-approve/reviewand-approve.component';
 
 
 const routes: Routes = [{
@@ -53,7 +53,6 @@ export const routedComponents = [
   CounsellingComponent,
   ReviewandApproveComponent,
   ApplicantCourseFeeStatusComponent,
-  AdmissionFeeStatusComponent,
-  ButtonViewComponent,
+  AdmissionFeeStatusComponent
 
 ];

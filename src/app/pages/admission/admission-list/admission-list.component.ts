@@ -28,26 +28,26 @@ export class AdmissionListComponent {
         title: 'Admission Number',
         type: 'number',
       },
-      CandidateName: {
-        title: 'Candidate Name ',
+      FullName: {
+        title: 'Full Name',
         type: 'string',
       },
-      CourseName: {
-        title: 'Course Name',
+      ProgramChoice1: {
+        title: 'Program Choice 1',
         type: 'string',
       },
-      BatchName: {
-        title: 'Batch Name',
+      ProgramChoice2: {
+        title: 'Program Choice 2',
         type: 'string',
       },
-      BranchName: {
-        title: 'Branch Name',
+      ProgramChoice3: {
+        title: 'Program Choice 3',
         type: 'string',
       },
-      AdmissionStatusName: {
-        title: 'Admission Status Name',
+      FormStatus: {
+        title: 'Form Status',
         type: 'string',
-      },
+      },     
     },
   };
   IsList: boolean;

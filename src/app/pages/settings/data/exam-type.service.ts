@@ -22,11 +22,11 @@ export class ExamTypeService {
         },
         );
 }
-removeData(data) {    
-  this.http.post(this.baseUrl + '/api/ExaminationTypes/Delete' ,data)
+removeData(id) {    
+  this.http.post(this.baseUrl + '/api/ExaminationTypes/Delete/' + id, null)
       .subscribe(
       data => {
-          console.log('PUT Request is successful ' + data);        
+          console.log('PUT Request is successful ' + data);
       },
       error => {
           console.log('Error' + error);

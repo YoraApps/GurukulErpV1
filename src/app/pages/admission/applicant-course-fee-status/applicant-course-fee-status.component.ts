@@ -3,6 +3,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 import { BatchService } from '../../settings/data/batch.service';
 import { CourseService } from '../../settings/data/course.service';
 import { ApplicantCourseFeeService } from '../data/applicant-course-fee.service';
+import { ProgramStudyService } from '../../settings/data/program-study.service';
 
 @Component({
   selector: 'ngx-applicant-course-fee-status',
@@ -54,9 +55,11 @@ export class ApplicantCourseFeeStatusComponent implements OnInit {
 
   batchList: any[];
   courseList: any[];
-  constructor(service: BatchService, _service: CourseService, private services: ApplicantCourseFeeService) {
+  ProgramStudyList:any[];
+  constructor(service: BatchService, _service: CourseService, private services: ApplicantCourseFeeService,Pservice:ProgramStudyService) {
     this.batchList = service.getData();
     this.courseList = _service.getData();
+    this.ProgramStudyList=Pservice.getData();
     const data = this.services.getData();
     this.source.load(data);
    }

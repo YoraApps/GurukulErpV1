@@ -27,13 +27,17 @@ export class CounsellingComponent {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-    columns: {
+    columns: {     
       ApplicationNumber: {
         title: 'Application Number',
         type: 'number',
       },
-      CandidateName: {
-        title: 'Candidate Name ',
+      FirstName: {
+        title: 'First Name',
+        type: 'string',
+      },
+      Gender:{
+        title: 'Gender',
         type: 'string',
       },
       EmailId: {
@@ -44,26 +48,18 @@ export class CounsellingComponent {
         title: 'Address',
         type: 'string',
       },
-      DegreeCategory: {
-        title: 'Degree Category',
+      ProgramStudyChoice1: {
+        title: 'Program Study Choice 1',
         type: 'string',
       },
-      DegreeType: {
-        title: 'Degree Type',
+      ProgramStudyChoice2: {
+        title: 'Program Study Choice 2',
         type: 'string',
       },
-      Batch: {
-        title: 'Batch',
+      ProgramStudyChoice3: {
+        title: 'Program Study Choice 3',
         type: 'string',
-      },
-      Course: {
-        title: 'Course',
-        type: 'string',
-      },
-      AdmissionVerificationStatus: {
-        title: 'Admission Verification Status',
-        type: 'string',
-      },
+      },      
     },
   };
   source: LocalDataSource = new LocalDataSource();

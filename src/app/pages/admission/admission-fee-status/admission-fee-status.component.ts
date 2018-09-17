@@ -25,7 +25,7 @@ export class AdmissionFeeStatusComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-    columns: {
+    columns: {      
       ApplicationNumber: {
         title: 'Application Number',
         type: 'number',
