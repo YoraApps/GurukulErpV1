@@ -10,6 +10,8 @@ import { VehicleService } from './data/vehicle.service';
 import { DriverMasterService } from './data/driver-master.service';
 import { RoutecreationComponent } from './routecreation/routecreation.component';
 import { RoutecreationService } from './data/routecreation.service';
+import { AssignRouteService } from "./data/assign-route.service";
+import { AssignRouteComponent } from "./assign-route/assign-route.component";
 
 
 @NgModule({
@@ -21,6 +23,7 @@ import { RoutecreationService } from './data/routecreation.service';
   declarations: [
     ...routedComponents,
     RoutecreationComponent,
+    AssignRouteComponent,
   ],
   providers: [
     SmartTableService,
@@ -28,6 +31,7 @@ import { RoutecreationService } from './data/routecreation.service';
     VehicleService,
     DriverMasterService,
     RoutecreationService,
+    AssignRouteService,
   ],
 })
 export class TransportationModule { }

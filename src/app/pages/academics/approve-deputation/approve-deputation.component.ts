@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
-import { BatchService } from '../data/batch.service';
-import { BranchService } from '../data/branch.service';
+import { LocalDataSource } from "ng2-smart-table";
+import { ApproveDeputationService } from "../data/approve-deputation.service";
 
 @Component({
-  selector: 'ngx-batch',
-  templateUrl: './batch.component.html',
-  styleUrls: ['./batch.component.scss'],
+  selector: 'ngx-approve-deputation',
+  templateUrl: './approve-deputation.component.html',
+  styleUrls: ['./approve-deputation.component.scss']
 })
-export class BatchComponent implements OnInit {
+export class ApproveDeputationComponent implements OnInit {
 
-  settings = {
+ settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,31 +24,37 @@ export class BatchComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-    columns: {
-      BatchName : {
-        title: 'Batch Name ',
+    columns: {      
+      FromDate: {
+        title: 'From Date',
+        type: 'date',
+      },
+       ToDate: {
+        title: 'To Date',
+        type: 'date',
+      },
+      	UniversityName: {
+        title: 'University Name',
         type: 'string',
       },
-      ResultType: {
-        title: 'Result Type',
+       Remarks: {
+        title: 'Remarks',
         type: 'string',
       },
-      AcademicTerm : {
-        title: 'Academic Term ',
+      	Status: {
+        title: 'Status',
         type: 'string',
       },
     },
   };
 
-
   source: LocalDataSource = new LocalDataSource();
-  branchList: any[];
 
-  constructor(branchService: BranchService, private service: BatchService) {
+
+  constructor(private service: ApproveDeputationService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.branchList = branchService.getData();
-  }
+   }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

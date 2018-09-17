@@ -25,6 +25,11 @@ import { FacultyDepartmentService } from './data/faculty-department.service';
 import { ProgramStudyService } from './data/program-study.service';
 import { GradeComponent } from './grade/grade.component';
 import { GradeService } from './data/grade.service';
+import { SemesterComponent } from './semester/semester.component';
+import { SemesterService } from "./data/semester.service";
+import { ClassroomComponent } from "./classroom/classroom.component";
+import { FeeAssociationComponent } from './fee-association/fee-association.component';
+import { StudentProfileComponent } from './student-profile/student-profile.component';
 
 @NgModule({
   imports: [
@@ -38,6 +43,10 @@ import { GradeService } from './data/grade.service';
     ProgramStudyComponent,
     FacultyDepartmentComponent,
     GradeComponent,
+    SemesterComponent,
+    ClassroomComponent,
+    FeeAssociationComponent,
+    StudentProfileComponent,
   ],
   providers: [
     DegreeTypeService,
@@ -57,6 +66,7 @@ import { GradeService } from './data/grade.service';
     FacultyDepartmentService,
     ProgramStudyService,
     GradeService,
+    SemesterService,
   ],
   entryComponents: [
   ],

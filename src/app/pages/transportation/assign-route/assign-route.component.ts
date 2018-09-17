@@ -1,16 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
-import { BatchService } from '../data/batch.service';
-import { BranchService } from '../data/branch.service';
+import { LocalDataSource } from "ng2-smart-table";
+import { AssignRouteService } from "../data/assign-route.service";
 
 @Component({
-  selector: 'ngx-batch',
-  templateUrl: './batch.component.html',
-  styleUrls: ['./batch.component.scss'],
+  selector: 'ngx-assign-route',
+  templateUrl: './assign-route.component.html',
+  styleUrls: ['./assign-route.component.scss']
 })
-export class BatchComponent implements OnInit {
+export class AssignRouteComponent implements OnInit {
 
-  settings = {
+ settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -26,32 +25,34 @@ export class BatchComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      BatchName : {
-        title: 'Batch Name ',
+      StudentName: {
+        title: 'Student Name',
         type: 'string',
       },
-      ResultType: {
-        title: 'Result Type',
+      SelectedRoute: {
+        title: 'Selected Route',
         type: 'string',
       },
-      AcademicTerm : {
-        title: 'Academic Term ',
-        type: 'string',
+      DropPickUpPoint: {
+        title: 'Drop Pick Up Point',
+        type: 'date',
+      },
+      FromMonth: {
+        title: 'From Month',
+        type: 'date',
+      },
+      ToMonth: {
+        title: 'To Month',
+        type: 'number',
       },
     },
   };
-
-
   source: LocalDataSource = new LocalDataSource();
-  branchList: any[];
-
-  constructor(branchService: BranchService, private service: BatchService) {
+  constructor(private service: AssignRouteService) {
     const data = this.service.getData();
     this.source.load(data);
-    this.branchList = branchService.getData();
   }
-
-   onDeleteConfirm(event): void {
+  onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {

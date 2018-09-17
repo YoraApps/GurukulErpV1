@@ -7,6 +7,7 @@ import { LocationComponent } from './location/location.component';
 import { VehicleComponent } from './vehicle/vehicle.component';
 import { DriverMasterComponent } from './driver-master/driver-master.component';
 import { RoutecreationComponent } from './routecreation/routecreation.component';
+import { AssignRouteComponent } from "./assign-route/assign-route.component";
 
 const routes: Routes = [{
   path: '',
@@ -20,6 +21,9 @@ const routes: Routes = [{
   }, {
     path: 'routecreation',
     component: RoutecreationComponent,
+  },{
+    path: 'assignroute',
+    component: AssignRouteComponent,
   },
   {
     path: 'driver',
@@ -44,4 +48,5 @@ export const routedComponents = [
   LocationComponent,
   VehicleComponent,
   DriverMasterComponent,
+  AssignRouteComponent,
 ];

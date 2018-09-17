@@ -5,7 +5,7 @@ export class FeeService {
 
   data = [{
     id: 1,
-    FeeCategory: 'Tuition Fee',
+    FeeLabel: 'Tuition Fee',
     FeeType: 'Refundable',
     Description: 'Tuition Fee',
     IsActive: '1',
@@ -15,7 +15,7 @@ export class FeeService {
     ModifiedOn: '02/09/2018',
   }, {
     id: 2,
-    FeeCategory: 'Laboratory Fee',
+    FeeLabel: 'Laboratory Fee',
     FeeType: 'Non-Refundable',
     Description: 'Laboratory Fee',
     IsActive: '1',

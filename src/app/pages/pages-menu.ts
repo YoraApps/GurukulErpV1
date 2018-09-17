@@ -65,6 +65,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Campaign Management',
         link: '/pages/academics/Campaign-Management',
       },
+       {
+        title: 'Approve Deputation',
+        link: '/pages/academics/approvedeputation',
+      },
     ],
   },
   {
@@ -86,6 +90,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Route Creation',
         link: '/pages/transportation/routecreation',
+      },
+      {
+        title: 'Assign Route',
+        link: '/pages/transportation/assignroute',
       },
     ],
   },
@@ -192,6 +200,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Grade',
         link: '/pages/settings/grade',
+      },
+      {
+        title: 'Semester',
+        link: '/pages/settings/semester',
+      },
+      {
+        title: 'Fee Association',
+        link: '/pages/settings/feeassociation',
+      },
+      {
+        title: 'Student Profile',
+        link: '/pages/settings/studentprofile',
       },
     ],
   },

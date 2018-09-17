@@ -12,7 +12,7 @@ export class ClubService {
     }
 
     saveData(data) {
-        this.http.post(this.baseUrl + '/api/ClubMaster/UpdateClubMasterDetails', data)
+        this.http.post(this.baseUrl + "/api/ClubMaster/UpdateClubMasterDetails", data)
             .subscribe(
             data1 => {
                 console.log('POST Request is successful ' + data1);

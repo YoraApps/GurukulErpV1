@@ -8,6 +8,7 @@ import { SmartTableService } from '../../@core/data/smart-table.service';
 import { AcademicsRoutingModule , routedComponents} from './academics-routing.module';
 import { ConductComponent } from './conduct/conduct.component';
 import { MemoCircularNoticeService } from './data/memo-circular-notice.service';
+import { ApproveDeputationComponent } from './approve-deputation/approve-deputation.component';
 
 
 @NgModule({
@@ -19,6 +20,7 @@ import { MemoCircularNoticeService } from './data/memo-circular-notice.service';
   declarations: [
     ...routedComponents,
     ConductComponent,
+    ApproveDeputationComponent,
   ],
   providers: [
     SmartTableService,

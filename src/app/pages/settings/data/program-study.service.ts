@@ -1,35 +1,61 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
 
 @Injectable({
   providedIn: 'root',
 })
 export class ProgramStudyService {
 
-   data = [{
-    id: 1,
-    ProgramStudyCode: '78125',
-    ProgramStudyName: 'Farmasi',
-    AcademicTerm: 'Semester',
-    SKS: '150',
-    IsActive: '1',
-    CreatedBy: '53',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }, {
-    id: 2,
-    ProgramStudyCode: '47986',
-    ProgramStudyName: 'Teknik Lingkungan',
-    AcademicTerm: 'Semester',
-    SKS: '170',
-    IsActive: '1',
-    CreatedBy: '43',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }];
+  constructor(private http: HttpClient) { }
+  baseUrl: string = 'http://testyora-001-site1.itempurl.com';
 
   getData() {
-    return this.data;
+    return this.http.get<ProgramStudyObject>(this.baseUrl + '/api/ProgramStudies/Get');
   }
+
+  saveData(data) {
+    debugger
+    this.http.post(this.baseUrl + "/api/ProgramStudies/Save", data)
+      .subscribe(
+      data1 => {
+        console.log('POST Request is successful ' + data1);
+      },
+      error => {
+        console.log('Error' + error);
+      },
+    );
+  }
+
+  removeData(programStudyid) {
+    this.http.post(this.baseUrl + '/api/ProgramStudies/Delete?programStudyid=' + programStudyid, null)
+      .subscribe(
+      data => {
+        console.log('PUT Request is successful ' + data);
+      },
+      error => {
+        console.log('Error' + error);
+      },
+    );
+  }
+
+}
+
+
+export interface ProgramStudy {
+      ProgramStudyId: number;
+      ProgramStudyCode: number;
+      ProgramStudyName: string;
+      AcademicTerm: string;
+      SKS: number;
+      Status: boolean;
+      UniversityId: number;
+      active: number;
+      lastupdateddt: Date;
+      lastupdatedby: number;
+      UserId: number;
+      TokenId: string;
+}
+
+export interface ProgramStudyObject {
+  results: ProgramStudy[];
 }
