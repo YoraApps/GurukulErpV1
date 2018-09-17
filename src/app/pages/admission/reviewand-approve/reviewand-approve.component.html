@@ -11,18 +11,18 @@
           </select>
         </div>
       </div>
-      <div class="col-md-4" style="margin-left: -8%;">
-        <label for="userName">Course
+      <div class="col-md-4" style="margin-left: -5%;">
+        <label for="userName">ProgramStudy
           <span class="text-danger">*</span>
         </label>
         <div style="width:250px;">
           <select class="form-control">
-            <option>Please select the course</option>
-            <option [value]="course.id" *ngFor="let course of courseList">{{course.CourseName}}</option>
+            <option>Please select the ProgramStudy</option>
+            <option [value]="ProgramStudy.id" *ngFor="let ProgramStudy of ProgramStudyList">{{ProgramStudy.ProgramStudyName}}</option>
           </select>
         </div>
       </div>
-      <div class="shape-container" style="width:250px;margin-top: 25px">
+      <div class="shape-container" style="width:250px;margin-top: 25px;margin-left: 3%;">
           <div style="margin-left: -30%;margin-top: 1%;">
             <button class="btn btn-success btn-semi-round btn-demo">Go</button>
           </div>

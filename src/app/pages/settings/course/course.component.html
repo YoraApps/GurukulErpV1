@@ -1,18 +1,17 @@
-<nb-card-body>
-  <div  style="width:200px;left: 60px;">          
-      <select class="form-control">  
-          <option >master</option> 
-          <option [value]="degreetype.DegreeTypeId" *ngFor="let degreetype of degreeTypeList">{{degreetype.DegreeTypeName}}</option>  
-        </select> 
-      </div>
-  </nb-card-body> 
-<nb-card>     
-  <nb-card-header>      
-    Course    
+<nb-card-body>   
+  <div style="width:200px;left: 60px;">
+    <select class="form-control">
+      <option>master</option>
+      <option [value]="degreetype.DegreeTypeId" *ngFor="let degreetype of degreeTypeList">{{degreetype.DegreeTypeName}}</option>
+    </select>
+  </div>
+</nb-card-body>
+<nb-card>
+  <nb-card-header>
+    Course
   </nb-card-header>
   <nb-card-body>
     <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
     </ng2-smart-table>
   </nb-card-body>
 </nb-card>
-

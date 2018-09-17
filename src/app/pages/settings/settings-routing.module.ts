@@ -73,7 +73,7 @@ const routes: Routes = [{
   }, {
     path: 'program-study',
     component: ProgramStudyComponent,
-  },
+  }, 
   {
     path: 'grade',
     component: GradeComponent,

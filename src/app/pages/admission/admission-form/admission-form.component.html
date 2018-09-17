@@ -1,9 +1,13 @@
 <div class="row">
-    
+
   <div class="col-md-12 col-lg-12">
     <nb-card style="height: 100%;">
-        <nb-card-header _ngcontent-c19=""><a _ngcontent-c19="" [routerLink]="['/pages/admission/admission-list']" style="width: 40px;text-decoration: none;"><i _ngcontent-c19="" style="font-size: 2rem;font-weight: bold;" class="nb-arrow-thin-left"></i></a></nb-card-header>
-        <nb-tabset fullWidth style="height: 100%;display: flex;flex-direction: column;">
+      <nb-card-header _ngcontent-c19="">
+        <a _ngcontent-c19="" [routerLink]="['/pages/admission/admission-list']" style="width: 40px;text-decoration: none;">
+          <i _ngcontent-c19="" style="font-size: 2rem;font-weight: bold;" class="nb-arrow-thin-left"></i>
+        </a>
+      </nb-card-header>
+      <nb-tabset fullWidth style="height: 100%;display: flex;flex-direction: column;">
         <nb-tab tabTitle="Personal Details" style="padding: nb-theme(padding);">
           <br/>
           <div class="col-lg-12 ">
@@ -109,9 +113,13 @@
                 <textarea rows="5" placeholder="Enter Hobbies" class="form-control"></textarea>
               </div>
             </div>
-
+            <hr>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Save</button>
+              </div>
+            </div>
           </div>
-
         </nb-tab>
         <nb-tab tabTitle="Parents Details">
           <br/>
@@ -121,7 +129,7 @@
                 <input type="text" style="height: 50px;" placeholder="Enter Father Name" class="form-control" />
               </div>
               <div class="col-sm-6 input-group">
-                <input type="text" style="height: 50px;" placeholder="Enater Mother Name" class="form-control" />
+                <input type="text" style="height: 50px;" placeholder="Enter Mother Name" class="form-control" />
               </div>
             </div>
             <br/>
@@ -130,7 +138,7 @@
                 <input type="text" style="height: 50px;" placeholder="Enter Father Occupation" class="form-control" />
               </div>
               <div class="col-sm-6 input-group">
-                <input type="text" style="height: 50px;" placeholder="Enater Mother Occupation" class="form-control" />
+                <input type="text" style="height: 50px;" placeholder="Enter Mother Occupation" class="form-control" />
               </div>
             </div>
             <br/>
@@ -161,10 +169,16 @@
             <div class="row full-name-inputs">
               <div class="col-sm-6 form-group">
                 <select class="form-control" style="height: 48px;">
-                  <option display:none>MAritalstatus</option>
+                  <option display:none>Marital status</option>
                   <option>Married</option>
                   <option>Single</option>
                 </select>
+              </div>
+            </div>
+            <hr>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Save</button>
               </div>
             </div>
           </div>
@@ -196,6 +210,12 @@
                 </select>
               </div>
             </div>
+            <hr>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Save</button>
+              </div>
+            </div>
           </div>
         </nb-tab>
         <nb-tab tabTitle="Select Study Program">
@@ -217,6 +237,12 @@
                 </select>
               </div>
             </div>
+            <hr>
+            <div class="form-group row">
+              <div class="offset-sm-3 col-sm-9">
+                <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Save</button>
+              </div>
+            </div>
           </div>
         </nb-tab>
         <nb-tab tabTitle="Upload Documents">
@@ -231,7 +257,7 @@
                 </select>
               </div>
               <div class="col-sm-4 custom-file" style="left: 15px;">
-                <input type="file"  class="custom-file-input" id="customFile" >
+                <input type="file" class="custom-file-input" id="customFile">
                 <label class="custom-file-label" for="customFile">Upload file</label>
               </div>
               <!-- <input type="file" name="pic" accept="image/*"> -->
@@ -239,7 +265,7 @@
             </div>
             <div class="row full-name-inputs">
               <div class="col-sm-4 form-group">
-                <select class="form-control" style="height: 40px;" >
+                <select class="form-control" style="height: 40px;">
                   <option display:none>Please Select The Registraion Path</option>
                   <option>Married</option>
                   <option>Single</option>
@@ -269,19 +295,19 @@
             </div>
             <div class="row full-name-inputs">
               <div class="col-sm-4 custom-file" style="left: 12px;width: 20px;">
-                <input type="file"  class="custom-file-input" id="customFile" >
+                <input type="file" class="custom-file-input" id="customFile">
                 <label class="custom-file-label" for="customFile">Upload file</label>
               </div>
               <div class="col-sm-4 form-group" style="top: -25px;left:60px">
-              <label>
-                Palangka Raya,2018</label>
+                <label>
+                  Palangka Raya,2018</label>
                 <input type="text" style="height: 37px;" placeholder=" " class="form-control" />
-              
-            </div>
+
+              </div>
               <div class="col-sm-4 form-group">
                 <!-- <label>Palangka Raya,2018</label> -->
-                
-              
+
+
               </div>
             </div>
             <hr>

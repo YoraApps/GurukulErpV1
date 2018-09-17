@@ -20,7 +20,11 @@ export class AdmissionListService {
     BranchName: 'cse',
     AdmissionStatusId: 1001,
     AdmissionStatusName: 'A',
-
+    FullName:'sai',
+    ProgramChoice1:'Mining Engineering',
+    ProgramChoice2:'Industrial Engineering',
+    ProgramChoice3:'Industrial Engineering',
+    FormStatus:'Saved'
   },
   {
     AdmissionId: 2,
@@ -39,7 +43,11 @@ export class AdmissionListService {
     BranchName: 'cse',
     AdmissionStatusId: 1001,
     AdmissionStatusName: 'A',
-
+    FullName:'sai',
+    ProgramChoice1:'Mining Engineering',
+    ProgramChoice2:'Industrial Engineering',
+    ProgramChoice3:'Industrial Engineering',
+    FormStatus:'Saved'
   },
 
 ];
