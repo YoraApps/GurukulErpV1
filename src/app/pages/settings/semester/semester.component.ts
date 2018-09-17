@@ -1,13 +1,14 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
-import { ClubService } from '../../../pages/settings/data/club.service';
+import { LocalDataSource } from "ng2-smart-table";
+import { SemesterService } from "../data/semester.service";
 
 @Component({
-  selector: 'ngx-club',
-  templateUrl: './club.component.html',
-  styleUrls: ['./club.component.scss'],
+  selector: 'ngx-semester',
+  templateUrl: './semester.component.html',
+  styleUrls: ['./semester.component.scss']
 })
-export class ClubComponent implements OnInit {
+export class SemesterComponent implements OnInit {
+
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -26,32 +27,35 @@ export class ClubComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      ClubId: {
-        title: 'Club Code',
+      CourseCode: {
+        title: 'Semester Code',
         type: 'number',
       },
-      ClubName: {
-        title: 'Club Name ',
+      CourseName: {
+        title: 'Semester Name',
         type: 'string',
       },
-      ClubDescription: {
-        title: 'Club Description ',
-        type: 'string',
+       SKS: {
+        title: 'SKS',
+        type: 'number',
       },
     },
   };
+
   source: LocalDataSource = new LocalDataSource();
   data;
-  SetAction: string;
   dataArray: any = [];
-  constructor(private service: ClubService) {
-  }
 
-  onDeleteConfirm(event): void {
+  constructor(private service: SemesterService) {
+
+   }
+
+    onDeleteConfirm(event): void {
+     debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
-      if (event.data.ClubId != null) {
-        this.service.removeData(event.data.ClubId);
+      if (event.data.CourseId != null) {
+        this.service.removeData(event.data.CourseId);
       }
     } else {
       event.confirm.reject();
@@ -60,29 +64,27 @@ export class ClubComponent implements OnInit {
 
   ngOnInit() {
     this.service.getData()
-      .subscribe(data => {
-        this.data = data.results;
-        this.source.load(this.data);
-      });
+          .subscribe( data => {
+            this.data = data.results;
+            this.source.load(this.data);
+          });
   }
 
   onSaveConfirm(event): void {
+     debugger
     if (window.confirm('Are you sure you want to save?')) {
       event.newData['name'] += ' + added in code';
       event.confirm.resolve(event.newData);
-      event.newData.SetAction = 'UPDATE';
-      this.dataArray.push(event.newData);
-      this.service.saveData(this.dataArray);
+      this.service.saveData(event.newData);
     } else {
       event.confirm.reject();
     }
-  }
 
-  onCreateConfirm(event): void {
-    event.confirm.resolve(event.newData);
-    event.newData.SetAction = 'INSERT';
-    this.dataArray.push(event.newData);
-    this.service.saveData(this.dataArray);
+   }
+
+    onCreateConfirm(event): void {
+      event.confirm.resolve(event.newData);
+    this.service.saveData(event.newData);
   }
 
 }

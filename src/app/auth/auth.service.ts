@@ -10,8 +10,9 @@ export class AuthService {
     // Check whether the token is expired and return
     // true or false
     if (token != null) {
-      return false;
+        return false;
     }
+
   }
-  
+
 }

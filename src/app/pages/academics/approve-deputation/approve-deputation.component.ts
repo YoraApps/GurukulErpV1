@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ExamTypeService } from '../data/exam-type.service';
-import { LocalDataSource } from 'ng2-smart-table';
+import { LocalDataSource } from "ng2-smart-table";
+import { ApproveDeputationService } from "../data/approve-deputation.service";
 
 @Component({
-  selector: 'ngx-exam-type',
-  templateUrl: './exam-type.component.html',
-  styleUrls: ['./exam-type.component.scss'],
+  selector: 'ngx-approve-deputation',
+  templateUrl: './approve-deputation.component.html',
+  styleUrls: ['./approve-deputation.component.scss']
 })
-export class ExamTypeComponent implements OnInit {
+export class ApproveDeputationComponent implements OnInit {
 
-  settings = {
+ settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -24,31 +24,36 @@ export class ExamTypeComponent implements OnInit {
       deleteButtonContent: '<i class="nb-trash"></i>',
       confirmDelete: true,
     },
-    columns: {
-      ExaminationTypeId: {
-        title: 'Examination TypeId',
-        type: 'number',
+    columns: {      
+      FromDate: {
+        title: 'From Date',
+        type: 'date',
       },
-      ExamGroup: {
-        title: 'Exam Group',
+       ToDate: {
+        title: 'To Date',
+        type: 'date',
+      },
+      	UniversityName: {
+        title: 'University Name',
         type: 'string',
       },
-      ExamName: {
-        title: 'Exam Name',
+       Remarks: {
+        title: 'Remarks',
         type: 'string',
       },
-
+      	Status: {
+        title: 'Status',
+        type: 'string',
+      },
     },
   };
 
   source: LocalDataSource = new LocalDataSource();
 
-  data;
 
-  UniversityId: number = 1;
-
-  constructor(private service: ExamTypeService) {
-
+  constructor(private service: ApproveDeputationService) {
+    const data = this.service.getData();
+    this.source.load(data);
    }
 
    onDeleteConfirm(event): void {
@@ -60,11 +65,6 @@ export class ExamTypeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getData(this.UniversityId)
-          .subscribe( data => {
-            this.data = data.results;
-            this.source.load(this.data);
-          });
-      }
+  }
 
 }

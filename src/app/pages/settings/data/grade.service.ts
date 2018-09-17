@@ -31,7 +31,8 @@ export class GradeService {
 
   getData() {
     return this.data;
+  }
 }
 
-}
+
 

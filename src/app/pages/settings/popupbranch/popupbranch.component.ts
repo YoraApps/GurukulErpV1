@@ -27,7 +27,7 @@ export class ButtonViewComponent implements ViewCell, OnInit {
     this.renderValue = this.value.toString().toUpperCase();
   }
   constructor(modalService: NgbModal) { }
-  
+
   onClick() {
     this.save.emit(this.rowData);
   }
@@ -39,6 +39,7 @@ export class ButtonViewComponent implements ViewCell, OnInit {
   styleUrls: ['./popupbranch.component.scss'],
 })
 export class PopupbranchComponent implements OnInit {
+
   source: LocalDataSource = new LocalDataSource();
   branchList: any[];
   constructor(
@@ -105,4 +106,5 @@ export class PopupbranchComponent implements OnInit {
   }
 
   ngOnInit() {}
+
 }

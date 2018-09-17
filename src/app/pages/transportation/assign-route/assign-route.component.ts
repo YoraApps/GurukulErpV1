@@ -1,15 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { ExamTypeService } from '../data/exam-type.service';
-import { LocalDataSource } from 'ng2-smart-table';
+import { LocalDataSource } from "ng2-smart-table";
+import { AssignRouteService } from "../data/assign-route.service";
 
 @Component({
-  selector: 'ngx-exam-type',
-  templateUrl: './exam-type.component.html',
-  styleUrls: ['./exam-type.component.scss'],
+  selector: 'ngx-assign-route',
+  templateUrl: './assign-route.component.html',
+  styleUrls: ['./assign-route.component.scss']
 })
-export class ExamTypeComponent implements OnInit {
+export class AssignRouteComponent implements OnInit {
 
-  settings = {
+ settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -25,33 +25,34 @@ export class ExamTypeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      ExaminationTypeId: {
-        title: 'Examination TypeId',
+      StudentName: {
+        title: 'Student Name',
+        type: 'string',
+      },
+      SelectedRoute: {
+        title: 'Selected Route',
+        type: 'string',
+      },
+      DropPickUpPoint: {
+        title: 'Drop Pick Up Point',
+        type: 'date',
+      },
+      FromMonth: {
+        title: 'From Month',
+        type: 'date',
+      },
+      ToMonth: {
+        title: 'To Month',
         type: 'number',
       },
-      ExamGroup: {
-        title: 'Exam Group',
-        type: 'string',
-      },
-      ExamName: {
-        title: 'Exam Name',
-        type: 'string',
-      },
-
     },
   };
-
   source: LocalDataSource = new LocalDataSource();
-
-  data;
-
-  UniversityId: number = 1;
-
-  constructor(private service: ExamTypeService) {
-
-   }
-
-   onDeleteConfirm(event): void {
+  constructor(private service: AssignRouteService) {
+    const data = this.service.getData();
+    this.source.load(data);
+  }
+  onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
     } else {
@@ -60,11 +61,6 @@ export class ExamTypeComponent implements OnInit {
   }
 
   ngOnInit() {
-    this.service.getData(this.UniversityId)
-          .subscribe( data => {
-            this.data = data.results;
-            this.source.load(this.data);
-          });
-      }
+  }
 
 }

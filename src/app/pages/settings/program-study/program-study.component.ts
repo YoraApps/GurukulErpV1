@@ -8,17 +8,20 @@ import { ProgramStudyService } from '../data/program-study.service';
   styleUrls: ['./program-study.component.scss'],
 })
 export class ProgramStudyComponent implements OnInit {
+ 
 
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmCreate: true,
     },
     edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmSave: true,
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
@@ -46,21 +49,48 @@ export class ProgramStudyComponent implements OnInit {
 
   source: LocalDataSource = new LocalDataSource();
 
+  data;
+   dataArray: any = [];
+
 
   constructor(private service: ProgramStudyService) {
-    const data = this.service.getData();
-    this.source.load(data);
+   
    }
 
    onDeleteConfirm(event): void {
+     debugger
     if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
+      event.confirm.resolve(event.data);
+      if (event.data.ProgramStudyId != null) {
+        this.service.removeData(event.data.ProgramStudyId);
+      }
     } else {
       event.confirm.reject();
     }
   }
 
   ngOnInit() {
+    this.service.getData()
+          .subscribe( data => {
+            this.data = data.results;
+            this.source.load(this.data);
+          });
   }
 
+   onSaveConfirm(event): void {
+     debugger
+    if (window.confirm('Are you sure you want to save?')) {
+      event.newData['name'] += ' + added in code';
+      event.confirm.resolve(event.newData);
+      this.service.saveData(event.newData);
+    } else {
+      event.confirm.reject();
+    }
+
+   }
+
+    onCreateConfirm(event): void {
+      event.confirm.resolve(event.newData);
+    this.service.saveData(event.newData);
+  }
 }
