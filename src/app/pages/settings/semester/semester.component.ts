@@ -1,14 +1,13 @@
 import { Component, OnInit } from '@angular/core';
-import { LocalDataSource } from 'ng2-smart-table';
-import { ProgramStudyService } from '../data/program-study.service';
+import { LocalDataSource } from "ng2-smart-table";
+import { SemesterService } from "../data/semester.service";
 
 @Component({
-  selector: 'ngx-program-study',
-  templateUrl: './program-study.component.html',
-  styleUrls: ['./program-study.component.scss'],
+  selector: 'ngx-semester',
+  templateUrl: './semester.component.html',
+  styleUrls: ['./semester.component.scss']
 })
-export class ProgramStudyComponent implements OnInit {
- 
+export class SemesterComponent implements OnInit {
 
   settings = {
     add: {
@@ -28,16 +27,12 @@ export class ProgramStudyComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      ProgramStudyCode: {
-        title: 'Program Study Code',
+      CourseCode: {
+        title: 'Semester Code',
         type: 'number',
       },
-      ProgramStudyName: {
-        title: 'Program Study Name',
-        type: 'string',
-      },
-      AcademicTerm: {
-        title: 'Academic Term',
+      CourseName: {
+        title: 'Semester Name',
         type: 'string',
       },
        SKS: {
@@ -48,21 +43,19 @@ export class ProgramStudyComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
-
   data;
-   dataArray: any = [];
+  dataArray: any = [];
 
+  constructor(private service: SemesterService) {
 
-  constructor(private service: ProgramStudyService) {
-   
    }
 
-   onDeleteConfirm(event): void {
+    onDeleteConfirm(event): void {
      debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
-      if (event.data.ProgramStudyId != null) {
-        this.service.removeData(event.data.ProgramStudyId);
+      if (event.data.CourseId != null) {
+        this.service.removeData(event.data.CourseId);
       }
     } else {
       event.confirm.reject();
@@ -77,7 +70,7 @@ export class ProgramStudyComponent implements OnInit {
           });
   }
 
-   onSaveConfirm(event): void {
+  onSaveConfirm(event): void {
      debugger
     if (window.confirm('Are you sure you want to save?')) {
       event.newData['name'] += ' + added in code';
@@ -93,4 +86,5 @@ export class ProgramStudyComponent implements OnInit {
       event.confirm.resolve(event.newData);
     this.service.saveData(event.newData);
   }
+
 }

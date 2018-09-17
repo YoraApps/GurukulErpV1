@@ -38,7 +38,7 @@ export class GradeComponent implements OnInit {
         type: 'string',
       },
        Percentage: {
-        title: 'Grade Value',
+        title: 'Percentage',
         type: 'string',
       },
     },

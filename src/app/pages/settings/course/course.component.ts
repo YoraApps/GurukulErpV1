@@ -32,6 +32,22 @@ export class CourseComponent implements OnInit {
         title: 'Course Name',
         type: 'string',
       },
+       TotalSKS: {
+        title: 'Total SKS',
+        type: 'string',
+      },
+      CourseType: {
+        title: 'Course Type',
+        type: 'string',
+      },
+       CourseGroup: {
+        title: 'Course Group',
+        type: 'string',
+      },
+      PrerequisiteCourse: {
+        title: 'Pre requisite Course',
+        type: 'string',
+      },
     },
   };
 

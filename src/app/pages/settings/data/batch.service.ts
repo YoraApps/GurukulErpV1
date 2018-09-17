@@ -5,9 +5,9 @@ export class BatchService {
 
   data = [{
     id: 1,
-    BranchId: 'fghjk',
-    BatchCode: '021356',
-    BatchName: 'Yora batch',
+    BatchName: 'testing 15 agt 2018 | General',
+    ResultType: 'GradeSystem',
+    AcademicTerm : 'semister',
     IsActive: '1',
     CreatedBy: '53',
     CreatedOn: '03/09/2018',
@@ -16,9 +16,9 @@ export class BatchService {
     button: 'View',
   }, {
     id: 2,
-    BranchId: 'piuyc',
-    BatchCode: '045691',
-    BatchName: 'ECE batch',
+    BatchName: '	B 2018-19 | General',
+    ResultType: 'Grading',
+    AcademicTerm : 'half yealry',
     IsActive: '1',
     CreatedBy: '43',
     CreatedOn: '03/09/2018',

@@ -21,6 +21,9 @@ import { PopupbranchComponent } from './popupbranch/popupbranch.component';
 import { ProgramStudyComponent } from './program-study/program-study.component';
 import { FacultyDepartmentComponent } from './faculty-department/faculty-department.component';
 import { GradeComponent } from './grade/grade.component';
+import { SemesterComponent } from "./semester/semester.component";
+import { FeeAssociationComponent } from "./fee-association/fee-association.component";
+import { StudentProfileComponent } from "./student-profile/student-profile.component";
 
 const routes: Routes = [{
   path: '',
@@ -75,6 +78,18 @@ const routes: Routes = [{
     path: 'grade',
     component: GradeComponent,
   },
+  {
+    path: 'semester',
+    component: SemesterComponent,
+  },
+  {
+    path: 'feeassociation',
+    component: FeeAssociationComponent,
+  },
+  {
+    path: 'studentprofile',
+    component: StudentProfileComponent,
+  },
    {
     path: 'popupbranch',
     component: PopupbranchComponent,
@@ -112,4 +127,7 @@ export const routedComponents = [
   FacultyDepartmentComponent,
   PopupbranchComponent,
   GradeComponent,
+  SemesterComponent,
+  FeeAssociationComponent,
+  StudentProfileComponent,
 ];
