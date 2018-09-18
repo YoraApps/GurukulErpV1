@@ -16,7 +16,7 @@ const routes: Routes = [{
   }, {
       path: 'managepayment',
       component: ManagepaymentComponent,
-    },
+    },      
   ],
 }];
 
