@@ -48,6 +48,10 @@ export class CourseComponent implements OnInit {
         title: 'Pre requisite Course',
         type: 'string',
       },
+       button: {
+        title: 'Button',
+        type: 'custom',
+       },
     },
   };
 

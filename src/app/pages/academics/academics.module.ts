@@ -9,6 +9,9 @@ import { AcademicsRoutingModule , routedComponents} from './academics-routing.mo
 import { ConductComponent } from './conduct/conduct.component';
 import { MemoCircularNoticeService } from './data/memo-circular-notice.service';
 import { ApproveDeputationComponent } from './approve-deputation/approve-deputation.component';
+import { TeacherNotesComponent } from './teacher-notes/teacher-notes.component';
+import { TeacherNotesService } from "./data/teacher-notes.service";
+
 import { StudentDairyComponent } from './student-dairy/student-dairy.component';
 import { StudentDairyService } from '../academics/data/studentDairy.service';
 import { ExaminationComponent } from './examination/examination.component';
@@ -25,6 +28,7 @@ import { AsssignExamToStudentComponent } from './asssign-exam-to-student/asssign
     ...routedComponents,
     ConductComponent,
     ApproveDeputationComponent,
+    TeacherNotesComponent,
     StudentDairyComponent,
     ExaminationComponent,
     AsssignExamToStudentComponent,
@@ -32,6 +36,7 @@ import { AsssignExamToStudentComponent } from './asssign-exam-to-student/asssign
   providers: [
     SmartTableService,
     MemoCircularNoticeService,
+    TeacherNotesService,
     StudentDairyService,
     ExaminationService
   ],

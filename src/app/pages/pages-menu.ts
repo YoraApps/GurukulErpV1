@@ -70,6 +70,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/academics/approvedeputation',
       },
       {
+        title: 'Teacher Notes',
+        link: '/pages/academics/teachernote',
+      },
+      {
         title: 'Student Dairy',
         link: '/pages/academics/Studentdairy',
       },

@@ -51,7 +51,6 @@ export class SemesterComponent implements OnInit {
    }
 
     onDeleteConfirm(event): void {
-     debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
       if (event.data.CourseId != null) {
@@ -75,6 +74,7 @@ export class SemesterComponent implements OnInit {
     if (window.confirm('Are you sure you want to save?')) {
       event.newData['name'] += ' + added in code';
       event.confirm.resolve(event.newData);
+      
       this.service.saveData(event.newData);
     } else {
       event.confirm.reject();
