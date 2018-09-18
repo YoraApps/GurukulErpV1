@@ -6,6 +6,9 @@ import { MemoCircularNoticeComponent } from './memo-circular-notice/memo-circula
 import { ConductComponent } from './conduct/conduct.component';
 import { CampaignManagementComponent } from './campaign-management/campaign-management.component';
 import { ApproveDeputationComponent } from "./approve-deputation/approve-deputation.component";
+import { StudentDairyComponent } from './student-dairy/student-dairy.component';
+import { ExaminationComponent } from './examination/examination.component';
+import { AsssignExamToStudentComponent } from './asssign-exam-to-student/asssign-exam-to-student.component';
 
 const routes: Routes = [{
   path: '',
@@ -20,10 +23,23 @@ const routes: Routes = [{
       path: 'approvedeputation',
       component: ApproveDeputationComponent,
     },
+    {
+      path: 'Studentdairy',
+      component: StudentDairyComponent,
+  },
      {
       path: 'Campaign-Management',
       component: CampaignManagementComponent,
-  }],
+  },
+  {
+    path: 'Examination',
+    component: ExaminationComponent,
+  },
+  {
+    path: 'AsssignExamToStudent',
+    component: AsssignExamToStudentComponent,
+  },
+],
 }];
 
 @NgModule({
