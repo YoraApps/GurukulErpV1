@@ -19,6 +19,7 @@ import { CourseService } from '../settings/data/course.service';
 import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
 import { ReviewandApproveComponent } from './reviewand-approve/reviewand-approve.component';
 import { ReviewandApproveService } from './data/reviewand-approve.service';
+import { ProgramStudyService } from "../settings/data/program-study.service";
 
 
 @NgModule({
@@ -50,6 +51,7 @@ import { ReviewandApproveService } from './data/reviewand-approve.service';
     CourseService,
     AdmissionFeeStatusService,
     ReviewandApproveService,
+    ProgramStudyService,
   ],
 })
 export class AdmissionModule { }

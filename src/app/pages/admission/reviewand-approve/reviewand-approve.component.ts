@@ -128,16 +128,6 @@ export class ReviewandApproveComponent implements OnInit {
         title: 'Application Status',
         type: 'string',
       },
-      // button: {
-      //   title: 'Button',
-      //   type: 'custom',
-      //   renderComponent: ButtonViewComponent,
-      //   onComponentInitFunction(instance) {
-      //     instance.save.subscribe(row => {
-      //       alert(`${row.ApplicantName} saved!`);
-      //     });
-      //   },
-      // },
       button: {
         title: 'Button',
         type: 'custom',
@@ -155,16 +145,20 @@ export class ReviewandApproveComponent implements OnInit {
     },
   };
   source: LocalDataSource = new LocalDataSource();
+  data;
   batchList: any[];
   courseList: any[];
   ProgramStudyList: any[];
-  constructor(private Reservice: ReviewandApproveService, bservice: BatchService, _service: CourseService,pservice:ProgramStudyService,private modalService: NgbModal, private service: PopupService,
-    ) {
+
+  constructor(private Reservice: ReviewandApproveService, bservice: BatchService, 
+  _service: CourseService, private pservice:ProgramStudyService,
+  private modalService: NgbModal, private service: PopupService,)
+   {
     const data = this.Reservice.getData();
     this.source.load(data);
     this.batchList = bservice.getData();
-    this.ProgramStudyList=pservice.getData();
     this.courseList = _service.getData();
+   
   }
 
   onDeleteConfirm(event): void {
@@ -176,6 +170,13 @@ export class ReviewandApproveComponent implements OnInit {
   }
 
   ngOnInit() {
+      this.pservice.getData()
+          .subscribe( data => {
+            this.data = data.results;
+            console.log(this.data);
+            this.ProgramStudyList = this.data;
+            console.log(this.ProgramStudyList);
+          });
   }
 
 }
