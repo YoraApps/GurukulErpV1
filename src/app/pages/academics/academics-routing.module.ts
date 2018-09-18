@@ -6,6 +6,7 @@ import { MemoCircularNoticeComponent } from './memo-circular-notice/memo-circula
 import { ConductComponent } from './conduct/conduct.component';
 import { CampaignManagementComponent } from './campaign-management/campaign-management.component';
 import { ApproveDeputationComponent } from "./approve-deputation/approve-deputation.component";
+import { TeacherNotesComponent } from "./teacher-notes/teacher-notes.component";
 
 const routes: Routes = [{
   path: '',
@@ -19,6 +20,10 @@ const routes: Routes = [{
     },{
       path: 'approvedeputation',
       component: ApproveDeputationComponent,
+    },
+    {
+      path: 'teachernote',
+      component: TeacherNotesComponent,
     },
      {
       path: 'Campaign-Management',
@@ -44,4 +49,5 @@ export const routedComponents = [
   ConductComponent,
   CampaignManagementComponent,
   ApproveDeputationComponent,
+  TeacherNotesComponent,
 ];

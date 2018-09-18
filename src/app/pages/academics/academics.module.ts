@@ -9,6 +9,8 @@ import { AcademicsRoutingModule , routedComponents} from './academics-routing.mo
 import { ConductComponent } from './conduct/conduct.component';
 import { MemoCircularNoticeService } from './data/memo-circular-notice.service';
 import { ApproveDeputationComponent } from './approve-deputation/approve-deputation.component';
+import { TeacherNotesComponent } from './teacher-notes/teacher-notes.component';
+import { TeacherNotesService } from "./data/teacher-notes.service";
 
 
 @NgModule({
@@ -21,10 +23,12 @@ import { ApproveDeputationComponent } from './approve-deputation/approve-deputat
     ...routedComponents,
     ConductComponent,
     ApproveDeputationComponent,
+    TeacherNotesComponent,
   ],
   providers: [
     SmartTableService,
     MemoCircularNoticeService,
+    TeacherNotesService,
   ],
 })
 export class AcademicsModule { }

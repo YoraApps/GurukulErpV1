@@ -69,6 +69,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Approve Deputation',
         link: '/pages/academics/approvedeputation',
       },
+      {
+        title: 'Teacher Notes',
+        link: '/pages/academics/teachernote',
+      },
     ],
   },
   {

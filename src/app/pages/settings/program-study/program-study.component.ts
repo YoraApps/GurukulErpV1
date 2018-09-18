@@ -58,7 +58,6 @@ export class ProgramStudyComponent implements OnInit {
    }
 
    onDeleteConfirm(event): void {
-     debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
       if (event.data.ProgramStudyId != null) {
@@ -78,10 +77,9 @@ export class ProgramStudyComponent implements OnInit {
   }
 
    onSaveConfirm(event): void {
-     debugger
     if (window.confirm('Are you sure you want to save?')) {
       event.newData['name'] += ' + added in code';
-      event.confirm.resolve(event.newData);
+      event.confirm.resolve(event.newData);      
       this.service.saveData(event.newData);
     } else {
       event.confirm.reject();
