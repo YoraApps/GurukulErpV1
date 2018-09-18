@@ -53,15 +53,15 @@ export class ApplicantCourseFeeStatusComponent implements OnInit {
 
   source: LocalDataSource = new LocalDataSource();
 
+  data;
+
   batchList: any[];
   courseList: any[];
   ProgramStudyList:any[];
-  constructor(service: BatchService, _service: CourseService, private services: ApplicantCourseFeeService,Pservice:ProgramStudyService) {
+
+  constructor(service: BatchService, _service: CourseService, private services: ApplicantCourseFeeService,private Pservice:ProgramStudyService) {
     this.batchList = service.getData();
     this.courseList = _service.getData();
-    this.ProgramStudyList=Pservice.getData();
-    const data = this.services.getData();
-    this.source.load(data);
    }
 
    onDeleteConfirm(event): void {
@@ -73,6 +73,14 @@ export class ApplicantCourseFeeStatusComponent implements OnInit {
   }
 
   ngOnInit() {
+
+     this.Pservice.getData()
+          .subscribe( data => {
+            this.data = data.results;
+            console.log(this.data);
+            this.ProgramStudyList = this.data;
+            console.log(this.ProgramStudyList);
+          });
   }
 
 }
