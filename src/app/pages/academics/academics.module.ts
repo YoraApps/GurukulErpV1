@@ -12,6 +12,11 @@ import { ApproveDeputationComponent } from './approve-deputation/approve-deputat
 import { TeacherNotesComponent } from './teacher-notes/teacher-notes.component';
 import { TeacherNotesService } from "./data/teacher-notes.service";
 
+import { StudentDairyComponent } from './student-dairy/student-dairy.component';
+import { StudentDairyService } from '../academics/data/studentDairy.service';
+import { ExaminationComponent } from './examination/examination.component';
+import { ExaminationService } from './data/examination.service';
+import { AsssignExamToStudentComponent } from './asssign-exam-to-student/asssign-exam-to-student.component';
 
 @NgModule({
   imports: [
@@ -24,11 +29,16 @@ import { TeacherNotesService } from "./data/teacher-notes.service";
     ConductComponent,
     ApproveDeputationComponent,
     TeacherNotesComponent,
+    StudentDairyComponent,
+    ExaminationComponent,
+    AsssignExamToStudentComponent,
   ],
   providers: [
     SmartTableService,
     MemoCircularNoticeService,
     TeacherNotesService,
+    StudentDairyService,
+    ExaminationService
   ],
 })
 export class AcademicsModule { }

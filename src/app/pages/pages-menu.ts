@@ -73,6 +73,18 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Teacher Notes',
         link: '/pages/academics/teachernote',
       },
+      {
+        title: 'Student Dairy',
+        link: '/pages/academics/Studentdairy',
+      },
+      {
+        title: 'Set Examination Marks',
+        link: '/pages/academics/Examination',
+      },
+      {
+        title: 'Asssign Exam',
+        link: '/pages/academics/AsssignExamToStudent',
+      },
     ],
   },
   {
