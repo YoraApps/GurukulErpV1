@@ -1,10 +1,10 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'ngx-settings',
+  selector: 'ngx-manage-settings',
   template: `
     <router-outlet></router-outlet>
   `,
 })
-export class SettingsComponent {
+export class ManageSettingsComponent {
 }
