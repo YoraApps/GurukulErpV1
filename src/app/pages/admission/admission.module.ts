@@ -20,6 +20,8 @@ import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
 import { ReviewandApproveComponent } from './reviewand-approve/reviewand-approve.component';
 import { ReviewandApproveService } from './data/reviewand-approve.service';
 import { ProgramStudyService } from "../settings/data/program-study.service";
+import { ScheduleExaminationComponent } from './scheduleexamination/scheduleexamination.component';
+import { IdCardComponent } from './id-card/id-card.component';
 
 
 @NgModule({
@@ -37,7 +39,9 @@ import { ProgramStudyService } from "../settings/data/program-study.service";
     ApplicantCourseFeeStatusComponent,
     AdmissionFeeStatusComponent,
     ApplicantDetailModelComponent,
-    ReviewandApproveComponent
+    ReviewandApproveComponent,
+    ScheduleExaminationComponent,
+    IdCardComponent,
   ],
   entryComponents: [
     ApplicantDetailModelComponent

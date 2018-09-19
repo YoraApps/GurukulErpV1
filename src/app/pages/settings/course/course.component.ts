@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { CourseService } from '../../../pages/settings/data/course.service';
 import { DegreeTypeService } from '../../../pages/settings/data/degree-type.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { CourseModalComponent } from './course-modal/course-modal.component';
 @Component({
   selector: 'ngx-course',
   templateUrl: './course.component.html',
@@ -58,10 +60,15 @@ export class CourseComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
   degreeTypeList: any[];
 
-  constructor(degreeTypeService: DegreeTypeService, private service: CourseService) {
+  constructor(degreeTypeService: DegreeTypeService, private service: CourseService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
     this.degreeTypeList = degreeTypeService.getData();
+  }
+  onClick() {
+    const activeModal = this.modalService.open(CourseModalComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
   }
 
   onDeleteConfirm(event): void {

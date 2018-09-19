@@ -22,11 +22,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Counselling',
         link: '/pages/admission/counselling',
-      },
-      {
-        title: 'Schedule Examination',
-        link: '/pages/settings/Schedule-Examination',
-      },
+      },     
       {
         title: 'Admission Fee Status',
         link: '/pages/admission/admission-fee-status',
@@ -45,7 +41,11 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Id Cards',
-        link: '/pages/admission/batch',
+        link: '/pages/admission/IdCard',
+      },
+      {
+        title: 'Schedule Examination',
+        link: '/pages/admission/Scheduleexamination',
       },
     ],
   },
