@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { BatchService } from '../data/batch.service';
 import { BranchService } from '../data/branch.service';
+import { BatchModalComponent } from './batch-modal/batch-modal.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngx-batch',
@@ -45,10 +47,15 @@ export class BatchComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
   branchList: any[];
 
-  constructor(branchService: BranchService, private service: BatchService) {
+  constructor(branchService: BranchService, private service: BatchService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
     this.branchList = branchService.getData();
+  }  
+  onClick() {
+    const activeModal = this.modalService.open(BatchModalComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
   }
 
    onDeleteConfirm(event): void {

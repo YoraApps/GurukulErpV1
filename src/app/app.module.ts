@@ -18,14 +18,20 @@ import { ButtonViewComponent } from './pages/settings/popupbranch/popupbranch.co
 import { AuthGuardService } from './auth/auth-guard.service';
 import { AuthService } from './auth/auth.service';
 import { ReviewButtonViewComponent } from './pages/admission/reviewand-approve/reviewand-approve.component';
-import {ModalComponent} from './pages/ui-features/modals/modal/modal.component'
+import { ModalComponent} from './pages/ui-features/modals/modal/modal.component'
+import { BatchModalComponent } from './pages/settings/batch/batch-modal/batch-modal.component';
+import { CourseModalComponent } from './pages/settings/course/course-modal/course-modal.component';
+import { ScheduleComponent } from './pages/admission/scheduleexamination/schedule/schedule.component';
+import { ScheduleExamModalService } from './pages/admission/data/scheduleexammodal.service';
+import { Ng2SmartTableModule } from 'ng2-smart-table';
 @NgModule({
-  declarations: [AppComponent, ButtonViewComponent,ReviewButtonViewComponent,ModalComponent],
+  declarations: [AppComponent, ButtonViewComponent,ReviewButtonViewComponent,ModalComponent,BatchModalComponent, CourseModalComponent,ScheduleComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     HttpClientModule,
     AppRoutingModule,
+    Ng2SmartTableModule,
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
@@ -36,11 +42,15 @@ import {ModalComponent} from './pages/ui-features/modals/modal/modal.component'
     { provide: APP_BASE_HREF, useValue: '/' },
     AuthGuardService,
     AuthService,
+    ScheduleExamModalService
   ],
   entryComponents: [
     ButtonViewComponent,
     ReviewButtonViewComponent,
-    ModalComponent
+    ModalComponent,
+    BatchModalComponent,
+    CourseModalComponent,
+    ScheduleComponent,
   ],
 })
 export class AppModule {

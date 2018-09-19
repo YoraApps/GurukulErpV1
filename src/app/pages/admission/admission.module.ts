@@ -20,6 +20,8 @@ import { AdmissionFeeStatusService } from './data/admission-fee-status.service';
 import { ReviewandApproveComponent } from './reviewand-approve/reviewand-approve.component';
 import { ReviewandApproveService } from './data/reviewand-approve.service';
 import { ProgramStudyService } from "../settings/data/program-study.service";
+import { ScheduleExaminationComponent } from './scheduleexamination/scheduleexamination.component';
+import { IdCardComponent } from './id-card/id-card.component';
 import { ExamResultUploadComponent } from './exam-result-upload/exam-result-upload.component';
 
 
@@ -39,7 +41,9 @@ import { ExamResultUploadComponent } from './exam-result-upload/exam-result-uplo
     AdmissionFeeStatusComponent,
     ApplicantDetailModelComponent,
     ReviewandApproveComponent,
-    ExamResultUploadComponent
+    ScheduleExaminationComponent,
+    IdCardComponent,
+    ExamResultUploadComponent,
   ],
   entryComponents: [
     ApplicantDetailModelComponent

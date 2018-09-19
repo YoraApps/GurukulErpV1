@@ -8,6 +8,8 @@ import { CounsellingComponent } from './counselling/counselling.component';
 import { ApplicantCourseFeeStatusComponent } from './applicant-course-fee-status/applicant-course-fee-status.component';
 import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fee-status.component';
 import { ReviewandApproveComponent} from './reviewand-approve/reviewand-approve.component';
+import { ScheduleExaminationComponent } from './scheduleexamination/scheduleexamination.component';
+import { IdCardComponent } from './id-card/id-card.component';
 import { ExamResultUploadComponent } from './exam-result-upload/exam-result-upload.component';
 
 
@@ -36,6 +38,12 @@ const routes: Routes = [{
    {
     path: 'admission-fee-status',
     component: AdmissionFeeStatusComponent,
+  }, {
+    path: 'Scheduleexamination',
+    component: ScheduleExaminationComponent,
+  }, {
+    path: 'IdCard', 
+    component: IdCardComponent,
   }],
 }];
 
@@ -59,6 +67,6 @@ export const routedComponents = [
   ReviewandApproveComponent,
   ApplicantCourseFeeStatusComponent,
   AdmissionFeeStatusComponent,
+  ScheduleExaminationComponent,
   ExamResultUploadComponent,
-
 ];
