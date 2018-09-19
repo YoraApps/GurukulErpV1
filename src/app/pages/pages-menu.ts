@@ -232,6 +232,16 @@ export const MENU_ITEMS: NbMenuItem[] = [
     ],
   },
   {
+    title: 'Manage-Settings',
+    icon: 'nb-keypad',
+    children: [
+      {
+        title: 'Program Sem Association',
+        link: '/pages/manage-settings/program-sem-association',
+      }
+    ],
+  },
+  {
     title: 'UI Features',
     icon: 'nb-keypad',
     link: '/pages/ui-features',

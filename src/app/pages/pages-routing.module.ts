@@ -14,6 +14,9 @@ const routes: Routes = [{
       path: 'settings',
       loadChildren: './settings/settings.module#SettingsModule',
     }, {
+      path: 'manage-settings',
+      loadChildren: './manage-settings/manage-settings.module#ManageSettingsModule',
+    }, {
       path: 'admission',
       loadChildren: './admission/admission.module#AdmissionModule',
     }, {

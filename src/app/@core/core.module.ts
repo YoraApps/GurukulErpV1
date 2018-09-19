@@ -13,6 +13,7 @@ import { TransportationDataModule } from '../pages/transportation/data/transport
 import { AcademicsDataModule } from '../pages/academics/data/academics-data.module';
 import { AccountDataModule } from '../pages/account/data/account-data.module';
 import { HumanResourceDataModule } from '../pages/human-resource/data/human-resource-data.module';
+import { ManageSettingsDataModule } from '../pages/manage-settings/data/manage-settings.module';
 
 const socialLinks = [
   {
@@ -47,6 +48,7 @@ export const NB_CORE_PROVIDERS = [
   ...AcademicsDataModule.forRoot().providers,
   ...AccountDataModule.forRoot().providers,
   ...HumanResourceDataModule.forRoot().providers,
+  ...ManageSettingsDataModule.forRoot().providers,
   ...NbAuthModule.forRoot({
 
     strategies: [
