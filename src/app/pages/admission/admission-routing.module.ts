@@ -10,6 +10,7 @@ import { AdmissionFeeStatusComponent } from './admission-fee-status/admission-fe
 import { ReviewandApproveComponent} from './reviewand-approve/reviewand-approve.component';
 import { ScheduleExaminationComponent } from './scheduleexamination/scheduleexamination.component';
 import { IdCardComponent } from './id-card/id-card.component';
+import { ExamResultUploadComponent } from './exam-result-upload/exam-result-upload.component';
 
 
 const routes: Routes = [{
@@ -30,7 +31,11 @@ const routes: Routes = [{
   }, {
     path: 'applicant-course-fee-status',
     component: ApplicantCourseFeeStatusComponent,
-  }, {
+  },{
+    path: 'examresultupload',
+    component: ExamResultUploadComponent,
+  },
+   {
     path: 'admission-fee-status',
     component: AdmissionFeeStatusComponent,
   }, {
@@ -63,4 +68,5 @@ export const routedComponents = [
   ApplicantCourseFeeStatusComponent,
   AdmissionFeeStatusComponent,
   ScheduleExaminationComponent,
+  ExamResultUploadComponent,
 ];

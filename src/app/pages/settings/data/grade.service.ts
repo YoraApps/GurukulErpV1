@@ -1,37 +1,54 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class GradeService {
 
-   data = [{
-    id: 1,
-    GradeCode: '15',
-    GradeName: 'Refundable',
-    GradeValue: 'Tuition Fee',
-    Percentage: '85%',
-    IsActive: '1',
-    CreatedBy: '53',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }, {
-    id: 2,
-    GradeCode: 'Laboratory Fee',
-    GradeName: 'Non-Refundable',
-    GradeValue: 'Laboratory Fee',
-    Percentage: '75%',
-    IsActive: '1',
-    CreatedBy: '43',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }];
+  constructor(private http: HttpClient) { }
+  baseUrl: string = 'http://testyora-001-site1.itempurl.com';
 
   getData() {
-    return this.data;
+    return this.http.get<GradeObject>(this.baseUrl + '/api/GradeMaster/Get');
   }
+
+  saveData(data) {
+    this.http.post(this.baseUrl + "/api/GradeMaster/Save", data)
+      .subscribe(
+      data1 => {
+        console.log('POST Request is successful ' + data1);
+      },
+      error => {
+        console.log('Error' + error);
+      },
+    );
+  }
+
+  removeData(data) {
+    this.http.post(this.baseUrl + "/api/GradeMaster/Save", data)
+        .subscribe(
+        data => {
+            console.log('PUT Request is successful ' + data);
+        },
+        error => {
+            console.log('Error' + error);
+        },
+        );
+}
+}
+
+
+export interface grade {
+  GradeID: number;
+  GradeName: string;
+  Percentage: number;
+  SetAction: string;
+  Result: number;
+}
+
+export interface GradeObject {
+results: grade[];
 }
 
 

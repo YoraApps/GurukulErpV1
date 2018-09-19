@@ -22,6 +22,7 @@ import { ReviewandApproveService } from './data/reviewand-approve.service';
 import { ProgramStudyService } from "../settings/data/program-study.service";
 import { ScheduleExaminationComponent } from './scheduleexamination/scheduleexamination.component';
 import { IdCardComponent } from './id-card/id-card.component';
+import { ExamResultUploadComponent } from './exam-result-upload/exam-result-upload.component';
 
 
 @NgModule({
@@ -42,6 +43,7 @@ import { IdCardComponent } from './id-card/id-card.component';
     ReviewandApproveComponent,
     ScheduleExaminationComponent,
     IdCardComponent,
+    ExamResultUploadComponent,
   ],
   entryComponents: [
     ApplicantDetailModelComponent
