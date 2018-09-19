@@ -1,33 +1,56 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class FacultyDepartmentService {
 
-   data = [{
-    id: 1,
-    FacultyDepartmentCode: 'FSSPSC08',
-    FacultyDepartmentName: 'Program Pascasarjana',
-    FacultyDepartmentDescription: 'Law of Economics and Manga',
-    IsActive: '1',
-    CreatedBy: '53',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }, {
-    id: 2,
-    FacultyDepartmentCode: 'FSSPSC05',
-    FacultyDepartmentName: 'Fakultas Agama Islam',
-    FacultyDepartmentDescription: 'Laboratory Fee',
-    IsActive: '1',
-    CreatedBy: '43',
-    CreatedOn: '03/09/2018',
-    ModifiedBy: '36',
-    ModifiedOn: '02/09/2018',
-  }];
+  constructor(private http: HttpClient) { }
+  baseUrl: string = 'http://testyora-001-site1.itempurl.com';
 
   getData() {
-    return this.data;
+    return this.http.get<FacultydeptObject>(this.baseUrl + '/api/FacultyDept/Get');
   }
+
+  saveData(data) {
+    debugger
+    this.http.post(this.baseUrl + "/api/FacultyDept/Save", data)
+      .subscribe(
+      data1 => {
+        console.log('POST Request is successful ' + data1);
+      },
+      error => {
+        console.log('Error' + error);
+      },
+    );
+  }
+
+  removeData(data) {
+    debugger
+    this.http.post(this.baseUrl + "/api/FacultyDept/Save", data)
+        .subscribe(
+        data => {
+            console.log('PUT Request is successful ' + data);
+        },
+        error => {
+            console.log('Error' + error);
+        },
+        );
 }
+
+}
+
+
+export interface facultydept {
+  SetAction: string;
+  FacultyDeptId: number;
+  FacultyDeptCode: string;
+  FacultyDeptName: string;
+  FacultyDeptDescription: string;
+}
+
+export interface FacultydeptObject {
+results: facultydept[];
+}
+

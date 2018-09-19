@@ -26,10 +26,6 @@ export class ClubComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      ClubId: {
-        title: 'Club Code',
-        type: 'number',
-      },
       ClubName: {
         title: 'Club Name ',
         type: 'string',
