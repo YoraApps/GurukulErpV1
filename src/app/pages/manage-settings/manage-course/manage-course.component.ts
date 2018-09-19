@@ -1,14 +1,12 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
-import { ProgramSemAssociationService } from '../data/program-sem-association.service';
-
+import { ManageCourseService } from '../data/manage-course.service';
 @Component({
-  selector: 'ngx-program-sem-association',
-  templateUrl: './program-sem-association.component.html',
-  styleUrls: ['./program-sem-association.component.scss'],
+  selector: 'ngx-manage-course',
+  templateUrl: './manage-course.component.html',
+  styleUrls: ['./manage-course.component.scss']
 })
-export class ProgramSemAssociationComponent implements OnInit {
-
+export class ManageCourseComponent implements OnInit {
   settings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
@@ -25,13 +23,25 @@ export class ProgramSemAssociationComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      SemesterCode: {
-        title: 'Semester Code',
-        type: 'number',
-      },
-      SemesterName: {
-        title: 'Semester Name ',
+      SubjectCode : {
+        title: 'Subject Code',
         type: 'string',
+      },
+      SubjectName: {
+        title: 'Subject Name',
+        type: 'string',
+      },
+      TeachingType: {
+        title: 'Teaching Type',
+        type: 'string',
+      },
+      Teacher: {
+        title: 'Teacher',
+        type: 'string',
+      },
+      Periods: {
+        title: 'Periods',
+        type: 'number',
       },
       SKS: {
         title: 'SKS',
@@ -39,7 +49,7 @@ export class ProgramSemAssociationComponent implements OnInit {
       },
     },
   };
-  feessettings = {
+  chaptersettings = {
     add: {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
@@ -55,31 +65,30 @@ export class ProgramSemAssociationComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      FeeLabel: {
-        title: 'Fee Label',
+      ChapterNumber : {
+        title: 'Chapter Numbe',
         type: 'string',
       },
-      Amount: {
-        title: 'Amount',
-        type: 'number',
-      },
-      FeeType: {
-        title: 'Fee Type',
+      ChapterTitle: {
+        title: 'Chapter Title',
         type: 'string',
       },
-      Description: {
-        title: 'Description',
+      ModeofTeaching: {
+        title: 'Mode of Teaching',
+        type: 'string',
+      },
+      ChapterDetails	: {
+        title: 'Chapter Details	',
         type: 'string',
       },
     },
-  };
-
+  };  
   source: LocalDataSource = new LocalDataSource();
   _source: LocalDataSource = new LocalDataSource();
-  constructor(private service: ProgramSemAssociationService) {
+  constructor(private service: ManageCourseService) {
     const data = this.service.getData();
-    const data1 = this.service.getData1();
     this.source.load(data);
+    const data1 = this.service.getData1();
     this._source.load(data1);
   }
   onDeleteConfirm(event): void {
@@ -89,7 +98,6 @@ export class ProgramSemAssociationComponent implements OnInit {
       event.confirm.reject();
     }
   }
-
   ngOnInit() {
   }
 

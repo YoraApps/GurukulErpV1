@@ -65,7 +65,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Campaign Management',
         link: '/pages/academics/Campaign-Management',
       },
-       {
+      {
         title: 'Approve Deputation',
         link: '/pages/academics/approvedeputation',
       },
@@ -139,7 +139,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Account-Summary',
         link: '/pages/account/account-summary',
       },
-       {
+      {
         title: 'Manage-Payment',
         link: '/pages/account/managepayment',
       },
@@ -185,7 +185,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Popup',
         link: '/pages/settings/popupbranch',
       },
-       {
+      {
         title: 'Faculty-Department',
         link: '/pages/settings/faculty-department',
       },
@@ -218,7 +218,43 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Program Sem Association',
         link: '/pages/manage-settings/program-sem-association',
-      }
+      },
+      {
+        title: 'Manage Course',
+        link: '/pages/manage-settings/manage-course',
+      },
+      {
+        title: 'Manage Curriculum',
+        link: '/pages/manage-settings/manage-curriculum',
+      },
+      {
+        title: 'Manage Batch',
+        link: '/pages/manage-settings/manage-batch',
+      },
+      {
+        title: 'Manage Semester',
+        link: '/pages/manage-settings/manage-semester',
+      },
+      {
+        title: 'Assign Student To Group',
+        link: '/pages/manage-settings/assign-student-to-group',
+      },
+      {
+        title: 'Assign Councelor To Group',
+        link: '/pages/manage-settings/assign-councelor-to-group',
+      },
+      {
+        title: 'Manage Club',
+        link: '/pages/manage-settings/manage-club',
+      },
+      {
+        title: 'Manage Student Curriculam',
+        link: '/pages/manage-settings/manage-student-curriculam',
+      },
+      {
+        title: 'Manage Faculty Department',
+        link: '/pages/manage-settings/manage-faculty-department',
+      },
     ],
   },
   {
