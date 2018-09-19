@@ -5,26 +5,34 @@ import { Injectable } from '@angular/core';
 })
 export class ProgramSemAssociationService {
 
-   data1 = [{
-    DocumentNumber: '3000008',
-    Description	: '	Payroll for PA001-Monthly 01/05/2018 to 31/05/2018',
-    PostedDate: '04-09-2018',
-    Month: '9',
-    Year: '2018',
-    Amount: '50000',
+  data1 = [{
+    SemesterCode: 2010,
+    SemesterName: 'asdfg',
+    SKS: 40,
   },
-{
-    DocumentNumber: '3000008',
-    Description	: '	Payroll for PA001-Monthly 01/05/2018 to 31/05/2018',
-    PostedDate: '04-09-2018',
-    Month: '9',
-    Year: '2018',
-    Amount: '70000',
+  {
+    SemesterCode: 2009,
+    SemesterName: 'kjhgfd',
+    SKS: 40,
   },
-
-];
-
+  ];
+  data = [{
+    FeeLabel: 'tutionfee',
+    Amount: 10000,
+    FeeType: 'NR',
+    Description:'Tuition Fee',
+  },
+  {
+    FeeLabel: 'Miscellaneous',
+    Amount: 10000,
+    FeeType: 'NR',
+    Description:'Miscellaneous',
+  },
+  ];
   getData1() {
     return this.data1;
+  }
+  getData() {
+    return this.data;
   }
 }
