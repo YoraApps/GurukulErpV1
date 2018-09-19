@@ -33,7 +33,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
       },
       {
         title: 'Exam Result Upload',
-        link: '/pages/settings/Exam-Result-Upload',
+        link: '/pages/admission/examresultupload',
       },
       {
         title: 'Applicant Course Fee',
@@ -150,20 +150,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-keypad',
     children: [
       {
-        title: 'Degree Category',
-        link: '/pages/settings/degree-category',
-      },
-      {
-        title: 'Degree Type',
-        link: '/pages/settings/degree-type',
-      },
-      {
         title: 'Course ',
         link: '/pages/settings/course',
-      },
-      {
-        title: 'Branch',
-        link: '/pages/settings/branch',
       },
       {
         title: 'Batch',
@@ -186,10 +174,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/settings/club',
       },
       {
-        title: 'Academic-Master',
-        link: '/pages/settings/academic-master',
-      },
-      {
         title: 'Fee',
         link: '/pages/settings/fee',
       },
@@ -208,10 +192,6 @@ export const MENU_ITEMS: NbMenuItem[] = [
       {
         title: 'Program-Study',
         link: '/pages/settings/program-study',
-      },
-      {
-        title: 'NbAccordion',
-        link: '/pages/settings/NbAccordion',
       },
       {
         title: 'Grade',
