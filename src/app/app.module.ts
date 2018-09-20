@@ -24,8 +24,25 @@ import { CourseModalComponent } from './pages/settings/course/course-modal/cours
 import { ScheduleComponent } from './pages/admission/scheduleexamination/schedule/schedule.component';
 import { ScheduleExamModalService } from './pages/admission/data/scheduleexammodal.service';
 import { Ng2SmartTableModule } from 'ng2-smart-table';
+import { VehicalModelComponent } from './pages/transportation/vehicle/vehical-model/vehical-model.component';
+import { DriverModelComponent } from './pages/transportation/driver-master/driver-model/driver-model.component';
+import { LocationModelComponent } from './pages/transportation/location/location-model/location-model.component';
+import { RouteCreationModelComponent } from './pages/transportation/routecreation/route-creation-model/route-creation-model.component';
+import { AssignRouteModelComponent } from './pages/transportation/assign-route/assign-route-model/assign-route-model.component';
 @NgModule({
-  declarations: [AppComponent, ButtonViewComponent,ReviewButtonViewComponent,ModalComponent,BatchModalComponent, CourseModalComponent,ScheduleComponent],
+  declarations: [AppComponent, 
+    ButtonViewComponent,
+    ReviewButtonViewComponent,
+    ModalComponent,
+    BatchModalComponent, 
+    CourseModalComponent,
+    ScheduleComponent,
+    VehicalModelComponent,
+    DriverModelComponent,
+    LocationModelComponent,
+    RouteCreationModelComponent,
+    AssignRouteModelComponent,
+  ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
@@ -51,6 +68,11 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
     BatchModalComponent,
     CourseModalComponent,
     ScheduleComponent,
+    VehicalModelComponent,
+    DriverModelComponent,
+    LocationModelComponent,
+    RouteCreationModelComponent,
+    AssignRouteModelComponent,
   ],
 })
 export class AppModule {

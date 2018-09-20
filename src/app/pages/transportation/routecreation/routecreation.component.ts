@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { RoutecreationService } from '../data/routecreation.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { RouteCreationModelComponent } from './route-creation-model/route-creation-model.component';
 
 @Component({
   selector: 'ngx-routecreation',
@@ -49,10 +51,17 @@ export class RoutecreationComponent implements OnInit {
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: RoutecreationService) {
+  constructor(private service: RoutecreationService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
   }
+
+  onClick() {
+    const activeModal = this.modalService.open(RouteCreationModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
+
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();

@@ -53,12 +53,10 @@ export class FacultyDepartmentComponent implements OnInit {
    }
 
    onDeleteConfirm(event): void {
-     debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
       event.data.SetAction = 'REMOVE';
-        this.service.removeData(event.data);
-      
+        this.service.removeData(event.data);      
     } else {
       event.confirm.reject();
     }

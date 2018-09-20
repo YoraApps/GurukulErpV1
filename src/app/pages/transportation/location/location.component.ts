@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { LocationService } from '../../../pages/transportation/data/location.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { LocationModelComponent } from './location-model/location-model.component';
 @Component({
   selector: 'ngx-location',
   templateUrl: './location.component.html',
@@ -37,9 +39,15 @@ export class LocationComponent implements OnInit {
   source: LocalDataSource = new LocalDataSource();
 
 
-  constructor(private service: LocationService) {
+  constructor(private service: LocationService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
+  }
+
+  onClick() {
+    const activeModal = this.modalService.open(LocationModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
   }
 
   onDeleteConfirm(event): void {

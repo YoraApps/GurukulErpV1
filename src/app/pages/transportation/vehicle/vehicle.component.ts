@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { VehicleService } from '../../../pages/transportation/data/vehicle.service';
+import { VehicalModelComponent } from './vehical-model/vehical-model.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 @Component({
   selector: 'ngx-vehicle',
   templateUrl: './vehicle.component.html',
@@ -24,12 +26,16 @@ export class VehicleComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      LicenseNumber: {
-        title: 'Location Name',
+      RegistrationLicenseNumber: {
+        title: 'Registration/License Number',
         type: 'string',
       },
+      Description: {
+        title: 'Description',
+        type: 'number',
+      },      
       OwnerNumber: {
-        title: 'OwnerNumber',
+        title: 'Owner Number',
         type: 'number',
       },
       WeightCapacity: {
@@ -55,10 +61,18 @@ export class VehicleComponent implements OnInit {
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: VehicleService) {
+  
+  constructor(private service: VehicleService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
   }
+
+  onClick() {
+    const activeModal = this.modalService.open(VehicalModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
+
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
