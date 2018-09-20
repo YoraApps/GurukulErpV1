@@ -7,46 +7,46 @@
 </div>
 <nb-card-body>
     <div class="row show-grid">
-      <div class="col-md-4">
+      <div class="col-md-3">
         <label for="userName">Batch
           <span class="text-danger">*</span>
         </label>
-        <div style="width:250px;left: 60px;">
+        <div style="width:240px;left: 0px;">
           <select class="form-control">
             <option>Please select the batch</option>
             <option [value]="batch.id" *ngFor="let batch of batchList">{{batch.BatchName}}</option>
           </select>
         </div>
       </div>      
-      <div class="col-md-4" style="margin-left: -8%;">
+      <div class="col-md-3" style="margin-left: 1%;">
         <label for="userName">Program Study
           <span class="text-danger">*</span>
         </label>
-        <div style="width:250px;">
+        <div style="width:240px;">
           <select class="form-control">
             <option>Please select the Program Study</option>
             <option [value]="programstudy.ProgramStudyId" *ngFor="let programstudy of ProgramStudyList">{{programstudy.ProgramStudyName}}</option>
           </select>
         </div>
       </div>
-      <div class="col-md-4" style="margin-left: -8%;">
+      <div class="col-md-3" style="margin-left: 1%;">
         <label for="userName">Semester
           <span class="text-danger">*</span>
         </label>
-        <div style="width:250px;">
+        <div style="width:240px;">
           <select class="form-control">
             <option>Please select the Semester</option>
             <option [value]="semester.id" *ngFor="let semester of semisterList">{{semester.CourseName}}</option>
           </select>
         </div>
       </div>
-      <div class="shape-container" style="width:250px;margin-top: 25px">
-          <div style="margin-left: 50%;margin-top: 1%;">
+      <div class="shape-container" class="col-md-3" style="width:75px;margin-right: -24px;margin-left: 765px;margin-top: -45px;">
+          <div >
             <button class="btn btn-success btn-semi-round btn-demo">SHOW Teacher Note</button>
           </div>
       </div>
-      <div class="shape-container" style="width:250px;margin-top: 25px">
-          <div style="margin-left: 100%;margin-top: 1%;">
+      <div class="shape-container" style="width:250px;margin-top: 25px;margin-left: 770px;">
+          <div style="margin-top: 1%;">
             <button class="btn btn-success btn-semi-round btn-demo">ADD Teacher Note</button>
           </div>
       </div>

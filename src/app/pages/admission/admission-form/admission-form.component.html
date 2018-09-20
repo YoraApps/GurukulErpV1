@@ -3,9 +3,12 @@
   <div class="col-md-12 col-lg-12">
     <nb-card style="height: 100%;">
       <nb-card-header _ngcontent-c19="">
-        <a _ngcontent-c19="" [routerLink]="['/pages/admission/admission-list']" style="width: 40px;text-decoration: none;">
+          <button class="btn btn-outline-success btn-icon" [routerLink]="['/pages/admission/admission-list']">
+            <i _ngcontent-c19="" style="font-size: 2rem;font-weight: bold;" class="nb-arrow-thin-left"></i>
+            </button>
+        <!-- <a _ngcontent-c19="" [routerLink]="['/pages/admission/admission-list']" style="width: 40px;text-decoration: none;">
           <i _ngcontent-c19="" style="font-size: 2rem;font-weight: bold;" class="nb-arrow-thin-left"></i>
-        </a>
+        </a> -->
       </nb-card-header>
       <nb-tabset fullWidth style="height: 100%;display: flex;flex-direction: column;">
         <nb-tab tabTitle="Personal Details" style="padding: nb-theme(padding);">
@@ -313,7 +316,7 @@
             <hr>
             <div class="form-group row">
               <div class="offset-sm-3 col-sm-9">
-                <button type="submit" class="btn btn-warning float-right" style="right: 0px;">Submit</button>
+                <button type="submit" class="btn btn-outline-warning float-right" style="right: 0px;">Submit</button>
               </div>
             </div>
           </div>
