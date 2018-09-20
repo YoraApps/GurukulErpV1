@@ -4,7 +4,7 @@
       <label for="userName">Batch
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;left: 60px;">
+      <div style="width:220px;left: 60px;">
         <select class="form-control">
           <option>Please select the batch</option>
           <option [value]="batch.id" *ngFor="let batch of batchList">{{batch.BatchName}}</option>
@@ -15,18 +15,18 @@
         <label for="userName">Program Study
           <span class="text-danger">*</span>
         </label>
-        <div style="width:250px;">
+        <div style="width:220px;">
           <select class="form-control">
             <option>Please select the Program Study</option>
             <option [value]="ProgramStudy.ProgramStudyId" *ngFor="let ProgramStudy of ProgramStudyList">{{ProgramStudy.ProgramStudyName}}</option>
           </select>
         </div>
       </div>
-    <div class="col-md-3" style="margin-left: 1%;">
+    <div class="col-md-3" style="margin-left: 0px;">
       <label for="userName">Course
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;">
+      <div style="width:220px;">
         <select class="form-control">
           <option>Please select the Semester</option>
           <option [value]="Semester.id" *ngFor="let Semester of SemesterServiceList">{{Semester.CourseName}}</option>
@@ -35,22 +35,22 @@
     </div>   
   </div>
   <div class="row show-grid">
-    <div class="col-md-3">
+    <div class="col-md-3" style="width:220px;margin-left: 755px;margin-top: -70px;">
       <label for="userName">Exam
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;left: 60px;">
+      <div >
         <select class="form-control">
           <option>Please select the batch</option>
           <option [value]="batch.id" *ngFor="let batch of batchList">{{batch.BatchName}}</option>
         </select>
       </div>
     </div>    
-    <div class="col-md-3" style="margin-left: 1%;">
+    <div class="col-md-3" style="left: 0px;">
       <label for="userName">Course
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;">
+      <div style="width:220px;">
         <select class="form-control">
           <option>Please select the Semester</option>
           <option [value]="Semester.id" *ngFor="let Semester of SemesterServiceList">{{Semester.CourseName}}</option>
