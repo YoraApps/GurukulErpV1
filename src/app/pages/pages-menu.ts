@@ -240,6 +240,10 @@ export const MENU_ITEMS: NbMenuItem[] = [
         link: '/pages/manage-settings/assign-student-to-group',
       },
       {
+        title: 'Manage Faculty Department',
+        link: '/pages/manage-settings/manage-faculty-department',
+      },
+      {
         title: 'Assign Councelor To Group',
         link: '/pages/manage-settings/assign-councelor-to-group',
       },
@@ -251,10 +255,7 @@ export const MENU_ITEMS: NbMenuItem[] = [
         title: 'Manage Student Curriculam',
         link: '/pages/manage-settings/manage-student-curriculam',
       },
-      {
-        title: 'Manage Faculty Department',
-        link: '/pages/manage-settings/manage-faculty-department',
-      },
+      
     ],
   },
 ];

@@ -7,7 +7,7 @@
 </div>
 <nb-card-body>
   <div class="row show-grid">
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label for="userName">Faculty/Department*
         <span class="text-danger">*</span>
       </label>
@@ -18,7 +18,7 @@
         </select>
       </div>
     </div>
-    <div class="col-md-4" style="margin-left: -8%;">
+    <div class="col-md-3" style="margin-left: -8%;">
       <label for="userName">Program Study
         <span class="text-danger">*</span>
       </label>
@@ -29,22 +29,22 @@
         </select>
       </div>
     </div>
-    <div class="col-md-4" style="margin-left: -8%;">
+    <div class="col-md-3" style="margin-left: -8%;">
       <label for="userName">Semester
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;">
+      <div style="width:250px;margin-left: 65%">
         <select class="form-control">
           <option>Please select the Semester</option>
           <option [value]="semester.id" *ngFor="let semester of semisterList">{{semester.CourseName}}</option>
         </select>
       </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-md-3">
       <label for="userName">Course
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;">
+      <div style="width:250px; margin-left:67%">
         <select class="form-control">
           <option>Please select the Course</option>
           <option [value]="semester.id" *ngFor="let semester of semisterList">{{semester.CourseName}}</option>
@@ -58,48 +58,48 @@
     </div>
   </div>
   <br>
-  <hr>
   <nb-card>
-      <nb-card-header>
-        Add Teaching Type
-        <div class="row show-grid">
-            <div class="col-lg-4 pull-right">
-              <div class="shape-container" style="width:250px;margin-top: 25px">
-                <div style="margin-left: 322%;margin-top: -17%;">
-                  <button class="btn btn-success btn-semi-round b tn-demo">Add Teaching Type</button>
-                </div>
-              </div>
+    <nb-card-header>
+      Add Teaching Type
+      <div class="row show-grid">
+        <div class="col-lg-4 pull-right">
+          <div class="shape-container" style="width:250px;margin-top: 25px">
+            <div style="margin-left: 322%;margin-top: -17%;">
+              <button class="btn btn-primary btn-semi-round btn-demo">Add Teaching Type</button>
             </div>
-            </div>
-      </nb-card-header>
+          </div>
+        </div>
+      </div>
+    </nb-card-header>
     <nb-card-body>
       <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
       </ng2-smart-table>
     </nb-card-body>
   </nb-card>
-  <hr>
   <nb-card>
-      <nb-card-header>
-        Assigned Chapters
-        <div class="row show-grid">
-          <div class="col-lg-4 pull-right">
-            <div class="shape-container" style="width:250px;margin-top: 25px">
-              <div style="margin-left: 180%;margin-top: -18%;">
-                <button class="btn btn-success btn-semi-round b tn-demo">Assign Chapters</button>
-              </div>
-            </div>
-          </div>
-          <div class="col-lg-4 pull-right">
-            <div class="shape-container" style="width:250px;margin-top: 25px">
-              <div style="margin-left: 127%;margin-top: -18%;">
-                <button class="btn btn-success btn-semi-round btn-demo">Remove Chapters</button>
-              </div>
+    <nb-card-header>
+      Assigned Chapters
+      <div class="row show-grid">
+        <div class="col-lg-4 pull-right">
+          <div class="shape-container" style="width:430px;margin-top: 55px">
+            <div style="margin-left: 180%;margin-top: -18%;">
+              <button class="btn btn-hero-info btn-demo">Assign Chapters</button>
             </div>
           </div>
         </div>
-      </nb-card-header>
-      <nb-card-body>
-        <ng2-smart-table [settings]="chaptersettings" [source]="_source.data" (deleteConfirm)="onDeleteConfirm($event)">
-        </ng2-smart-table>
-      </nb-card-body>
-    </nb-card>
+        <div class="col-lg-4 pull-right">
+          <div class="shape-container" style="width:250px;margin-top: 25px">
+            <div style="margin-left:245%;margin-top: -18%;">
+              <button type="button" class="btn btn-outline-danger btn-icon">
+                <i class="nb-trash"></i>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </nb-card-header>
+    <nb-card-body>
+      <ng2-smart-table [settings]="chaptersettings" [source]="_source.data" (deleteConfirm)="onDeleteConfirm($event)">
+      </ng2-smart-table>
+    </nb-card-body>
+  </nb-card>
