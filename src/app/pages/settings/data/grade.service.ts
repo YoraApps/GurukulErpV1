@@ -26,6 +26,7 @@ export class GradeService {
   }
 
   removeData(data) {
+    debugger
     this.http.post(this.baseUrl + "/api/GradeMaster/Save", data)
         .subscribe(
         data => {

@@ -8,7 +8,7 @@ export class VehicleService {
   constructor() { }
   data = [{
     id: 1,
-    LicenseNumber: 'AP0CK9911',
+    RegistrationLicenseNumber: 'AP0CK9911',
     Description : 'BIKE',
     OwnerNumber : 89885,
     WeightCapacity:	120,
@@ -18,7 +18,7 @@ export class VehicleService {
     InsuranceExpiryDate: '19-05-2018',
   }, {
     id: 2,
-    LicenseNumber: 'AP0CK9911',
+    RegistrationLicenseNumber: 'AP0CK9911',
     Description : 'BIKE',
     OwnerNumber : 89885,
     WeightCapacity:	120,

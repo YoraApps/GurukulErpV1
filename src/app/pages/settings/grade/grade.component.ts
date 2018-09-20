@@ -27,16 +27,8 @@ export class GradeComponent implements OnInit {
       confirmDelete: true,
     },
     columns: {
-      GradeCode: {
-        title: 'Grade Code',
-        type: 'number',
-      },
       GradeName: {
         title: 'Grade Name',
-        type: 'string',
-      },
-      GradeValue: {
-        title: 'Grade Value',
         type: 'string',
       },
        Percentage: {
@@ -56,6 +48,7 @@ export class GradeComponent implements OnInit {
    }
 
    onDeleteConfirm(event): void {
+     debugger
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve(event.data);
       event.data.SetAction = 'REMOVE';

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from "ng2-smart-table";
 import { AssignRouteService } from "../data/assign-route.service";
+import { AssignRouteModelComponent } from './assign-route-model/assign-route-model.component';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
 
 @Component({
   selector: 'ngx-assign-route',
@@ -48,10 +50,17 @@ export class AssignRouteComponent implements OnInit {
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: AssignRouteService) {
+  constructor(private service: AssignRouteService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
   }
+
+  onClick() {
+    const activeModal = this.modalService.open(AssignRouteModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
+
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
       event.confirm.resolve();
