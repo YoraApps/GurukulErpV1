@@ -12,12 +12,8 @@ export const MENU_ITEMS: NbMenuItem[] = [
     icon: 'nb-compose',
     children: [
       {
-        title: 'Admission list',
+        title: 'Admission Form',
         link: '/pages/admission/admission-list',
-      },
-      {
-        title: 'Admission Forms',
-        link: '/pages/admission/admission-form',
       },
       {
         title: 'Counselling',
