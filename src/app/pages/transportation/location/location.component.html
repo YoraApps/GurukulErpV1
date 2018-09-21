@@ -8,7 +8,9 @@
             <button type="submit" (click)="onClick()"  class="btn btn-success float-right" style="right: 0px;">ADD Location</button>
           </div>
       </div>
-    <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
+    <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)"
+    (editConfirm)="onSaveConfirm($event)"
+    (createConfirm)="onCreateConfirm($event)">
     </ng2-smart-table>
   </nb-card-body>
 </nb-card>
