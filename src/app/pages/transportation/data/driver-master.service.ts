@@ -1,35 +1,66 @@
 import { Injectable } from '@angular/core';
+import { HttpClient } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root',
 })
 export class DriverMasterService {
 
-  constructor() { }
-  data = [{
-    id: 1,
-    DriverName: 'Bala kumar',
-    LicenseNo : '2232dff343 ',
-    DateOfBirth : '12-05-2018',
-    LicenseExpiryDate: '	30-05-2018',
-    ContactNumber:	434343,
-    NoOfYearsExperience:	5,
-    ReferenceName: '	Bala',
-    ReferenceContactNo:	23232,
-    Address: '	Test',
-  }, {
-    id: 2,
-    DriverName: 'Bala kumar',
-    LicenseNo : '2232dff343 ',
-    DateOfBirth : '12-05-2018',
-    LicenseExpiryDate: '	30-05-2018',
-    ContactNumber:	434343,
-    NoOfYearsExperience:	5,
-    ReferenceName: '	Bala',
-    ReferenceContactNo:	23232,
-    Address: '	Test',
-  }];
+  constructor(private http: HttpClient) { }
+  baseUrl: string = 'http://testyora-001-site1.itempurl.com';
+
   getData() {
-    return this.data;
+    return this.http.get<DriverObject>(this.baseUrl + '/api/DriverMaster/Get');
+  }
+
+  saveData(data) {
+    debugger
+    this.http.post(this.baseUrl + "/api/DriverMaster/Save", data)
+      .subscribe(
+      data1 => {
+        console.log('POST Request is successful ' + data1);
+      },
+      error => {
+        console.log('Error' + error);
+      },
+    );
+  }
+
+  removeData(DriverId) {
+    debugger
+    this.http.post(this.baseUrl + "/api/DriverMaster/delete?DriverId="+ DriverId,null)
+        .subscribe(
+        data => {
+            console.log('PUT Request is successful ' + data);
+        },
+        error => {
+            console.log('Error' + error);
+        },
+        );
   }
 }
+
+
+
+export interface driver {
+  UniversityId: number;
+  DriverId: number;
+  DriverName: string;
+  DriverLicenceNo: string;
+  DriverLicenceExpDate: string;
+  DriverMobileNo: string;
+  AlternativeContactNo: string;
+  Active: boolean;
+  lastupdateddt: Date;
+  lastupdatedby: number;
+  DateofBirth: Date;
+  ReferenceName: string;
+  ReferenceContactNo: string;
+  Address: string;
+  Experience: string;
+}
+
+export interface DriverObject {
+results: driver[];
+}
+

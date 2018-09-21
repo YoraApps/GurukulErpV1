@@ -14,11 +14,13 @@ export class LocationComponent implements OnInit {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmCreate: true,
     },
     edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmSave: true,
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
@@ -37,11 +39,11 @@ export class LocationComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
+  data;
+  dataArray: any = [];
 
+  constructor(private service: LocationService, private modalService: NgbModal) {
 
-  constructor(private service: LocationService,private modalService: NgbModal) {
-    const data = this.service.getData();
-    this.source.load(data);
   }
 
   onClick() {
@@ -52,13 +54,39 @@ export class LocationComponent implements OnInit {
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
+      event.confirm.resolve(event.data);
+      if (event.data = null) {
+        this.service.removeData(event.data);
+      }
     } else {
       event.confirm.reject();
     }
   }
 
   ngOnInit() {
+    this.service.getData()
+      .subscribe(data => {
+        this.data = data.results;
+        this.source.load(this.data);
+      });
+  }
+
+  onSaveConfirm(event): void {
+    debugger
+    if (window.confirm('Are you sure you want to save?')) {
+      event.newData['name'] += ' + added in code';
+      event.confirm.resolve(event.newData);
+      console.log(event.newData);
+      this.service.saveData(event.newData);
+    } else {
+      event.confirm.reject();
+    }
+
+  }
+
+  onCreateConfirm(event): void {
+    event.confirm.resolve(event.newData);
+    this.service.saveData(event.newData);
   }
 
 }

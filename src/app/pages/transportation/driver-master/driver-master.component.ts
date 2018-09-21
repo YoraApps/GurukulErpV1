@@ -16,11 +16,13 @@ export class DriverMasterComponent implements OnInit {
       addButtonContent: '<i class="nb-plus"></i>',
       createButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmCreate: true,
     },
     edit: {
       editButtonContent: '<i class="nb-edit"></i>',
       saveButtonContent: '<i class="nb-checkmark"></i>',
       cancelButtonContent: '<i class="nb-close"></i>',
+      confirmSave: true,
     },
     delete: {
       deleteButtonContent: '<i class="nb-trash"></i>',
@@ -31,24 +33,24 @@ export class DriverMasterComponent implements OnInit {
         title: 'Driver Name',
         type: 'string',
       },
-      LicenseNo: {
-        title: 'License No',
+      DriverLicenceNo: {
+        title: 'Driver Licence No',
         type: 'string',
       },
-      DateOfBirth: {
-        title: 'Date Of Birth',
+      DriverLicenceExpDate: {
+        title: 'Driver Licence Exp Date',
         type: 'date',
       },
-      LicenseExpiryDate: {
-        title: 'License Expiry Date',
-        type: 'date',
-      },
-      ContactNumber: {
-        title: 'Contact Number',
+      DriverMobileNo: {
+        title: 'Driver Mobile No',
         type: 'number',
       },
-      NoOfYearsExperience: {
-        title:  'No Of Years Experience',
+      DateofBirth: {
+        title: 'Date of Birth',
+        type: 'date',
+      },
+      Experience: {
+        title:  'Experience',
         type: 'number',
       },
       ReferenceName: {
@@ -66,9 +68,11 @@ export class DriverMasterComponent implements OnInit {
     },
   };
   source: LocalDataSource = new LocalDataSource();
+
+  data;
+    dataArray: any = [];
   constructor(private service: DriverMasterService,private modalService: NgbModal) {
-    const data = this.service.getData();
-    this.source.load(data);
+    
   }
 
   onClick() {
@@ -79,13 +83,38 @@ export class DriverMasterComponent implements OnInit {
 
   onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {
-      event.confirm.resolve();
+      event.confirm.resolve(event.data);
+      if (event.data.DriverId != null) {
+        this.service.removeData(event.data.DriverId);
+      }
     } else {
       event.confirm.reject();
     }
   }
 
   ngOnInit() {
+    this.service.getData()
+          .subscribe( data => {
+            this.data = data.results;
+            this.source.load(this.data);
+          });
+  }
+
+  onSaveConfirm(event): void {
+    if (window.confirm('Are you sure you want to save?')) {
+      event.newData['name'] += ' + added in code';
+      event.confirm.resolve(event.newData);
+      console.log(event.newData);
+      this.service.saveData(event.newData);
+    } else {
+      event.confirm.reject();
+    }
+
+   }
+
+    onCreateConfirm(event): void {
+      event.confirm.resolve(event.newData);
+    this.service.saveData(event.newData);
   }
 
 }
