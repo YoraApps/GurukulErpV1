@@ -113,7 +113,8 @@ export class IdCardComponent implements OnInit {
             console.log(this.ProgramStudyList);
           });
   }
-  
+  onClick()
+  {}
   }
   
   

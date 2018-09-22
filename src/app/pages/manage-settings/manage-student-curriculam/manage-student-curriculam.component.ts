@@ -6,7 +6,9 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./manage-student-curriculam.component.scss']
 })
 export class ManageStudentCurriculamComponent implements OnInit {
-
+  semisterList: any;
+  ProgramStudyList: any;
+  batchList: any;
   constructor() { }
 
   ngOnInit() {

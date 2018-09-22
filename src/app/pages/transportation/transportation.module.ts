@@ -11,8 +11,6 @@ import { DriverMasterService } from './data/driver-master.service';
 import { RoutecreationComponent } from './routecreation/routecreation.component';
 import { RoutecreationService } from './data/routecreation.service';
 import { AssignRouteService } from "./data/assign-route.service";
-import { AssignRouteComponent } from "./assign-route/assign-route.component";
-import { NgDatepickerModule } from '../datepicker/ng-datepicker.module';
 import { CommonModule } from '@angular/common';
 
 @NgModule({
@@ -20,13 +18,11 @@ import { CommonModule } from '@angular/common';
     ThemeModule,
     Ng2SmartTableModule,
     TransportationRoutingModule,
-    NgDatepickerModule,
     CommonModule
   ],
   declarations: [
     ...routedComponents,
     RoutecreationComponent,
-    AssignRouteComponent,
   ],
   providers: [
     SmartTableService,

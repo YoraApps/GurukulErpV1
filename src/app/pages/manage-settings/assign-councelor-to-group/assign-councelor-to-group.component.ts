@@ -46,6 +46,9 @@ export class AssignCouncelorToGroupComponent implements OnInit {
       },
     },
   };
+  semisterList:any;
+  batchList:any;
+  ProgramStudyList: any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: AssignCouncelorToGroupService) {
     const data = this.service.getData();

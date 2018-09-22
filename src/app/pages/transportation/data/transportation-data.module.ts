@@ -3,7 +3,6 @@ import { CommonModule } from '@angular/common';
 import { LocationService } from './location.service';
 import { VehicleService } from './vehicle.service';
 import { DriverMasterService } from './driver-master.service';
-import { AssignRouteComponent } from "../assign-route/assign-route.component";
 
 
 
@@ -20,7 +19,6 @@ const SERVICES = [
   providers: [
     ...SERVICES,
   ],
-  declarations: [AssignRouteComponent],
 })
 export class TransportationDataModule {
   static forRoot(): ModuleWithProviders {

@@ -35,6 +35,7 @@ export class ManageFacultyDepartmentComponent implements OnInit {
       },
     },
   };
+  batchList:any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ManageFacultyDepartmentService) {
     const data = this.service.getData();
