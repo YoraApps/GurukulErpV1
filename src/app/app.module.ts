@@ -9,7 +9,6 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NgModule } from '@angular/core';
 import { HttpClientModule } from '@angular/common/http';
 import { CoreModule } from './@core/core.module';
-import { MyDatePickerModule } from 'mydatepicker';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
 import { ThemeModule } from './@theme/theme.module';
@@ -70,7 +69,6 @@ import { ClassRoomModelComponent } from './pages/settings/classroom/class-room-m
     HttpClientModule,
     AppRoutingModule,
     Ng2SmartTableModule,
-    MyDatePickerModule,
 
     NgbModule.forRoot(),
     ThemeModule.forRoot(),
