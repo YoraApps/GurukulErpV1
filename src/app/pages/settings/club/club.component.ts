@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ClubService } from '../../../pages/settings/data/club.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ClubModelComponent } from './club-model/club-model.component';
 
 @Component({
   selector: 'ngx-club',
@@ -40,7 +42,13 @@ export class ClubComponent implements OnInit {
   data;
   SetAction: string;
   dataArray: any = [];
-  constructor(private service: ClubService) {
+  constructor(private service: ClubService,private modalService: NgbModal) {
+  }
+
+  onClick() {
+    const activeModal = this.modalService.open(ClubModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
   }
 
   onDeleteConfirm(event): void {

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { GroupService } from '../data/group.service ';
 import { LocalDataSource } from 'ng2-smart-table';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { GroupModelComponent } from './group-model/group-model.component';
 
 @Component({
   selector: 'ngx-group',
@@ -44,9 +46,15 @@ export class GroupComponent implements OnInit {
   SetAction: string;
   dataArray: any = [];
 
-  constructor(private service: GroupService) {
+  constructor(private service: GroupService,private modalService: NgbModal) {
     
    }
+
+   onClick() {
+    const activeModal = this.modalService.open(GroupModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

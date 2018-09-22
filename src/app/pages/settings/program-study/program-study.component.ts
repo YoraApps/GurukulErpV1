@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ProgramStudyService } from '../data/program-study.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ProgramStudyModelComponent } from './program-study-model/program-study-model.component';
 
 @Component({
   selector: 'ngx-program-study',
@@ -53,9 +55,15 @@ export class ProgramStudyComponent implements OnInit {
    dataArray: any = [];
 
 
-  constructor(private service: ProgramStudyService) {
+  constructor(private service: ProgramStudyService,private modalService: NgbModal) {
    
    }
+
+   onClick() {
+    const activeModal = this.modalService.open(ProgramStudyModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

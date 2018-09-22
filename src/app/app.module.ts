@@ -29,6 +29,17 @@ import { DriverModelComponent } from './pages/transportation/driver-master/drive
 import { LocationModelComponent } from './pages/transportation/location/location-model/location-model.component';
 import { RouteCreationModelComponent } from './pages/transportation/routecreation/route-creation-model/route-creation-model.component';
 import { AssignRouteModelComponent } from './pages/transportation/assign-route/assign-route-model/assign-route-model.component';
+import { ProgramStudyModelComponent } from './pages/settings/program-study/program-study-model/program-study-model.component';
+import { SemesterModelComponent } from './pages/settings/semester/semester-model/semester-model.component';
+import { ChapterModelComponent } from './pages/settings/chapter/chapter-model/chapter-model.component';
+import { ExamTypeModelComponent } from './pages/settings/exam-type/exam-type-model/exam-type-model.component';
+import { GroupModelComponent } from './pages/settings/group/group-model/group-model.component';
+import { GradeModelComponent } from './pages/settings/grade/grade-model/grade-model.component';
+import { ClubModelComponent } from './pages/settings/club/club-model/club-model.component';
+import { FacultyModelComponent } from './pages/settings/faculty-department/faculty-model/faculty-model.component';
+import { FeeModelComponent } from './pages/settings/fee/fee-model/fee-model.component';
+import { ClassRoomModelComponent } from './pages/settings/classroom/class-room-model/class-room-model.component';
+
 @NgModule({
   declarations: [AppComponent, 
     ButtonViewComponent,
@@ -42,6 +53,16 @@ import { AssignRouteModelComponent } from './pages/transportation/assign-route/a
     LocationModelComponent,
     RouteCreationModelComponent,
     AssignRouteModelComponent,
+    ProgramStudyModelComponent,
+    SemesterModelComponent,
+    ChapterModelComponent,
+    ExamTypeModelComponent,
+    GroupModelComponent,
+    GradeModelComponent,
+    ClubModelComponent,
+    FacultyModelComponent,
+    FeeModelComponent,
+    ClassRoomModelComponent,
   ],
   imports: [
     BrowserModule,
@@ -73,6 +94,16 @@ import { AssignRouteModelComponent } from './pages/transportation/assign-route/a
     LocationModelComponent,
     RouteCreationModelComponent,
     AssignRouteModelComponent,
+    ProgramStudyModelComponent,
+    SemesterModelComponent,
+    ChapterModelComponent,
+    ExamTypeModelComponent,
+    GroupModelComponent,
+    GradeModelComponent,
+    ClubModelComponent,
+    FacultyModelComponent,
+    FeeModelComponent,
+    ClassRoomModelComponent,
   ],
 })
 export class AppModule {
