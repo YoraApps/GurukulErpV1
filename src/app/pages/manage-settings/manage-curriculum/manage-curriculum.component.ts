@@ -46,6 +46,9 @@ export class ManageCurriculumComponent implements OnInit {
       },
     },
   };
+  semisterList:any;
+  batchList:any;
+  ProgramStudyList: any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ManageCurriculumService) {
     const data = this.service.getData();

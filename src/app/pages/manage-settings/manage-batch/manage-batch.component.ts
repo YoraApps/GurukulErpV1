@@ -34,6 +34,7 @@ export class ManageBatchComponent implements OnInit {
       },
     },
   };
+  batchList: any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ManageBatchService) {
     const data = this.service.getData();

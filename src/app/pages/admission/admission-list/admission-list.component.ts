@@ -51,6 +51,7 @@ export class AdmissionListComponent {
     },
   };
   IsList: boolean;
+  batchList : any;
   source: LocalDataSource = new LocalDataSource();
 
   constructor(private service: AdmissionListService) {

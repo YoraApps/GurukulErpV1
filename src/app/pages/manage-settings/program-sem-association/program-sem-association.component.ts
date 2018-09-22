@@ -73,7 +73,8 @@ export class ProgramSemAssociationComponent implements OnInit {
       },
     },
   };
-
+  batchList: any;
+  courseList: any;
   source: LocalDataSource = new LocalDataSource();
   _source: LocalDataSource = new LocalDataSource();
   constructor(private service: ProgramSemAssociationService) {

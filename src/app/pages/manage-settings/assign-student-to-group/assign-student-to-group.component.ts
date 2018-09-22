@@ -38,6 +38,9 @@ export class AssignStudentToGroupComponent implements OnInit {
       },
     },
   };
+  batchList: any;
+  ProgramStudyList: any;
+  semisterList: any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: AssignStudentToGroupService) {
     const data = this.service.getData();
