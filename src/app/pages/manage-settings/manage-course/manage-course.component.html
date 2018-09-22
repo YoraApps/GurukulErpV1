@@ -19,10 +19,10 @@
       </div>
     </div>
     <div class="col-md-3" style="margin-left: -8%;">
-      <label for="userName">Program Study
+      <label for="userName" style="margin-left:84px">Program Study
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;">
+      <div style="width:250px; margin-left: 82px">
         <select class="form-control">
           <option>Please select the Program Study</option>
           <option [value]="programstudy.ProgramStudyId" *ngFor="let programstudy of ProgramStudyList">{{programstudy.ProgramStudyName}}</option>
@@ -30,10 +30,10 @@
       </div>
     </div>
     <div class="col-md-3" style="margin-left: -8%;">
-      <label for="userName">Semester
+      <label for="userName"style="margin-left:175px">Semester
         <span class="text-danger">*</span>
       </label>
-      <div style="width:250px;margin-left: 65%">
+      <div style="width:250px;margin-left: 70%">
         <select class="form-control">
           <option>Please select the Semester</option>
           <option [value]="semester.id" *ngFor="let semester of semisterList">{{semester.CourseName}}</option>
@@ -41,7 +41,7 @@
       </div>
     </div>
     <div class="col-md-3">
-      <label for="userName">Course
+      <label for="userName"style="margin-left:170px">Course
         <span class="text-danger">*</span>
       </label>
       <div style="width:250px; margin-left:67%">
@@ -51,7 +51,7 @@
         </select>
       </div>
     </div>
-    <div class="shape-container" class="col-md-2" style="width:250px;margin-top: 25px;margin-left: 4%;">
+    <div class="shape-container" class="col-md-2" style="width:250px;margin-top: 25px;margin-left: 95%;">
       <div style="margin-left: -30%;margin-top: 1%;">
         <button class="btn btn-success btn-semi-round btn-demo">Go</button>
       </div>
