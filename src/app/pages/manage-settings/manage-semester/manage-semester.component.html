@@ -35,7 +35,7 @@
       </label>
       <div style="width:250px;">
         <select class="form-control">
-          <option>Please select Mining Sem 1</option>
+          <option>Please select Semester</option>
           <option [value]="semester.id" *ngFor="let semester of semisterList">{{semester.CourseName}}</option>
         </select>
       </div>
@@ -50,7 +50,7 @@
   <hr>
   <nb-card>
     <nb-card-header>
-      Mining Sem 1
+      Manage Semester 
     </nb-card-header>
     <nb-card-body>
       <ng2-smart-table [settings]="settings" [source]="source.data" (deleteConfirm)="onDeleteConfirm($event)">
