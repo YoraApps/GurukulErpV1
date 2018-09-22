@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ChapterService } from '../data/chapter.service';
 import { LocalDataSource } from 'ng2-smart-table';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ChapterModelComponent } from './chapter-model/chapter-model.component';
 
 @Component({
   selector: 'ngx-chapter',
@@ -55,9 +57,14 @@ export class ChapterComponent implements OnInit {
     data;
     dataArray: any = [];
 
-  constructor(private service: ChapterService) {
+  constructor(private service: ChapterService,private modalService: NgbModal) {
 
    }
+   onClick() {
+    const activeModal = this.modalService.open(ChapterModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

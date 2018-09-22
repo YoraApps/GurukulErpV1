@@ -4,6 +4,7 @@ import { LocalDataSource } from 'ng2-smart-table';
 import { CounsellingService } from '../data/counselling.service';
 import { BatchService } from '../../settings/data/batch.service';
 import { CourseService } from '../../settings/data/course.service';
+import { ProgramStudyService } from '../../settings/data/program-study.service';
 
 @Component({
   selector: 'ngx-counselling',
@@ -63,15 +64,24 @@ export class CounsellingComponent {
     },
   };
   source: LocalDataSource = new LocalDataSource();
+  data;
   batchList: any[];
-  courseList: any[];
+  ProgramStudyList:any[];
 
-  constructor(private couservice: CounsellingService, service: BatchService, _service: CourseService,
-    ) {
+  constructor(private couservice: CounsellingService, service: BatchService,private Pservice:ProgramStudyService) {
     const data = this.couservice.getData();
     this.source.load(data);
     this.batchList = service.getData();
-    this.courseList = _service.getData();
+  }
+
+  ngOnInit() {
+    this.Pservice.getData()
+          .subscribe( data => {
+            this.data = data.results;
+            console.log(this.data);
+            this.ProgramStudyList = this.data;
+            console.log(this.ProgramStudyList);
+          });
   }
 
   onDeleteConfirm(event): void {
@@ -81,6 +91,4 @@ export class CounsellingComponent {
       event.confirm.reject();
     }
   }
-
-
 }
