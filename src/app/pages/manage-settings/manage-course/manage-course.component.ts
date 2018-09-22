@@ -82,7 +82,10 @@ export class ManageCourseComponent implements OnInit {
         type: 'string',
       },
     },
-  };  
+  }; 
+  ProgramStudyList: any;
+  semisterList: any; 
+  batchList :any;
   source: LocalDataSource = new LocalDataSource();
   _source: LocalDataSource = new LocalDataSource();
   constructor(private service: ManageCourseService) {

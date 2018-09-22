@@ -1,8 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { BatchService } from '../../settings/data/batch.service';
-import { CourseService } from '../../settings/data/course.service';
 import { LocalDataSource } from 'ng2-smart-table';
 import { AdmissionFeeStatusService } from '../data/admission-fee-status.service';
+import { ProgramStudyService } from '../../settings/data/program-study.service';
 
 @Component({
   selector: 'ngx-admission-fee-status',
@@ -51,19 +51,19 @@ export class AdmissionFeeStatusComponent implements OnInit {
         type: 'number',
       },
       PaymentStatus: {
-        title: 'Total Fees paid',
+        title: 'Payment Status',
         type: 'string',
       },
     },
   };
   source: LocalDataSource = new LocalDataSource();
+  data;
   batchList: any[];
-  courseList: any[];
-  constructor(private Admservice: AdmissionFeeStatusService, service: BatchService, _service: CourseService) {
+  ProgramStudyList: any[];
+  constructor(private Admservice: AdmissionFeeStatusService, service: BatchService,private Pservice:ProgramStudyService) {
     const data = this.Admservice.getData();
     this.source.load(data);
     this.batchList = service.getData();
-    this.courseList = _service.getData();
    }
 
    onDeleteConfirm(event): void {
@@ -75,6 +75,13 @@ export class AdmissionFeeStatusComponent implements OnInit {
   }
 
   ngOnInit() {
+    this.Pservice.getData()
+    .subscribe( data => {
+      this.data = data.results;
+      console.log(this.data);
+      this.ProgramStudyList = this.data;
+      console.log(this.ProgramStudyList);
+    });
   }
 
 }

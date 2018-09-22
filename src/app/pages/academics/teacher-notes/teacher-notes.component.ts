@@ -56,12 +56,11 @@ export class TeacherNotesComponent implements OnInit {
   };
 
   source: LocalDataSource = new LocalDataSource();
-data;
-  batchList: any[];
-  ProgramStudyList: any[];
-  semisterList: any[];
-
-  constructor(service: BatchService,private tservice:TeacherNotesService, 
+  batchList: any;
+  ProgramStudyList: any;
+  semisterList: any;
+  data1 : any;
+  constructor(private service: BatchService,private tservice:TeacherNotesService, 
   private _service: SemesterService,private services:ProgramStudyService) { 
 
     this.batchList = service.getData();
@@ -71,20 +70,21 @@ data;
 
   ngOnInit() {
     this.services.getData()
-          .subscribe( data => {
-            this.data = data.results;
-            console.log(this.data);
-            this.ProgramStudyList = this.data;
+          .subscribe( data1 => {
+            this.data1 = data1.results;
+            console.log(this.data1);
+            this.ProgramStudyList = this.data1;
             console.log(this.ProgramStudyList);
           });
 
           this._service.getData()
-          .subscribe( data => {
-            this.data = data.results;
-            console.log(this.data);
-            this.semisterList = this.data;
+          .subscribe( data1 => {
+            this.data1 = data1.results;
+            console.log(this.data1);
+            this.semisterList = this.data1;
             console.log(this.semisterList);
           });
   }
+  onDeleteConfirm(e:any){}
 
 }

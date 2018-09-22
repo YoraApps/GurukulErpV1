@@ -6,17 +6,19 @@ import { Ng2SmartTableModule } from 'ng2-smart-table';
 import { SmartTableService } from '../../@core/data/smart-table.service';
 import { PayrollComponent } from './payroll/payroll.component';
 import { LeavesComponent } from './leaves/leaves.component';
+import { EmployeeComponent } from './employee/employee.component';
 
 @NgModule({
   imports: [
     ThemeModule,
     Ng2SmartTableModule,
-    HumanResourceRoutingModule,
+    HumanResourceRoutingModule,    
   ],
   declarations: [
     ...routedComponents,
     PayrollComponent,
     LeavesComponent,
+    EmployeeComponent,
   ],
   providers: [
     SmartTableService,

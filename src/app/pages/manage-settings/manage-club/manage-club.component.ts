@@ -42,6 +42,8 @@ export class ManageClubComponent implements OnInit {
       },
     },
   };
+  
+  batchList: any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ManageClubService) {
     const data = this.service.getData();

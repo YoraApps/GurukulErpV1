@@ -116,6 +116,7 @@ ngOnInit() {
           console.log(this.ProgramStudyList);
         });
 }
+onClick(){}
 
 }
 

@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { GradeService } from '../data/grade.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { GradeModelComponent } from './grade-model/grade-model.component';
 
 @Component({
   selector: 'ngx-grade',
@@ -43,9 +45,16 @@ export class GradeComponent implements OnInit {
       SetAction: string;
       dataArray: any = [];
 
-  constructor(private service: GradeService) {
+  constructor(private service: GradeService,private modalService: NgbModal) {
     
    }
+
+   onClick() {
+    const activeModal = this.modalService.open(GradeModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
+
 
    onDeleteConfirm(event): void {
      debugger

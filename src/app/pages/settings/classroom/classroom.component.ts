@@ -1,6 +1,8 @@
 import { Component } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { ClassRoomService } from '../../../pages/settings/data/classroom.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ClassRoomModelComponent } from './class-room-model/class-room-model.component';
 
 @Component({
   selector: 'ngx-classroom',
@@ -57,9 +59,15 @@ export class ClassroomComponent  {
     },
   };
   source: LocalDataSource = new LocalDataSource();
-  constructor(private service: ClassRoomService) {
+  constructor(private service: ClassRoomService,private modalService: NgbModal) {
     const data = this.service.getData();
     this.source.load(data);
+  }
+
+  onClick() {
+    const activeModal = this.modalService.open(ClassRoomModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
   }
 
   onDeleteConfirm(event): void {

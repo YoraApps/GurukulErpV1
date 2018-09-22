@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { ExamTypeService } from '../data/exam-type.service';
 import { LocalDataSource } from 'ng2-smart-table';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ExamTypeModelComponent } from './exam-type-model/exam-type-model.component';
 
 @Component({
   selector: 'ngx-exam-type',
@@ -47,9 +49,15 @@ export class ExamTypeComponent implements OnInit {
   dataArray: any = {};
   UniversityId: number = 1;
   
-  constructor(private service: ExamTypeService) {
+  constructor(private service: ExamTypeService,private modalService: NgbModal) {
 
    }
+
+   onClick() {
+    const activeModal = this.modalService.open(ExamTypeModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

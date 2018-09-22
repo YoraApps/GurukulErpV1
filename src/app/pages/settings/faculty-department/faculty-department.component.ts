@@ -1,6 +1,8 @@
 import { Component, OnInit } from '@angular/core';
 import { LocalDataSource } from 'ng2-smart-table';
 import { FacultyDepartmentService } from '../data/faculty-department.service';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { FacultyModelComponent } from './faculty-model/faculty-model.component';
 
 @Component({
   selector: 'ngx-faculty-department',
@@ -48,9 +50,15 @@ export class FacultyDepartmentComponent implements OnInit {
     SetAction: string;
   dataArray: any = [];
 
-  constructor(private service: FacultyDepartmentService) {
+  constructor(private service: FacultyDepartmentService,private modalService: NgbModal) {
     
    }
+
+   onClick() {
+    const activeModal = this.modalService.open(FacultyModelComponent, { size: 'lg', container: 'nb-layout' });
+
+    activeModal.componentInstance.modalHeader = 'Large Modal';
+  }
 
    onDeleteConfirm(event): void {
     if (window.confirm('Are you sure you want to delete?')) {

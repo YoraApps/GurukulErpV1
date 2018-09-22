@@ -46,6 +46,9 @@ export class ManageSemesterComponent implements OnInit {
       },
     },
   };
+  batchList: any;
+  ProgramStudyList:any;
+  semisterList: any;
   source: LocalDataSource = new LocalDataSource();
   constructor(private service: ManageSemesterService) {
     const data = this.service.getData();

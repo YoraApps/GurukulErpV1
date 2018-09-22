@@ -46,7 +46,7 @@ import { StudentProfileComponent } from './student-profile/student-profile.compo
     SemesterComponent,
     ClassroomComponent,
     FeeAssociationComponent,
-    StudentProfileComponent,   
+    StudentProfileComponent,  
   ],
   providers: [
     DegreeTypeService,
